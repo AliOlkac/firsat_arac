@@ -8,15 +8,17 @@ from pathlib import Path
 
 # --- Ortak filtreler -------------------------------------------------------
 KM_MAX = 130_000
-FIYAT_MIN = 1_200_000
-FIYAT_MAX = 2_000_000
+# Emsal için pencereyi geniş tut: alt sınır fırsatları, üst sınır emsal fiyatını kesmesin.
+FIYAT_MIN = 1_000_000
+FIYAT_MAX = 2_200_000
 VITES_YOLU = "otomatik,yari-otomatik"  # DSG/EDC/CVT'lerin çoğu "yarı otomatik" listelenir
 SEDAN_KASA = "a8=250"  # sahibinden 'Kasa tipi: Sedan' (hatchback'i olan modellerde kullanılır)
 
 # Boyasız + Değişensiz + Ağır hasar kayıtlı: Hayır parametreleri.
 # Sitede bu 3 filtreyi bir kez elle seçip linkteki ek kısmı buraya yaz, örn:
 # EK_PARAMETRELER = "a1234=5678&a9999=1"
-EK_PARAMETRELER = "unpaintedParts=true&unchangingTracks=true&a116445=1263354"
+# Tek turda detaylı tarama: boyasız filtresi YOK (boyalı araçların fiyat etkisini model ölçer).
+EK_PARAMETRELER = "unchangingTracks=true&a116445=1263354"
 
 # --- Marka -> minimum yıl (kalite/segmente göre) ---------------------------
 MIN_YIL = {
@@ -36,7 +38,8 @@ MODELLER = [
     ("bmw", "x1", "suv", False), ("bmw", "x2", "suv", False), ("bmw", "x3", "suv", False),
     ("mercedes-benz", "a-serisi", "oto", True), ("mercedes-benz", "c-serisi", "oto", True),
     ("mercedes-benz", "cla", "oto", False), ("mercedes-benz", "e-serisi", "oto", True),
-    ("mercedes-benz", "gla", "suv", False), ("mercedes-benz", "glc", "suv", False),
+    ("mercedes-benz", "gla", "suv", False), ("mercedes-benz", "glb", "suv", False), ("mercedes-benz", "glc", "suv", False),
+    ("bmw", "2-serisi", "oto", False),
     ("volvo", "s60", "oto", False), ("volvo", "s90", "oto", False),
     ("volvo", "xc40", "suv", False), ("volvo", "xc60", "suv", False),
     ("mini", "countryman", "suv", False),
@@ -48,8 +51,8 @@ MODELLER = [
     ("skoda", "kamiq", "suv", False), ("skoda", "karoq", "suv", False), ("skoda", "kodiaq", "suv", False),
     ("seat", "ateca", "suv", False), ("seat", "arona", "suv", False),
     ("cupra", "formentor", "suv", False), ("cupra", "ateca", "suv", False),
-    ("toyota", "corolla", "oto", True), ("toyota", "c-hr", "suv", False), ("toyota", "rav4", "suv", False),
-    ("honda", "civic", "oto", True), ("honda", "hr-v", "suv", False), ("honda", "cr-v", "suv", False),
+    ("toyota", "corolla", "oto", True), ("toyota", "c-hr", "suv", False), ("toyota", "corolla-cross", "suv", False), ("toyota", "yaris-cross", "suv", False), ("toyota", "rav4", "suv", False),
+    ("honda", "civic", "oto", True), ("honda", "city", "oto", False), ("honda", "hr-v", "suv", False), ("honda", "cr-v", "suv", False),
     ("ford", "focus", "oto", True), ("ford", "puma", "suv", False), ("ford", "kuga", "suv", False),
     ("hyundai", "elantra", "oto", False), ("hyundai", "bayon", "suv", False),
     ("hyundai", "kona", "suv", False), ("hyundai", "tucson", "suv", False),
