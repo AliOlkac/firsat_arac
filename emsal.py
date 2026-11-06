@@ -88,6 +88,15 @@ def tramer_tutari(metin):
         if deger > 2_000_000:
             continue
         en_iyi = max(en_iyi or 0, deger)
+    # "1 milyon 100 bin hasar kaydı" ve "95 bin tramer" gibi tutarın önce geldiği yazımlar
+    for m in re.finditer(r"(?:(\d+)\s*milyon\s*)?(\d{1,3}(?:[.,]\d{3})*|\d+)\s*(bin|k\b)\s*(?:tl|₺|lira)?\s*(?:normal\s*)?(?:hasar|tramer)", t):
+        milyon = int(m.group(1) or 0) * 1_000_000
+        deger = milyon + int(re.sub(r"[.,]", "", m.group(2))) * 1000
+        if 5000 <= deger <= 2_000_000:
+            en_iyi = max(en_iyi or 0, deger)
+    for m in re.finditer(r"(\d+)\s*milyon\s*(?:(\d+)\s*bin\s*)?(?:tl\s*)?(?:normal\s*)?(?:hasar|tramer)", t):
+        deger = int(m.group(1)) * 1_000_000 + int(m.group(2) or 0) * 1000
+        en_iyi = max(en_iyi or 0, deger)
     return en_iyi
 
 
