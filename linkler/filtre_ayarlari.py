@@ -16,7 +16,7 @@ SEDAN_KASA = "a8=250"  # sahibinden 'Kasa tipi: Sedan' (hatchback'i olan modelle
 # Boyasız + Değişensiz + Ağır hasar kayıtlı: Hayır parametreleri.
 # Sitede bu 3 filtreyi bir kez elle seçip linkteki ek kısmı buraya yaz, örn:
 # EK_PARAMETRELER = "a1234=5678&a9999=1"
-EK_PARAMETRELER = ""
+EK_PARAMETRELER = "unpaintedParts=true&unchangingTracks=true&a116445=1263354"
 
 # --- Marka -> minimum yıl (kalite/segmente göre) ---------------------------
 MIN_YIL = {
