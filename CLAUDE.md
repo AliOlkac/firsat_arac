@@ -26,7 +26,7 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
    sahibinden ilanları **veritabanına eklenmez** (`ekle` reddeder). Her zaman `degerlendir` ile puanla:
    - **Genel tarama** (`"pazar"` listesi ya da `meta.mod = "pazar_taramasi"`; boya/tramer/açıklama yok):
      `python3 firsat.py degerlendir <dosya.json> --n 250` → çıktının sonundaki "LİNKLER" bölümünü **sohbete düz metin
-     olarak, alt alta** yapıştır. KULLANICI İSTEĞİ: bu adımda dosya gönderme, artifact/HTML yayınlama, uzun açıklama
+     olarak, alt alta** yapıştır; linkleri tek tıkla kopyalanabilsin diye bir kod bloğu (```text) içine koy (seri başına bir blok). KULLANICI İSTEĞİ: bu adımda dosya gönderme, artifact/HTML yayınlama, uzun açıklama
      yapma; sadece linkler (birden fazla seri varsa kısa seri başlığıyla ayrılmış, çünkü eklenti seri sayfası başına
      toplar) ve en fazla bir-iki cümle. Kullanıcı linkleri detaylı tarayıp geri gönderir; fırsat listesi (HTML) o zaman yapılır.
    - **Detaylı tarama** (genel_bilgiler + arac_bilgileri + boya_degisen_tramer, sahibinden.com linkli):
