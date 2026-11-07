@@ -14,6 +14,21 @@ Yapay zekâ modeli eğitmek gerekmiyor. Sistem üç katmandan oluşuyor:
    - Her ilanın piyasa değeri, o ilan hesaba katılmadan tahmin edilir. Böylece ilan kendi fiyatını "doğrulamaz".
 3. **Claude incelemesi** (`veri/notlar.json`): En iyi adayların ilan açıklamalarını Claude tek tek okur. Rakamların göstermediği tuzakları işaretler: başlıkta "manuel" yazıp otomatik listelenmiş araç, "airbag değişmiş", "sel-su" tramer kaydı, açıklamada değişen parça yazıp formda "boyasız" görünen ilan, "yurt dışındayım, WhatsApp'tan yazın" dolandırıcılık kalıbı gibi.
 
+## arabam = temel, sahibinden = av sahası
+
+- **arabam.com** taramaları piyasanın temeli: veritabanına girer, fiyat modeli bunlardan öğrenir. Haftalık yenilemek iyi olur.
+- **sahibinden** ilanları gerçek alınacak araçları bulmak için: veritabanına **eklenmez**, arabam piyasasına göre puanlanır.
+  1. sahibinden'de genel tarama yap (filtreli liste, detaysız) ve dosyayı gönder: sistem kâr potansiyeline göre en iyi
+     ~250 ilanı seçer, linklerini ve ilan numaralarını verir.
+  2. O ilanları detaylı tara ve gönder: tam puanlı rapor, Claude incelemesi ve satıcıya sorular gelir.
+- sahibinden'deki model adları arabam'daki paket adlarına otomatik eşlenir (aynı paket > aynı motor > aynı seri).
+
+## Satıcıya sorular
+
+Her ilan kartında **"Satıcıya sor: kopyala"** butonu var: ilana özel kısa bir mesajı panoya kopyalar (değişen/boyalı
+parçalar neden, tramer hangi olaydan, son bakım, şanzıman, garanti, borç/haciz, ekspertiz izni, son fiyat). Mesajın
+tamamı kartın detayında da görünür.
+
 ## Puan (100)
 
 | Bileşen | Puan | Ne ölçer |

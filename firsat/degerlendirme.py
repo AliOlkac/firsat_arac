@@ -69,6 +69,9 @@ class Piyasa:
         g4 = 1.0 if m.pencerede_mi(r["fiyat"], r.get("kategori")) else 0.75
         g0 = min(1.0, self.seri_sayisi.get((r["marka"], r["seri"]), 0) / 30)
         guven = (0.25 + 0.75 * (0.6 * g1 + 0.4 * g2)) * (0.5 + 0.5 * g0) * (0.4 + 0.6 * g3) * g4
+        if r.get("eslesme"):          # sahibinden ilanı: arabam adlarına eşleşme kalitesi
+            from .eslestir import GUVEN_CARPANI
+            guven *= GUVEN_CARPANI.get(r["eslesme"], 0.5)
 
         # 18 ay sonra: bireysel satış fiyat seviyesinde, bugünkü TL ile
         oran = m.gelecek_orani(r, A.ELDE_TUTMA_AY, A.YILLIK_KM)
@@ -179,6 +182,13 @@ def puanla(s, piyasa):
         notlar.append(f"{gun} gündür yayında: pazarlık payı olabilir")
     if s["guven"] < 0.55:
         notlar.append("Emsal az / tahmin belirsiz: fiyatı elle de kontrol et")
+    if s.get("eslesme") and s["eslesme"] != "paket":
+        notlar.append({"motor": "arabam'da aynı paket yok, aynı motorlu araçlarla karşılaştırıldı",
+                       "seri": "arabam'da aynı motor/paket bulunamadı, seri ortalamasıyla karşılaştırıldı",
+                       "marka": "arabam'da bu seri yok: fiyat tahmini güvenilmez",
+                       "yok": "arabam'da bu marka yok: fiyat tahmini güvenilmez"}[s["eslesme"]])
+    if s.get("liste_satiri"):
+        notlar.append("Genel tarama satırı: boya-değişen, tramer ve açıklama bilinmiyor; detaylı taramayla doğrula")
 
     toplam = max(0.0, min(100.0, p_fiyat + p_kondisyon + p_satis + p_deger - ceza + bonus))
     agir_risk = any(c >= 15 for _, _, c in s.get("riskler") or []) or s["firsat"] > A.SUPHELI_UCUZ

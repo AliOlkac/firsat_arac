@@ -4,6 +4,7 @@ from datetime import date
 from pathlib import Path
 
 from .degerlendirme import hasar_kisa
+from .sorular import mesaj, sorular
 from .veritabani import KOK
 
 NOT_YOLU = KOK / "veri" / "notlar.json"
@@ -45,6 +46,8 @@ def kayit(s, notlar=None, mod="piyasa"):
         "gelecek": round(s["gelecek_oran"], 4), "emsal": s["emsal_listesi"],
         "emsal_fiyat": round(s["emsal_fiyat"]) if s.get("emsal_fiyat") else None,
         "ilan_gun": s.get("ilan_gun"), "n_benzer": s["n_benzer"],
+        "sorular": sorular(s), "mesaj": mesaj(s), "eslesme": s.get("eslesme"), "kaynak_adi": s.get("kaynak_adi"),
+        "site": "sahibinden" if "sahibinden.com" in (s.get("url") or "") else "arabam",
     }
 
 
@@ -168,6 +171,14 @@ details.yontem summary { cursor: pointer; padding-block: 12px; font-weight: 600;
   background: var(--vurgu); color: var(--vurgu-ustu); font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap; }
 .git:hover { filter: brightness(1.08); text-decoration: underline; }
 .git small { font-weight: 500; opacity: .8; font-size: 12px; }
+.butonlar { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.kopyala { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 6px 12px; border-radius: 8px;
+  background: var(--kart); color: var(--vurgu); border: 1.5px solid var(--vurgu); font: inherit; font-weight: 600;
+  font-size: 14px; cursor: pointer; white-space: nowrap; }
+.kopyala.oldu { color: var(--iyi); border-color: var(--iyi); }
+.soru-kutu { width: 100%; min-height: 9.5em; font: inherit; font-size: 13.5px; line-height: 1.45; color: var(--murekkep);
+  background: var(--zemin); border: 1px solid var(--cizgi); border-radius: 8px; padding: 8px 10px; resize: vertical; }
+.detay-ic section.genis { grid-column: 1 / -1; }
 .sema { display: grid; justify-items: center; gap: 3px; text-decoration: none; color: var(--soluk); font-size: 12px; text-align: center; }
 .sema svg { width: 54px; height: auto; display: block; }
 .sema:hover svg { filter: drop-shadow(0 0 2px var(--vurgu)); }
@@ -200,6 +211,7 @@ footer { color: var(--soluk); font-size: 13px; padding-block: 18px 36px; max-wid
 .gosterge { display: flex; gap: 10px; flex-wrap: wrap; font-size: 12px; color: var(--soluk); align-items: center; }
 .gosterge i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
 @media (max-width: 860px) {
+  .butonlar { justify-content: flex-start; }
   .ilan { grid-template-columns: 64px minmax(0, 1fr) 76px; }
   .fiyat { grid-column: 2 / 3; justify-items: start; text-align: left; grid-row: 2; }
   .sema { grid-column: 3; grid-row: 1 / 3; }
@@ -334,11 +346,12 @@ function kart(r, i) {
       <span class="piyasa">piyasa değeri ~${TL(r.adil)}</span>
       <span class="fark ${fark >= 0 ? "arti" : "eksi"} sayi">${fark >= 0 ? "%" + YUZDE(r.firsat) + " ucuz · " + TL(fark) : "%" + YUZDE(-r.firsat) + " pahalı"}</span>
       ${HIZLI ? `<span class="sonra sayi"><b class="fark ${r.net_yarin >= 0 ? "arti" : "eksi"}">Yarın satsan net: ${r.net_yarin >= 0 ? "+" : ""}${TL(r.net_yarin)}</b></span>`
-              : `<span class="sonra sayi">18 ay sonra (reel): ${r.net18 >= 0 ? "+" : ""}${TL(r.net18)}</span>`}
-      <a class="git" href="${esc(r.url)}" target="_blank" rel="noopener">İlana git ↗ <small>#${esc(r.id)}</small></a>
+              : `${META.mod === "aday" ? `<span class="sonra sayi">Yarın satsan net: ${r.net_yarin >= 0 ? "+" : ""}${TL(r.net_yarin)}</span>` : ""}<span class="sonra sayi">18 ay sonra (reel): ${r.net18 >= 0 ? "+" : ""}${TL(r.net18)}</span>`}
+      <div class="butonlar"><a class="git" href="${esc(r.url)}" target="_blank" rel="noopener">İlana git ↗ <small>#${esc(r.id)}</small></a>
+      <button class="kopyala" type="button" data-id="${esc(r.id)}">Satıcıya sor: kopyala</button></div>
     </div>
     <a class="sema" href="${esc(r.url)}" target="_blank" rel="noopener" title="İlanı aç">${sema(r)}<span class="tr">${esc(r.hasar)}</span><span>${esc(tramerYazi(r.tramer))}</span></a>
-    <details class="detay"><summary>${HIZLI ? "Puan dökümü, kâr hesabı ve emsaller" : "Puan dökümü, 18 ay hesabı ve emsaller"}</summary><div class="detay-ic">
+    <details class="detay"><summary>${HIZLI ? "Puan dökümü, kâr hesabı, emsaller ve satıcıya sorular" : "Puan dökümü, 18 ay hesabı, emsaller ve satıcıya sorular"}</summary><div class="detay-ic">
       <section><h4>Puan ${r.son_puan.toLocaleString("tr-TR")} / 100</h4>
         ${HIZLI ? cub("Kâr potansiyeli", pf, 55) + cub("Satış hızı", ps, 25) + cub("Kondisyon", pk, 20)
                 : cub("Fiyat avantajı", pf, 45) + cub("Kondisyon", pk, 20) + cub("Satılabilirlik", ps, 20) + cub("Değer koruma", pd, 15)}
@@ -360,6 +373,9 @@ function kart(r, i) {
         <p class="sonra">TL bazında satış fiyatı enflasyonla daha yüksek görünür; burada reel değer kaybı gösterilir.</p></section>
       <section><h4>Benzer ilanlar</h4>${emsal ? `<ul class="emsal">${emsal}</ul>${r.emsal_fiyat ? `<p class="sonra">Bu araca göre uyarlanmış emsal medyanı: ${TL(r.emsal_fiyat)}</p>` : ""}` : `<p class="sonra">Yakın emsal bulunamadı (aynı motor, ±1 yıl, ±35 bin km).</p>`}</section>
       ${maddeler ? `<section><h4>Sistem notları</h4><ul class="maddeler">${maddeler}</ul></section>` : ""}
+      <section class="genis"><h4>Satıcıya sorulacaklar</h4>
+        <textarea class="soru-kutu" id="s${esc(r.id)}" rows="${r.mesaj.split("\n").length + 1}" readonly aria-label="Satıcıya gönderilecek mesaj">${esc(r.mesaj)}</textarea>
+        <p class="sonra">${r.site === "sahibinden" && r.kaynak_adi ? `sahibinden adı: ${esc(r.kaynak_adi)} · arabam eşleşmesi: ${esc(r.eslesme || "-")} · ` : ""}Mesajı kopyalayıp ilandaki mesaj ya da WhatsApp alanına yapıştırabilirsin.</p></section>
     </div></details>
   </article>`;
 }
@@ -389,6 +405,26 @@ function ciz() {
   document.getElementById("sayi").textContent = `${l.length} / ${ANA.length} ilan`;
   try { localStorage.setItem("firsat-filtre", JSON.stringify(durum)); } catch (e) {}
 }
+function kopyala(btn) {
+  const r = VERI_ID[btn.dataset.id];
+  const bitti = (ok) => {
+    btn.textContent = ok ? "Kopyalandı ✓" : "Metni seçtim, kopyala";
+    btn.classList.toggle("oldu", ok);
+    setTimeout(() => { btn.textContent = "Satıcıya sor: kopyala"; btn.classList.remove("oldu"); }, 2200);
+  };
+  const elle = () => {
+    const kart = btn.closest(".ilan"); const d = kart.querySelector("details.detay"); d.open = true;
+    const t = kart.querySelector(".soru-kutu"); t.focus(); t.select();
+    let ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+    bitti(ok);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(r.mesaj).then(() => bitti(true), elle);
+  } else { elle(); }
+}
+const VERI_ID = Object.fromEntries(VERI.map(r => [r.id, r]));
+document.addEventListener("click", e => { const b = e.target.closest(".kopyala"); if (b) kopyala(b); });
+
 function kur() {
   const tarih = new Date(META.tarih + "T12:00:00").toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
   document.getElementById("ust-etiket").textContent = `arabam.com · ${tarih}`;

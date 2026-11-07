@@ -71,6 +71,7 @@ def main():
     d = alt.add_parser("degerlendir")
     d.add_argument("dosyalar", nargs="+")
     d.add_argument("--ad", default=None, help="rapor dosya adı (varsayılan: aday-<tarih>)")
+    d.add_argument("--n", type=int, default=250, help="genel taramada detaylı taramaya önerilecek ilan sayısı")
     a = ap.parse_args()
 
     if a.komut == "kur":
@@ -114,13 +115,26 @@ def main():
     elif a.komut == "degerlendir":
         for y in a.dosyalar:
             analiz.aday_dosyasini_sakla(y)
-        sonuclar = analiz.adaylari_degerlendir(piyasa, a.dosyalar)
+        sonuclar, bilgi = analiz.adaylari_degerlendir(piyasa, a.dosyalar)
+        sahibinden = "sahibinden" in bilgi["kaynak"]
+        pazar = "pazar" in bilgi["tur"]
+        if bilgi["eslesme"]:
+            print("  arabam eşleşmesi: " + ", ".join(f"{k} {v}" for k, v in bilgi["eslesme"].most_common()))
+        if pazar:
+            # genel tarama: detaylı taramaya değecekleri seç (kâr potansiyeline göre)
+            sonuclar.sort(key=lambda s: -s["puan_hizli"])
+            sonuclar = [s for s in sonuclar if s["net_yarin"] > 0 and s["karar_hizli"] != "PAS" or s["firsat"] > 0.06][: a.n]
         _ozet_yaz(sonuclar, 30)
-        ad = a.ad or f"aday-{date.today().isoformat()}"
-        _kaydet(sonuclar, ad, "Aday Değerlendirmesi",
-                f"{len(sonuclar)} ilan, {len(piyasa.satirlar):,} ilanlık piyasaya göre puanlandı".replace(",", "."),
+        site_adi = "Sahibinden" if sahibinden else "Aday"
+        ad = a.ad or f"{'sahibinden-on-eleme' if pazar else ('sahibinden' if sahibinden else 'aday')}-{date.today().isoformat()}"
+        baslik = "Sahibinden Ön Eleme" if pazar else f"{site_adi} Fırsatları"
+        _kaydet(sonuclar, ad, baslik,
+                f"{len(sonuclar)} ilan, {len(piyasa.satirlar):,} ilanlık arabam piyasasına göre puanlandı".replace(",", "."),
                 piyasa, "aday")
-
+        if pazar:
+            (RAPORLAR / f"{ad}-linkler.txt").write_text("\n".join(s["url"] for s in sonuclar if s.get("url")) + "\n", encoding="utf-8")
+            (RAPORLAR / f"{ad}-ilan-numaralari.txt").write_text(",".join(s["ilan_id"] for s in sonuclar) + "\n", encoding="utf-8")
+            print(f"  Detaylı taranacak {len(sonuclar)} ilan: raporlar/{ad}-linkler.txt ve -ilan-numaralari.txt")
 
 if __name__ == "__main__":
     sys.exit(main())

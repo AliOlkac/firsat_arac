@@ -114,31 +114,90 @@ def tramer_ozet(bd, metin_sade):
     return {"tramer_durum": durum, "tramer_tl": tutar, "tramer_kaynak": kaynak}
 
 
-def satir(x, kategori=None, kaynak="arabam"):
+def _al(a, *anahtarlar):
+    """Aynı bilgi arabam ve sahibinden dosyalarında farklı etiketle gelir; ilk dolu olanı döner."""
+    for k in anahtarlar:
+        if a.get(k) not in (None, ""):
+            return a[k]
+    return None
+
+
+def yakit_norm(y):
+    """Yakıt adını arabam sözlüğüne çevirir (model bu adlarla eğitildi)."""
+    s = sade(y)
+    if not s:
+        return y
+    if "lpg" in s:
+        return "LPG & benzin"
+    if "hibrit" in s or "hybrid" in s:
+        return "Hibrit"
+    if "elektrik" in s:
+        return "Elektrik"
+    if "dizel" in s or "diesel" in s:
+        return "Dizel"
+    if "benzin" in s:
+        return "Benzin"
+    return y
+
+
+def kasa_norm(k):
+    s = sade(k)
+    if not s:
+        return k
+    if "hatchback" in s:
+        return "Hatchback/3" if "3" in s else "Hatchback/5"
+    if "station" in s:
+        return "Station wagon"
+    if "suv" in s:
+        return "SUV"
+    return k
+
+
+def garanti_norm(g):
+    s = sade(g)
+    if not s:
+        return None
+    if "var" in s or s in ("evet", "devam ediyor"):
+        return 1
+    if "yok" in s or s == "hayir":
+        return 0
+    return None
+
+
+def site(url):
+    return "sahibinden" if "sahibinden.com" in (url or "") else "arabam"
+
+
+def satir(x, kategori=None, kaynak=None):
+    """arabam ya da sahibinden detaylı ilanını ortak satıra çevirir."""
     g = x.get("genel_bilgiler") or {}
     a = x.get("arac_bilgileri") or {}
     bd = x.get("boya_degisen_tramer") or {}
     aciklama = x.get("aciklama") or ""
     baslik = g.get("baslik") or ""
     t = sade(baslik + " . " + aciklama)
-    hp = sayi(a.get("Motor Gücü (Motor ve Performans)")) or aralik_orta(a.get("Motor gücü"))
-    garanti = a.get("Garanti durumu")
-    agir = sade(bd.get("agir_hasar") or a.get("Ağır hasar kaydı"))
+    url = g.get("url")
+    kaynak = kaynak or site(url)
+    hp = sayi(a.get("Motor Gücü (Motor ve Performans)")) or aralik_orta(_al(a, "Motor gücü", "Motor Gücü"))
+    agir = sade(bd.get("agir_hasar") or _al(a, "Ağır hasar kaydı", "Ağır Hasar Kayıtlı"))
     donanim = x.get("donanim") or {}
     donanim_duz = {d for v in donanim.values() for d in (v or [])} if isinstance(donanim, dict) else set()
+    kasa = kasa_norm(_al(a, "Kasa tipi", "Kasa Tipi"))
+    if not kategori:
+        kategori = "suv" if ("arazi-suv" in (url or "") or kasa in ("SUV", "Crossover", "Pick-Up")) else "otomobil"
     r = {
-        "ilan_id": str(g.get("ilan_id")), "kaynak": kaynak, "url": g.get("url"), "baslik": baslik,
+        "ilan_id": str(g.get("ilan_id")), "kaynak": kaynak, "url": url, "baslik": baslik,
         "fiyat": sayi(g.get("fiyat")), "sehir": g.get("sehir"), "ilce": g.get("ilce"),
         "ilan_tarihi": (tarih_tr(g.get("ilan_tarihi")) or None), "kimden": g.get("kimden") or "Bilinmiyor",
-        "foto": g.get("fotograf_sayisi"), "kategori": kategori or ("suv" if a.get("Kasa tipi") in ("SUV", "Crossover", "Pick-Up") else "otomobil"),
+        "foto": g.get("fotograf_sayisi"), "kategori": kategori,
         "marka": (a.get("Marka") or "").strip(), "seri": (a.get("Seri") or "").strip(),
-        "model": (a.get("Model") or "").strip(), "yil": sayi(a.get("Yıl")), "km": sayi(a.get("Kilometre")),
-        "vites": a.get("Vites tipi"), "yakit": a.get("Yakıt tipi"), "kasa": a.get("Kasa tipi"),
-        "renk": a.get("Renk"), "cekis": a.get("Çekiş"), "sanziman": a.get("Şanzıman"),
-        "hp": hp, "cc": sayi(a.get("Motor hacmi")), "segment": a.get("Sınıfı"),
-        "garanti": 1 if garanti == "Garantisi var" else (0 if garanti == "Garantisi yok" else None),
-        "agir_hasar": "yok" if "yok" in agir else ("var" if agir in ("evet", "var") or "kayitli" in agir else None),
-        "cam_tavan": int(bool(donanim_duz & {"Cam tavan", "Sunroof"})),
+        "model": (a.get("Model") or "").strip(), "yil": sayi(a.get("Yıl")), "km": sayi(_al(a, "Kilometre", "KM")),
+        "vites": _al(a, "Vites tipi", "Vites"), "yakit": yakit_norm(_al(a, "Yakıt tipi", "Yakıt", "Yakıt / Motor Tipi")),
+        "kasa": kasa, "renk": a.get("Renk"), "cekis": _al(a, "Çekiş"), "sanziman": a.get("Şanzıman"),
+        "hp": hp, "cc": aralik_orta(_al(a, "Motor hacmi", "Motor Hacmi")), "segment": a.get("Sınıfı"),
+        "garanti": garanti_norm(_al(a, "Garanti durumu", "Garanti", "Servis Garantisi")),
+        "agir_hasar": "yok" if ("yok" in agir or agir == "hayir") else ("var" if agir in ("evet", "var") or "kayitli" in agir else None),
+        "cam_tavan": int(bool(donanim_duz & {"Cam tavan", "Sunroof", "Cam Tavan"})),
         "aciklama": aciklama,
     }
     r["motor"] = motor_anahtari(r["model"], r["yakit"])
@@ -151,8 +210,41 @@ def satir(x, kategori=None, kaynak="arabam"):
     return r
 
 
+def pazar_satiri(x):
+    """sahibinden genel (liste) tarama satırı: açıklama, tramer ve parça adı yoktur."""
+    kat = [k.strip() for k in (x.get("kategori") or "").split(">") if k.strip()]
+    baslik = x.get("baslik") or ""
+    url = x.get("url")
+    boyasiz, degisensiz = x.get("boyasiz"), x.get("degisensiz")
+    bilinmiyor = boyasiz is None and degisensiz is None
+    model = x.get("model") or " ".join(kat[2:])
+    r = {
+        "ilan_id": str(x.get("ilan_id")), "kaynak": "sahibinden", "url": url, "baslik": baslik,
+        "fiyat": sayi(x.get("fiyat")), "sehir": x.get("sehir"), "ilce": x.get("ilce"),
+        "ilan_tarihi": tarih_tr(x.get("ilan_tarihi")), "kimden": x.get("kimden") or ("Galeriden" if x.get("magaza") else "Sahibinden"),
+        "foto": None, "kategori": "suv" if "arazi-suv" in (url or "") else "otomobil",
+        "marka": (x.get("marka") or (kat[0] if kat else "")).strip(), "seri": (x.get("seri") or (kat[1] if len(kat) > 1 else "")).strip(),
+        "model": model.strip(), "yil": sayi(x.get("yil")), "km": sayi(x.get("km")),
+        "vites": x.get("vites"), "yakit": yakit_norm(x.get("yakit")), "kasa": kasa_norm(x.get("kasa")),
+        "renk": x.get("renk") or x.get("Renk"), "cekis": None, "sanziman": None, "hp": None, "cc": None, "segment": None,
+        "garanti": None, "agir_hasar": {"Evet": "var", "Hayır": "yok"}.get(x.get("agir_hasar")), "cam_tavan": 0,
+        "aciklama": "", "liste_satiri": 1,
+        "n_lokal": 0, "n_boya": 0 if boyasiz in (True, None) else 2, "n_degisen": 0 if degisensiz in (True, None) else 1,
+        "n_belirsiz": 13 if bilinmiyor else 0, "boya_bilinmiyor": int(bilinmiyor),
+        "tampon_lokal": 0, "tampon_boya": 0, "tampon_degisen": 0, "tavan_boya": 0, "tavan_degisen": 0, "kaput_degisen": 0,
+        "parcalar": {"lokal": [], "boya": [], "degisen": [], "belirsiz": []},
+        "tramer_durum": "belirsiz", "tramer_tl": None, "tramer_kaynak": None,
+    }
+    r["motor"] = motor_anahtari(r["model"], r["yakit"])
+    t = sade(baslik)
+    r["riskler"] = riskler(t) + form_celiskileri(t, baslik, r)
+    r["olumlu"] = olumlular(t)
+    r["pesinat_gecer"] = int(bool(re.search(r"pesinat|kapora|\bsenet", t)))
+    return r
+
+
 def dosya_oku(yol):
-    """(meta, satırlar) döner. meta: toplanma zamanı, filtre kapsamları."""
+    """(meta, satırlar) döner. meta: toplanma zamanı, filtre kapsamları, kaynak (arabam/sahibinden), tür (detay/pazar)."""
     with ac(yol) as f:
         d = json.load(f)
     meta = d.get("meta") or {}
@@ -172,9 +264,22 @@ def dosya_oku(yol):
         toplanma = datetime.fromisoformat(toplanma).replace(tzinfo=None)
     except Exception:
         toplanma = datetime.fromtimestamp(Path(yol).stat().st_mtime)
-    satirlar = []
-    for x in d.get("ilanlar") or []:
-        iid = str((x.get("genel_bilgiler") or {}).get("ilan_id"))
-        satirlar.append(satir(x, kategori.get(iid)))
-    return {"toplanma": toplanma, "kapsamlar": kapsamlar, "kaynak": meta.get("kaynak", "arabam.com"),
+    satirlar, tur = [], "detay"
+    if "pazar" in d or meta.get("mod") == "pazar_taramasi":
+        tur = "pazar"
+        gorulen = set()
+        for x in d.get("pazar") or d.get("ilanlar") or []:
+            if str(x.get("ilan_id")) in gorulen or (x.get("para_birimi") not in (None, "TL")):
+                continue
+            gorulen.add(str(x.get("ilan_id")))
+            satirlar.append(pazar_satiri(x))
+    else:
+        for x in d.get("ilanlar") or []:
+            g = x.get("genel_bilgiler") or {}
+            if g.get("para_birimi") not in (None, "TL"):
+                continue
+            satirlar.append(satir(x, kategori.get(str(g.get("ilan_id")))))
+    kaynak = "sahibinden" if (tur == "pazar" or "sahibinden" in sade(meta.get("kaynak"))
+                              or any(r["kaynak"] == "sahibinden" for r in satirlar[:20])) else "arabam"
+    return {"toplanma": toplanma, "kapsamlar": kapsamlar, "kaynak": kaynak, "tur": tur,
             "ilan_sayisi": len(satirlar)}, satirlar

@@ -95,6 +95,10 @@ def referansa_ekle(yollar):
     HAM.mkdir(parents=True, exist_ok=True)
     for yol in yollar:
         yol = Path(yol)
+        if sahibinden_mi(yol):
+            print(f"  ! {yol.name}: sahibinden dosyası referans piyasaya eklenmez (arabam temel alınır). "
+                  f"Değerlendirmek için: python3 firsat.py degerlendir {yol}")
+            continue
         ad = yol.name
         # yükleme önekini (ör. '615a613a-') at: arabam-ilanlar-... ile başlasın
         if "arabam-" in ad and not ad.startswith("arabam-"):
@@ -113,12 +117,33 @@ def referansa_ekle(yollar):
 
 
 def adaylari_degerlendir(piyasa, yollar):
-    sonuclar = []
+    """Aday dosyalarını (arabam ya da sahibinden; detaylı ya da genel tarama) referans piyasaya göre puanlar.
+    Adaylar veritabanına EKLENMEZ. (sonuçlar, bilgi) döner; bilgi: kaynaklar, türler, eşleşme sayıları."""
+    from collections import Counter
+    from .eslestir import Eslestirici
+    sonuclar, bilgi = [], {"kaynak": set(), "tur": set(), "eslesme": Counter(), "okunamayan": 0}
+    eslestirici = None
     for yol in yollar:
         meta, satirlar = dosya_oku(yol)
+        bilgi["kaynak"].add(meta["kaynak"])
+        bilgi["tur"].add(meta["tur"])
         for r in satirlar:
             if not (r.get("fiyat") and r.get("yil") and r.get("km") is not None and r.get("marka")):
+                bilgi["okunamayan"] += 1
                 continue
+            if r.get("kaynak") == "sahibinden":
+                eslestirici = eslestirici or Eslestirici(piyasa.satirlar)
+                eslestirici.eslestir(r)
+                bilgi["eslesme"][r["eslesme"]] += 1
             sonuclar.append(piyasa.degerlendir(r))
     sonuclar.sort(key=lambda s: -s["puan"])
-    return _tekille(sonuclar)
+    return _tekille(sonuclar), bilgi
+
+
+def sahibinden_mi(yol):
+    """Dosya sahibinden taraması mı? (sahibinden dosyaları referans veritabanına eklenmez)"""
+    try:
+        meta, satirlar = dosya_oku(yol)
+    except Exception:
+        return False
+    return meta["kaynak"] == "sahibinden"

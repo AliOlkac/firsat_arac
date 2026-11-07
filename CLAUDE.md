@@ -22,7 +22,18 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
    python3 firsat.py degerlendir <dosya.json> --ad aday-YYYY-MM-DD
    ```
    Emin değilsen: 3000+ ilan ve fiyat bantlı çoklu filtre ise referans, değilse aday. Gerekirse kullanıcıya sor.
-3. Veritabanı yoksa ilk komut onu `veri/ham/*.json.xz` dosyalarından otomatik kurar (~1 dk). Model `veri/model.pkl` içinde önbelleklenir.
+3. **sahibinden dosyaları** (kullanıcı oradan gerçek alınacak araçları arar): arabam piyasası emsal/temel olarak kalır,
+   sahibinden ilanları **veritabanına eklenmez** (`ekle` reddeder). Her zaman `degerlendir` ile puanla:
+   - **Genel tarama** (`"pazar"` listesi ya da `meta.mod = "pazar_taramasi"`; boya/tramer/açıklama yok):
+     `python3 firsat.py degerlendir <dosya.json> --n 250` → kâr potansiyeline göre ön eleme raporu +
+     `raporlar/<ad>-linkler.txt` ve `-ilan-numaralari.txt` (kullanıcı bunları detaylı tarar; en fazla 200-300).
+     Bu iki txt'yi kullanıcıya dosya olarak da gönder.
+   - **Detaylı tarama** (genel_bilgiler + arac_bilgileri + boya_degisen_tramer, sahibinden.com linkli):
+     `python3 firsat.py degerlendir <dosya.json>` → tam rapor; ardından Claude incelemesi ve yayın.
+   - Model adları `firsat/eslestir.py` ile arabam adlarına eşlenir (paket > motor > seri). Raporda "arabam eşleşmesi"
+     yazar; eşleşme seri/marka seviyesindeyse fiyat tahmini zayıftır, buna göre yorumla.
+   - İlk gerçek sahibinden dosyası geldiğinde etiket adlarını kontrol et (okuyucu `_al(...)` alternatifleri, `pazar_satiri`).
+4. Veritabanı yoksa ilk komut onu `veri/ham/*.json.xz` dosyalarından otomatik kurar (~1 dk). Model `veri/model.pkl` içinde önbelleklenir.
 
 ## Claude incelemesi (atlanmaz)
 
@@ -44,6 +55,12 @@ Sonra raporu aynı komutla yeniden üret. Okurken özellikle bak:
 - Emsali çok az (serinin piyasada <10 ilanı) ve çok ucuz görünen → güvenme.
 Yeni bir kalıp tekrar ediyorsa `firsat/metin.py` içindeki kurallara ekle.
 
+## Satıcıya sorular
+
+Her kartta "Satıcıya sor: kopyala" butonu ve detayda mesaj kutusu var (`firsat/sorular.py`). Sorular ilanın verisinden
+üretilir (değişen/boyalı parçalar, tramer, km, çift kavramalı şanzıman, hibrit batarya, garanti, riskler, ucuzluk).
+Yeni bir risk kalıbı eklersen `RISK_SORUSU` sözlüğüne de soru ekle.
+
 ## Yayınlama ve teslim
 
 - HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Hızlı al-sat listesi: https://claude.ai/artifact/WDmzJfbKH9a7ojw1r2cNhJ (aynı şekilde güncelle). Aday değerlendirmeleri için yeni artifact açılabilir.
@@ -59,5 +76,7 @@ Yeni bir kalıp tekrar ediyorsa `firsat/metin.py` içindeki kurallara ekle.
 - `firsat/degerlendirme.py` adil fiyat, emsaller, güven, 18 ay hesabı, 100'lük puan ve karar
 - `firsat/ayarlar.py` ağırlıklar, eşikler, marka talep tablosu, masraflar
 - `firsat/rapor.py` HTML şablonu (tek dosya) ve JSON kayıt biçimi
+- `firsat/sorular.py` satıcıya sorulacak sorular ve kopyalanabilir mesaj
+- `firsat/eslestir.py` sahibinden marka/seri/paket adlarını arabam adlarına eşleme
 
 Model sürümünü (`firsat/analiz.py` → `MODEL_SURUM`) özellik/parsing değişikliğinde artır; önbellek yenilenir.
