@@ -1,3 +1,7 @@
-data/
-cikti/
+# Ham dosyalardan yeniden kurulur (python3 firsat.py kur)
+veri/piyasa.db
+veri/piyasa.db-journal
+veri/model.pkl
 __pycache__/
+*.pyc
+raporlar/*-inceleme.txt
