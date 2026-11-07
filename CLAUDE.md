@@ -40,7 +40,7 @@ Yeni bir kalıp tekrar ediyorsa `firsat/metin.py` içindeki kurallara ekle.
 
 ## Yayınlama ve teslim
 
-- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Aynı rapor türü için mümkünse önceki artifact'ı güncelle.
+- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Aday değerlendirmeleri için yeni artifact açılabilir.
 - Kullanıcıya kısa özet ver: kaç ilan tarandı, kaç AL/güçlü aday, ilk 5 araç (fiyat, piyasa değeri, ucuzluk %, Claude notu).
 - Değişiklikleri commit edip geliştirme dalına pushla. `veri/piyasa.db`, `veri/model.pkl`, `*-inceleme.txt` depoya girmez.
 
