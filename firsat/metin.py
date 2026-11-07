@@ -55,7 +55,7 @@ RISKLER = [
     ("agir_hasar", "Açıklamada ağır hasar kaydı ifadesi", 35,
      r"agir hasar kayitli|agir hasarli|agir hasar kaydi (var|mevcut|bulunmakta)|agir hasar (cikmakta|cikiyor|cikar|gorun|gozuk|var)",
      True),
-    ("engelli", "Engelli/ÖTV muafiyetli araç olabilir: devir şartı ve vergi borcu sorulmalı", 18,
+    ("engelli", "Engelli/ÖTV muafiyetli araç: devirde ÖTV ödenmesi ya da yalnızca engelliye satış gerekebilir", 30,
      r"\bengelli\b|otv (muaf|istisna|indirimli)|otvsiz|otv siz", True),
     ("yapisal", "Şasi/podye/direk/tavan işlemi ifadesi", 15,
      r"(sasi|sase|sasesi|sasisi|sasede|saside|saseye|sasiye) (hasar|duzelt|kesme|islemli|islem gor|islem var|degis|cekil)|"
@@ -66,7 +66,7 @@ RISKLER = [
      r"sanziman (degisti|degismis|degismistir|arizali|arizasi|revizyon|yenilendi)|vites (arizali|kutusu degis)", False),
     ("airbag", "Airbag açmış/değişmiş: ciddi kaza geçmişi", 18,
      r"(airbag|airbeg|airbaq|egirbe|eirbe|eyirbe|ayrbag|erbag|erbeg|hava yastig)\w*\W{0,3}(\w+\W+){0,3}?"
-     r"(acti|acmis|acmistir|acilmis|patladi|patlamis|patlak|degis\w*|yenilen\w*|onarim\w*|onaril\w*|tamir\w*)", False),
+     r"(acti|acmis|acmistir|acilmis|patladi|patlamis|patlak|degis\w*|yenilen\w*|onarim\w*|onaril\w*|tamir\w*|islemli\w*|islem gor\w*)", False),
     ("km", "KM düzeltme ya da km'si belirsiz ifadesi", 12,
      r"km (dusur|oynan|duzelt|geri al)|km si belirsiz|km belirsiz", True),
     ("yabanci", "Yurt dışından getirilmiş / yabancı plaka: ikinci elde satışı zor", 14,
@@ -77,8 +77,8 @@ RISKLER = [
      r"kargo ile teslim|kapora (gonder|yatir)|cekici ile (gonder|teslim)", False),
     ("lpg_sonradan", "Açıklamada LPG geçiyor: LPG'li araçların ikinci el talebi düşüktür", 5,
      r"\blpg\b|\blpgli\b|\blpg li\b", False),
-    ("kiralik", "Kiralık/filo/taksi geçmişi olabilir", 6,
-     r"kiralik|rent ?a ?car|\bfilo\b|\btaksi\b|ticari plaka|ticari kayit|\bhizmet araci", True),
+    ("kiralik", "Kiralık/filo/taksi/ticari kullanım geçmişi olabilir", 10,
+     r"kiralik|rent ?a ?car|\bfilo\b|\btaksi\b|ticari plaka|ticari kayit|ticariye|ticari olarak kullan|\bhizmet araci", True),
     ("mekatronik", "Mekatronik/şanzıman beyni değişimi yapılmış", 3, r"mekatronik|sanziman beyni", False),
     ("kaza", "Açıklamada aracın kaza geçirdiği yazıyor", 10,
      r"kazaya karis\w*|kaza gecir\w*|kaza yapmis|kaza yapti|kazasi (var|mevcut|olmustur)|kazasi fotograf\w*|"
@@ -89,7 +89,7 @@ RISKLER = [
 RISKLER = [(k, a, c, re.compile(d), kl) for k, a, c, d, kl in RISKLER]
 
 # Formdaki bilgiyle çelişen ifadeler (form "boyasız / otomatik" derken açıklama başka şey söylüyorsa)
-PARCA = r"(kapi|kapisi|kapilar|kapilari|camurluk|camurlugu|kaput|kaputu|tampon|tamponu|bagaj|tavan|panel|marspiyel|on uc parca|uc parca|kapagi)"
+PARCA = r"(kapi|kapisi|kapilar|kapilari|camurluk|camurlugu|kaput|kaputu|tampon|tamponu|bagaj|tavan|panel|marspiyel|on uc parca|uc parca|kapagi|gogus|gogsu|kapi saclari)"
 DEGISEN_METIN = re.compile(PARCA + r"\w*\W{1,3}(\w+\W+){0,4}?(degismis|degismistir|degisti|degistirilmis|degistirilmistir|"
                            r"degistirmis|degistirmistir|degisimi|degisim olmus|degisen)\b")
 BOYA_METIN = re.compile(PARCA + r"\w*\W{1,3}(\w+\W+){0,3}?(boyali|boyalidir|boyanmis|boyanmistir|boya var|boya mevcut|"

@@ -27,6 +27,8 @@ Açıklamadaki riskler (pert, ağır hasar, airbag, şasi, engelli/ÖTV, kaza, d
 
 **Kararlar:** AL / Güçlü aday (≥78), İncele (65-78), Dikkat (risk işareti), Pas (<65).
 
+**Hızlı al-sat puanı** ("yarın satsam"): net kâr 55, satış hızı 25, kondisyon 20. Net kâr = piyasa değerinin bireysel satıcı seviyesinde %3 altına (hızlı satış) satış − ilan fiyatı − noter/ekspertiz/ilan/temizlik masrafı. Alışta pazarlık yapılmadığı varsayılır; pazarlık ek kârdır.
+
 ## Kullanım
 
 Her şeyi Claude çalıştırır. Dosyayı sohbete ekleyip ne istediğini söylemen yeterli. Elle çalıştırmak istersen:
@@ -34,6 +36,7 @@ Her şeyi Claude çalıştırır. Dosyayı sohbete ekleyip ne istediğini söyle
 ```bash
 python3 firsat.py ekle arabam-ilanlar-coklu-....json      # yeni piyasa taramasını referansa ekler
 python3 firsat.py piyasa --n 150                         # tüm piyasadaki en iyi fırsatlar -> raporlar/*.html
+python3 firsat.py hizli --n 150                          # yarın satsam en kârlı olacaklar (hızlı al-sat)
 python3 firsat.py degerlendir yeni-ilanlar.json          # gönderdiğin ilanları piyasaya göre puanlar
 python3 firsat.py durum                                  # veritabanı ve model özeti
 python3 firsat.py kur                                    # her şeyi ham dosyalardan sıfırdan kurar

@@ -1,108 +1,680 @@
 {
   "_aciklama": "Claude'un ilan açıklamalarını okuyarak verdiği kararlar. karar: AL | İNCELE | DİKKAT | ELE. Rapor bu notları otomatik puanın yanında gösterir; ELE olanlar ana listeden çıkarılır.",
   "_tarih": "2026-11-07",
-  "27805791": ["AL", "2025 çıkışlı GSR2'li kasa, boyasız ve tramersiz, sahibinden. Piyasanın yaklaşık %12 altında; satıcı 'son fiyat' diyor."],
-  "44400823": ["AL", "12 bin km, fabrika garantisi devam ediyor, boyasız-tramersiz, yetkili servis bakımlı. 'Acil satılık' yazıyor, pazarlık şansı da var."],
-  "42804906": ["İNCELE", "Boyasız/değişensiz, ekspertiz raporu yeni. Tramer tutarı yazılmamış: hasar sorgusu yaptır."],
-  "44844456": ["İNCELE", "7 bin km, 'sıfır ayarında' ve piyasanın ~%18 altında. Bu kadar ucuzluğun nedenini sor: fiyatın tam nakit fiyat ve vitesin otomatik (DCT) olduğunu teyit et."],
-  "43438307": ["İNCELE", "Boyasız-tramersiz ama 152 bin km. Pikaplar değerini korur; iş aracı geçmişini ve alt takımı kontrol et."],
-  "44755533": ["İNCELE", "Yetkili bayi güvencesi, boya-değişen yok. 4 adet hasar kaydı var (biri 6.765 TL, üçü tutarsız): kayıtların detayını iste."],
-  "39214800": ["ELE", "Yurt dışından getirilip Türk plakasına çevrilmiş (Business Innovation paketi). İkinci elde satışı zor; 100 gündür satılamamış."],
-  "44758051": ["İNCELE", "Piyasanın ~%17 altında ama ilanda boya-değişen bilgisi girilmemiş. Galeri ilanı: ekspertiz ve tramer sorgusu olmadan alma."],
-  "44804775": ["AL", "Sıfırdan alınmış, 13 bin km, boyasız, sahibinden. Tramer yazılmamış: sorgulat."],
-  "44607003": ["ELE", "Başlıkta 'Manuel' yazıyor: araç manuel vitesli olabilir, manuel T-Cross'un piyasa değeri DSG'den belirgin düşüktür."],
-  "31472704": ["ELE", "Torpido ve direksiyon airbagleri değişmiş: ciddi kaza geçmişi."],
-  "41982940": ["AL", "Hatasız, ikinci araç olduğu için satılıyor. 56 gündür yayında: pazarlık payı var."],
-  "45133321": ["DİKKAT", "Açıklamadaki ekspertizde 3 boyalı parça yazıyor (sol ön/arka kapı, sol arka çamurluk), ilan formunda boyasız görünüyor."],
-  "45115814": ["DİKKAT", "244 bin TL yeni tarihli tramer (far-tampon-plastik) ve 124 bin km."],
-  "42937958": ["İNCELE", "Sahibinden, boyasız-tramersiz. 81 gündür yayında: pazarlık payı yüksek."],
-  "45107132": ["İNCELE", "Hatasız-boyasız pikap, galeri ilanı. İş aracı kullanımını ve alt takımı kontrol et."],
-  "39950385": ["AL", "Hatasız, tramersiz, 2028'e kadar garantili. Yalnızca kaputta vernik atması var. 'Acil satılık'."],
-  "44782804": ["ELE", "Açıklamada 'manuel vites' yazıyor."],
-  "42283302": ["DİKKAT", "Boyasız ama 250 bin TL hasar kaydı var (900 km'deyken otoban kazası). Satarken alıcı bu kaydı sorun eder."],
-  "45286925": ["İNCELE", "2 boyalı parça, tramersiz, galeri. Boyalı parçaların yerini ekspertizde gör."],
-  "44737489": ["DİKKAT", "Satıcı ön cam ve far değişimi, 2 tramer kaydı ve sol far tarafında ~60 bin TL masraf olduğunu yazıyor."],
-  "45104224": ["AL", "Yalnızca kaput boyalı; şase/podye işlemsiz, tramersiz."],
-  "45040007": ["ELE", "Ön airbagler değişmiş (sağ ön tekerden hasar)."],
-  "45333718": ["İNCELE", "4x4, ilk elden, boyasız pikap. Arazi kullanılmadığını söylüyor; alt takımı kontrol et."],
-  "44976590": ["ELE", "Sürücü ve göğüs airbagi değişmiş."],
-  "45191198": ["İNCELE", "Sadece sol arka çamurluk boyalı, tramersiz. 90 bin km biraz yüksek."],
-  "45274297": ["ELE", "Tramer kaydı 547.694 TL ve 'SEL-SU' (sel hasarı)."],
-  "44742199": ["ELE", "Açıklamada 'Manuel' yazıyor: manuel vitesli."],
-  "44600655": ["ELE", "Satıcı 'ağır hasar çıkmaktadır' yazıyor, 500 bin TL tramer."],
-  "44841839": ["AL", "Yetkili bayi ilanı, boyasız, hasar kaydı yok."],
-  "43209123": ["DİKKAT", "Açıklamada ön 3 parçanın değiştiği ve 317 bin TL kasko kaydı yazıyor; ilan formunda boyasız görünüyor."],
-  "44637235": ["İNCELE", "Elektrikli: garantisi devam ediyor ama ikinci elde talep dar. Batarya sağlık raporu iste."],
-  "44713548": ["ELE", "Başlıkta 'Manuel' yazıyor: manuel vitesli."],
-  "41573674": ["AL", "İlk sahibinden, yetkili servis bakımlı. Yalnızca arka tampon plastiği değişmiş, ~43 bin TL hasar kaydı."],
-  "43125701": ["ELE", "Kaza fotoğrafı eklenmiş, airbagler değişmiş, 262 bin + 17 bin TL tramer."],
-  "44625460": ["ELE", "Açıklamada 'MANUEL' yazıyor."],
-  "43117882": ["İNCELE", "Hatasız, sahibinden. Açıklamada paket 'Vision' diye geçiyor (formda Dream): paketi teyit et, Vision ise fırsat daha küçük."],
-  "42879349": ["AL", "Hatasız, bakımlı, sahibinden; 4 lastik ve akü yeni."],
-  "45050043": ["İNCELE", "Sadece ön tampon boyalı, PPF kaplı, garantili, %20 KDV faturalı. Markanın ikinci el talebi orta."],
-  "44732158": ["İNCELE", "Hatasız-boyasız-tramersiz ama 154 bin km: satarken km itirazı olur."],
-  "44888508": ["İNCELE", "Yükseltme kiti, off-road lastik vb. ağır modifiyeli: alıcı kitlesi daralır, arazi kullanımını kontrol et."],
-  "44954421": ["İNCELE", "Hatasız, garantili, yetkili servis bakımlı ama 133 bin km."],
-  "45117034": ["AL", "İlk sahibinden, kaza-boya yok, cam tavanlı, yetkili servis bakımlı."],
-  "45153788": ["DİKKAT", "Açıklamada sağ ön ve arka kapının değiştiği, 2 lokal boya ve 65 bin TL tramer yazıyor; formda boyasız."],
-  "45275159": ["İNCELE", "Sadece kaput boyalı, değişen ve tramer yok."],
-  "42479430": ["İNCELE", "12 bin km, boya-değişen yok; ama 10 bin bakımı yapılmamış, sis farı eksik, ufak göçükler var. Başlıkta 'Design Pack', formda 'Sky Pack': paketi teyit et."],
-  "44354790": ["AL", "Hatasız-boyasız-tramersiz, yetkili servis bakımlı, faturalı."],
-  "43263947": ["ELE", "Perde ve koltuk airbagi onarılmış."],
-  "44754874": ["İNCELE", "1 lokal boya, servis bakımlı. Tramer bilgisi yok: sorgulat."],
-  "44020745": ["AL", "İlk sahibinden, 16.700 km, garantisi devam ediyor, boyasız."],
-  "44443147": ["AL", "Boya-değişen-tramer yok, 4x4, sahibinden."],
-  "38336783": ["DİKKAT", "Motor 17 bin km'de yetkili serviste sıfır sandık motorla değiştirilmiş (ruhsata işli). Satarken soru işareti yaratır."],
-  "44334486": ["İNCELE", "Boyasız, dolu paket ama 132 bin km. 7 koltuklu SUV talebi iyi."],
-  "44155761": ["İNCELE", "Galeri, 1 boyalı. 113 bin km yüksek."],
-  "45357374": ["AL", "İlk sahibinden, boyasız-tramersiz, yetkili servis bakımlı."],
-  "41444181": ["AL", "Sahibinden, boyasız-tramersiz."],
-  "44575046": ["İNCELE", "Satıcı paketin aslında Xcellence (üst paket) olduğunu yazıyor; 135 bin km, kapı altında küçük yırtık."],
-  "44617621": ["ELE", "Sol yandan kazaya karışmış; boya-değişen formu boş."],
-  "39086594": ["AL", "Boya-değişen-tramer yok, bakımları yeni."],
-  "45148826": ["İNCELE", "Tek cümlelik açıklama ve 140 bin km: ekspertiz şart."],
-  "44866926": ["AL", "İlk sahibinden, yetkili servis bakımlı; 2 küçük lokal boya."],
-  "45333256": ["AL", "Yetkili bayi ilanı, boya-değişen-tramer yok, cam tavanlı."],
-  "44698511": ["İNCELE", "Sağ ön çamurluk ve far yetkili serviste değişmiş (faturalı); garantisi devam ediyor."],
-  "44972207": ["ELE", "Piyasada neredeyse emsali yok (2 ilan), adil fiyat güvenilir değil; kapı sök-tak ve göçük düzeltme var."],
-  "41731049": ["İNCELE", "Hatasız, ekstralı. KGM markasının ikinci el talebi orta."],
-  "42633218": ["İNCELE", "Tamamı orijinal, tramersiz. Başlıkta 'Touch Plus' yazıyor (formda Icon): paket Touch ise fırsat daha küçük."],
-  "45310588": ["DİKKAT", "286 bin TL tramer ve 1 boyalı parça."],
-  "45104192": ["İNCELE", "8 bin km, hasar kaydı yok ama formda 1 değişen parça var: hangi parça olduğunu sor."],
-  "42017551": ["ELE", "Sürücü airbagi değişmiş; tavanda dal çizik ve göçükleri."],
-  "45318107": ["İNCELE", "Tamamı orijinal, tramersiz; 81 bin km."],
-  "45144116": ["İNCELE", "Tek elden, garaj aracı diyor; açıklama çok kısa, ekspertiz şart."],
-  "41657696": ["ELE", "Satıcı 'araç ağır hasarlıdır' yazıyor."],
-  "39445254": ["İNCELE", "Hatasız-boyasız-tramersiz ama 100 bin km."],
-  "44393351": ["AL", "9.500 km, hatasız-boyasız-tramersiz."],
-  "42569998": ["İNCELE", "Boya-değişen-tramer yok; kaputta kuş pisliği yanığı var."],
-  "43953781": ["İNCELE", "Sadece kaput boyalı. Tramer bilgisi yok."],
-  "45286601": ["AL", "Hatasız-boyasız-değişensiz, hasar kaydı yok."],
-  "45146150": ["İNCELE", "'Ev aldığım için çok acil' diyor: pazarlık şansı. Tramer yazılmamış."],
-  "43348699": ["ELE", "Sol arka şasede düzeltme ve 251.500 TL hasar ödemesi var."],
-  "44691022": ["DİKKAT", "Açıklamada sağ çamurluğun değiştiği yazıyor; formda boyasız görünüyor."],
-  "40065322": ["İNCELE", "Değişensiz, tramer önemsiz (1.085 TL), 1 boyalı."],
-  "44858213": ["AL", "Hatasız-boyasız-hasar kayıtsız, 18 bin km, yeni kasa."],
-  "42639242": ["AL", "9 ay önce bayiden alınmış, 16 bin km."],
-  "45263738": ["İNCELE", "Elektrikli; hatasız ve servis bakımlı. İkinci el talebi dar."],
-  "43961181": ["İNCELE", "Hatasız-boyasız; galeri geri alım garantisi veriyor."],
-  "44078516": ["İNCELE", "2024 model ama 91 bin km (uzun yol). Sahibinden, boyasız."],
-  "44591121": ["AL", "Boya-değişen-tramer yok; yanlarda çizikler var."],
-  "36317843": ["İNCELE", "Sahibinden, az km. Tramer bilgisi yok."],
-  "43098919": ["İNCELE", "Kaza-boya-tramer yok; tavanda dolu göçükleri var."],
-  "44626294": ["İNCELE", "Tavan, bagaj ve kaputta hafif dolu izleri; 1 boyalı, 1 lokal, 10 bin TL tramer."],
-  "45175349": ["İNCELE", "Değişen/boya yok ama genel boyada kimyasal deformasyon var."],
-  "45332553": ["İNCELE", "İlk elden, garantili, 'acil'. Tramer bilgisi yok."],
-  "44888349": ["DİKKAT", "Kaput değişen, 2 parça boyalı ve 300 bin TL yeni tarihli hasar kaydı."],
-  "45039600": ["DİKKAT", "Fabrikasyon LPG'li ve 153 bin TL tramer: satarken alıcı kitlesi daralır."],
-  "44225830": ["DİKKAT", "284 bin TL tramer kaydı (kaza görüntüsü var)."],
-  "43575600": ["İNCELE", "Lokal boyalar, 37 bin TL tramer, ön cam çatlak; 149 bin km."],
-  "35827743": ["İNCELE", "Kaza-boya yok; tavanda hafif kronik boya atması var (fiyata yansıtılmış)."],
-  "44984162": ["DİKKAT", "Satıcı yurt dışında olduğunu ve yalnızca WhatsApp'tan ulaşılmasını istiyor: kapora dolandırıcılığı kalıbı. Aracı görmeden para gönderme."],
-  "43156068": ["İNCELE", "Senetli satış öne çıkarılmış: ilan fiyatının nakit fiyat olduğunu teyit et."],
-  "45286981": ["İNCELE", "Body kitli, 145 bin km, 3-4 boyalı parça."],
-  "44548714": ["İNCELE", "22 bin km, hatasız. Jeep'in ikinci el talebi orta."],
-  "45187099": ["AL", "Sahibinden, bakımlı; Tiguan'ın ikinci el talebi yüksek."],
-  "44734656": ["AL", "İlk elden, hatasız-boyasız-tramersiz."],
-  "44835354": ["İNCELE", "Açıklama kısa; tramer 'yok' olarak girilmiş."]
+  "27805791": [
+    "AL",
+    "2025 çıkışlı GSR2'li kasa, boyasız ve tramersiz, sahibinden. Piyasanın yaklaşık %12 altında; satıcı 'son fiyat' diyor."
+  ],
+  "44400823": [
+    "AL",
+    "12 bin km, fabrika garantisi devam ediyor, boyasız-tramersiz, yetkili servis bakımlı. 'Acil satılık' yazıyor, pazarlık şansı da var."
+  ],
+  "42804906": [
+    "İNCELE",
+    "Boyasız/değişensiz, ekspertiz raporu yeni. Tramer tutarı yazılmamış: hasar sorgusu yaptır."
+  ],
+  "44844456": [
+    "İNCELE",
+    "7 bin km, 'sıfır ayarında' ve piyasanın ~%18 altında. Bu kadar ucuzluğun nedenini sor: fiyatın tam nakit fiyat ve vitesin otomatik (DCT) olduğunu teyit et."
+  ],
+  "43438307": [
+    "İNCELE",
+    "Boyasız-tramersiz ama 152 bin km. Pikaplar değerini korur; iş aracı geçmişini ve alt takımı kontrol et."
+  ],
+  "44755533": [
+    "İNCELE",
+    "Yetkili bayi güvencesi, boya-değişen yok. 4 adet hasar kaydı var (biri 6.765 TL, üçü tutarsız): kayıtların detayını iste."
+  ],
+  "39214800": [
+    "ELE",
+    "Yurt dışından getirilip Türk plakasına çevrilmiş (Business Innovation paketi). İkinci elde satışı zor; 100 gündür satılamamış."
+  ],
+  "44758051": [
+    "İNCELE",
+    "Piyasanın ~%17 altında ama ilanda boya-değişen bilgisi girilmemiş. Galeri ilanı: ekspertiz ve tramer sorgusu olmadan alma."
+  ],
+  "44804775": [
+    "AL",
+    "Sıfırdan alınmış, 13 bin km, boyasız, sahibinden. Tramer yazılmamış: sorgulat."
+  ],
+  "44607003": [
+    "ELE",
+    "Başlıkta 'Manuel' yazıyor: araç manuel vitesli olabilir, manuel T-Cross'un piyasa değeri DSG'den belirgin düşüktür."
+  ],
+  "31472704": [
+    "ELE",
+    "Torpido ve direksiyon airbagleri değişmiş: ciddi kaza geçmişi."
+  ],
+  "41982940": [
+    "AL",
+    "Hatasız, ikinci araç olduğu için satılıyor. 56 gündür yayında: pazarlık payı var."
+  ],
+  "45133321": [
+    "DİKKAT",
+    "Açıklamadaki ekspertizde 3 boyalı parça yazıyor (sol ön/arka kapı, sol arka çamurluk), ilan formunda boyasız görünüyor."
+  ],
+  "45115814": [
+    "DİKKAT",
+    "244 bin TL yeni tarihli tramer (far-tampon-plastik) ve 124 bin km."
+  ],
+  "42937958": [
+    "İNCELE",
+    "Sahibinden, boyasız-tramersiz. 81 gündür yayında: pazarlık payı yüksek."
+  ],
+  "45107132": [
+    "İNCELE",
+    "Hatasız-boyasız pikap, galeri ilanı. İş aracı kullanımını ve alt takımı kontrol et."
+  ],
+  "39950385": [
+    "AL",
+    "Hatasız, tramersiz, 2028'e kadar garantili. Yalnızca kaputta vernik atması var. 'Acil satılık'."
+  ],
+  "44782804": [
+    "ELE",
+    "Açıklamada 'manuel vites' yazıyor."
+  ],
+  "42283302": [
+    "DİKKAT",
+    "Boyasız ama 250 bin TL hasar kaydı var (900 km'deyken otoban kazası). Satarken alıcı bu kaydı sorun eder."
+  ],
+  "45286925": [
+    "İNCELE",
+    "2 boyalı parça, tramersiz, galeri. Boyalı parçaların yerini ekspertizde gör."
+  ],
+  "44737489": [
+    "DİKKAT",
+    "Satıcı ön cam ve far değişimi, 2 tramer kaydı ve sol far tarafında ~60 bin TL masraf olduğunu yazıyor."
+  ],
+  "45104224": [
+    "AL",
+    "Yalnızca kaput boyalı; şase/podye işlemsiz, tramersiz."
+  ],
+  "45040007": [
+    "ELE",
+    "Ön airbagler değişmiş (sağ ön tekerden hasar)."
+  ],
+  "45333718": [
+    "İNCELE",
+    "4x4, ilk elden, boyasız pikap. Arazi kullanılmadığını söylüyor; alt takımı kontrol et."
+  ],
+  "44976590": [
+    "ELE",
+    "Sürücü ve göğüs airbagi değişmiş."
+  ],
+  "45191198": [
+    "İNCELE",
+    "Sadece sol arka çamurluk boyalı, tramersiz. 90 bin km biraz yüksek."
+  ],
+  "45274297": [
+    "ELE",
+    "Tramer kaydı 547.694 TL ve 'SEL-SU' (sel hasarı)."
+  ],
+  "44742199": [
+    "ELE",
+    "Açıklamada 'Manuel' yazıyor: manuel vitesli."
+  ],
+  "44600655": [
+    "ELE",
+    "Satıcı 'ağır hasar çıkmaktadır' yazıyor, 500 bin TL tramer."
+  ],
+  "44841839": [
+    "AL",
+    "Yetkili bayi ilanı, boyasız, hasar kaydı yok."
+  ],
+  "43209123": [
+    "DİKKAT",
+    "Açıklamada ön 3 parçanın değiştiği ve 317 bin TL kasko kaydı yazıyor; ilan formunda boyasız görünüyor."
+  ],
+  "44637235": [
+    "İNCELE",
+    "Elektrikli: garantisi devam ediyor ama ikinci elde talep dar. Batarya sağlık raporu iste."
+  ],
+  "44713548": [
+    "ELE",
+    "Başlıkta 'Manuel' yazıyor: manuel vitesli."
+  ],
+  "41573674": [
+    "AL",
+    "İlk sahibinden, yetkili servis bakımlı. Yalnızca arka tampon plastiği değişmiş, ~43 bin TL hasar kaydı."
+  ],
+  "43125701": [
+    "ELE",
+    "Kaza fotoğrafı eklenmiş, airbagler değişmiş, 262 bin + 17 bin TL tramer."
+  ],
+  "44625460": [
+    "ELE",
+    "Açıklamada 'MANUEL' yazıyor."
+  ],
+  "43117882": [
+    "İNCELE",
+    "Hatasız, sahibinden. Açıklamada paket 'Vision' diye geçiyor (formda Dream): paketi teyit et, Vision ise fırsat daha küçük."
+  ],
+  "42879349": [
+    "AL",
+    "Hatasız, bakımlı, sahibinden; 4 lastik ve akü yeni."
+  ],
+  "45050043": [
+    "İNCELE",
+    "Sadece ön tampon boyalı, PPF kaplı, garantili, %20 KDV faturalı. Markanın ikinci el talebi orta."
+  ],
+  "44732158": [
+    "İNCELE",
+    "Hatasız-boyasız-tramersiz ama 154 bin km: satarken km itirazı olur."
+  ],
+  "44888508": [
+    "İNCELE",
+    "Yükseltme kiti, off-road lastik vb. ağır modifiyeli: alıcı kitlesi daralır, arazi kullanımını kontrol et."
+  ],
+  "44954421": [
+    "İNCELE",
+    "Hatasız, garantili, yetkili servis bakımlı ama 133 bin km."
+  ],
+  "45117034": [
+    "AL",
+    "İlk sahibinden, kaza-boya yok, cam tavanlı, yetkili servis bakımlı."
+  ],
+  "45153788": [
+    "DİKKAT",
+    "Açıklamada sağ ön ve arka kapının değiştiği, 2 lokal boya ve 65 bin TL tramer yazıyor; formda boyasız."
+  ],
+  "45275159": [
+    "İNCELE",
+    "Sadece kaput boyalı, değişen ve tramer yok."
+  ],
+  "42479430": [
+    "İNCELE",
+    "12 bin km, boya-değişen yok; ama 10 bin bakımı yapılmamış, sis farı eksik, ufak göçükler var. Başlıkta 'Design Pack', formda 'Sky Pack': paketi teyit et."
+  ],
+  "44354790": [
+    "AL",
+    "Hatasız-boyasız-tramersiz, yetkili servis bakımlı, faturalı."
+  ],
+  "43263947": [
+    "ELE",
+    "Perde ve koltuk airbagi onarılmış."
+  ],
+  "44754874": [
+    "İNCELE",
+    "1 lokal boya, servis bakımlı. Tramer bilgisi yok: sorgulat."
+  ],
+  "44020745": [
+    "AL",
+    "İlk sahibinden, 16.700 km, garantisi devam ediyor, boyasız."
+  ],
+  "44443147": [
+    "AL",
+    "Boya-değişen-tramer yok, 4x4, sahibinden."
+  ],
+  "38336783": [
+    "DİKKAT",
+    "Motor 17 bin km'de yetkili serviste sıfır sandık motorla değiştirilmiş (ruhsata işli). Satarken soru işareti yaratır."
+  ],
+  "44334486": [
+    "İNCELE",
+    "Boyasız, dolu paket ama 132 bin km. 7 koltuklu SUV talebi iyi."
+  ],
+  "44155761": [
+    "İNCELE",
+    "Galeri, 1 boyalı. 113 bin km yüksek."
+  ],
+  "45357374": [
+    "AL",
+    "İlk sahibinden, boyasız-tramersiz, yetkili servis bakımlı."
+  ],
+  "41444181": [
+    "AL",
+    "Sahibinden, boyasız-tramersiz."
+  ],
+  "44575046": [
+    "İNCELE",
+    "Satıcı paketin aslında Xcellence (üst paket) olduğunu yazıyor; 135 bin km, kapı altında küçük yırtık."
+  ],
+  "44617621": [
+    "ELE",
+    "Sol yandan kazaya karışmış; boya-değişen formu boş."
+  ],
+  "39086594": [
+    "AL",
+    "Boya-değişen-tramer yok, bakımları yeni."
+  ],
+  "45148826": [
+    "İNCELE",
+    "Tek cümlelik açıklama ve 140 bin km: ekspertiz şart."
+  ],
+  "44866926": [
+    "AL",
+    "İlk sahibinden, yetkili servis bakımlı; 2 küçük lokal boya."
+  ],
+  "45333256": [
+    "AL",
+    "Yetkili bayi ilanı, boya-değişen-tramer yok, cam tavanlı."
+  ],
+  "44698511": [
+    "İNCELE",
+    "Sağ ön çamurluk ve far yetkili serviste değişmiş (faturalı); garantisi devam ediyor."
+  ],
+  "44972207": [
+    "ELE",
+    "Piyasada neredeyse emsali yok (2 ilan), adil fiyat güvenilir değil; kapı sök-tak ve göçük düzeltme var."
+  ],
+  "41731049": [
+    "İNCELE",
+    "Hatasız, ekstralı. KGM markasının ikinci el talebi orta."
+  ],
+  "42633218": [
+    "İNCELE",
+    "Tamamı orijinal, tramersiz. Başlıkta 'Touch Plus' yazıyor (formda Icon): paket Touch ise fırsat daha küçük."
+  ],
+  "45310588": [
+    "DİKKAT",
+    "286 bin TL tramer ve 1 boyalı parça."
+  ],
+  "45104192": [
+    "İNCELE",
+    "8 bin km, hasar kaydı yok ama formda 1 değişen parça var: hangi parça olduğunu sor."
+  ],
+  "42017551": [
+    "ELE",
+    "Sürücü airbagi değişmiş; tavanda dal çizik ve göçükleri."
+  ],
+  "45318107": [
+    "İNCELE",
+    "Tamamı orijinal, tramersiz; 81 bin km."
+  ],
+  "45144116": [
+    "İNCELE",
+    "Tek elden, garaj aracı diyor; açıklama çok kısa, ekspertiz şart."
+  ],
+  "41657696": [
+    "ELE",
+    "Satıcı 'araç ağır hasarlıdır' yazıyor."
+  ],
+  "39445254": [
+    "İNCELE",
+    "Hatasız-boyasız-tramersiz ama 100 bin km."
+  ],
+  "44393351": [
+    "AL",
+    "9.500 km, hatasız-boyasız-tramersiz."
+  ],
+  "42569998": [
+    "İNCELE",
+    "Boya-değişen-tramer yok; kaputta kuş pisliği yanığı var."
+  ],
+  "43953781": [
+    "İNCELE",
+    "Sadece kaput boyalı. Tramer bilgisi yok."
+  ],
+  "45286601": [
+    "AL",
+    "Hatasız-boyasız-değişensiz, hasar kaydı yok."
+  ],
+  "45146150": [
+    "İNCELE",
+    "'Ev aldığım için çok acil' diyor: pazarlık şansı. Tramer yazılmamış."
+  ],
+  "43348699": [
+    "ELE",
+    "Sol arka şasede düzeltme ve 251.500 TL hasar ödemesi var."
+  ],
+  "44691022": [
+    "DİKKAT",
+    "Açıklamada sağ çamurluğun değiştiği yazıyor; formda boyasız görünüyor."
+  ],
+  "40065322": [
+    "İNCELE",
+    "Değişensiz, tramer önemsiz (1.085 TL), 1 boyalı."
+  ],
+  "44858213": [
+    "AL",
+    "Hatasız-boyasız-hasar kayıtsız, 18 bin km, yeni kasa."
+  ],
+  "42639242": [
+    "AL",
+    "9 ay önce bayiden alınmış, 16 bin km."
+  ],
+  "45263738": [
+    "İNCELE",
+    "Elektrikli; hatasız ve servis bakımlı. İkinci el talebi dar."
+  ],
+  "43961181": [
+    "İNCELE",
+    "Hatasız-boyasız; galeri geri alım garantisi veriyor."
+  ],
+  "44078516": [
+    "İNCELE",
+    "2024 model ama 91 bin km (uzun yol). Sahibinden, boyasız."
+  ],
+  "44591121": [
+    "AL",
+    "Boya-değişen-tramer yok; yanlarda çizikler var."
+  ],
+  "36317843": [
+    "İNCELE",
+    "Sahibinden, az km. Tramer bilgisi yok."
+  ],
+  "43098919": [
+    "İNCELE",
+    "Kaza-boya-tramer yok; tavanda dolu göçükleri var."
+  ],
+  "44626294": [
+    "İNCELE",
+    "Tavan, bagaj ve kaputta hafif dolu izleri; 1 boyalı, 1 lokal, 10 bin TL tramer."
+  ],
+  "45175349": [
+    "İNCELE",
+    "Değişen/boya yok ama genel boyada kimyasal deformasyon var."
+  ],
+  "45332553": [
+    "İNCELE",
+    "İlk elden, garantili, 'acil'. Tramer bilgisi yok."
+  ],
+  "44888349": [
+    "DİKKAT",
+    "Kaput değişen, 2 parça boyalı ve 300 bin TL yeni tarihli hasar kaydı."
+  ],
+  "45039600": [
+    "DİKKAT",
+    "Fabrikasyon LPG'li ve 153 bin TL tramer: satarken alıcı kitlesi daralır."
+  ],
+  "44225830": [
+    "DİKKAT",
+    "284 bin TL tramer kaydı (kaza görüntüsü var)."
+  ],
+  "43575600": [
+    "İNCELE",
+    "Lokal boyalar, 37 bin TL tramer, ön cam çatlak; 149 bin km."
+  ],
+  "35827743": [
+    "İNCELE",
+    "Kaza-boya yok; tavanda hafif kronik boya atması var (fiyata yansıtılmış)."
+  ],
+  "44984162": [
+    "DİKKAT",
+    "Satıcı yurt dışında olduğunu ve yalnızca WhatsApp'tan ulaşılmasını istiyor: kapora dolandırıcılığı kalıbı. Aracı görmeden para gönderme."
+  ],
+  "43156068": [
+    "İNCELE",
+    "Senetli satış öne çıkarılmış: ilan fiyatının nakit fiyat olduğunu teyit et."
+  ],
+  "45286981": [
+    "İNCELE",
+    "Body kitli, 145 bin km, 3-4 boyalı parça."
+  ],
+  "44548714": [
+    "İNCELE",
+    "22 bin km, hatasız. Jeep'in ikinci el talebi orta."
+  ],
+  "45187099": [
+    "AL",
+    "Sahibinden, bakımlı; Tiguan'ın ikinci el talebi yüksek."
+  ],
+  "44734656": [
+    "AL",
+    "İlk elden, hatasız-boyasız-tramersiz."
+  ],
+  "44835354": [
+    "İNCELE",
+    "Açıklama kısa; tramer 'yok' olarak girilmiş."
+  ],
+  "44204452": [
+    "İNCELE",
+    "İkinci sahibinden, 7.474 TL küçük tramer; 119 bin km, satarken km'ye takılan olur."
+  ],
+  "43608121": [
+    "AL",
+    "Boya ve değişen yok, 1.700 TL'lik önemsiz tramer, 4x4 Platinum. Pikaplar hızlı satılır."
+  ],
+  "45040587": [
+    "İNCELE",
+    "İlan açıklaması boş, 157 bin km ve 2 boyalı. Ekspertiz ve tramer sorgusu şart."
+  ],
+  "45136905": [
+    "İNCELE",
+    "İlk sahibinden, faturalı, 37 bin km; 2 boyalı parça ve yedek anahtar yok."
+  ],
+  "42525378": [
+    "İNCELE",
+    "Kaput, sol ön kapı ve çamurluk boyalı; değişen ve tramer yok."
+  ],
+  "45275037": [
+    "DİKKAT",
+    "Sağ ön kapı değişen, kaza fotoğrafı var ve ~500 bin TL yeni tarihli sigorta kaydı."
+  ],
+  "43145232": [
+    "İNCELE",
+    "Sağ ön çamurluk değişen, sol çamurluk ve kaput boyalı, ön cam çatlak; hasar kaydı yok."
+  ],
+  "44998505": [
+    "İNCELE",
+    "Hatasız-boyasız, en dolu paket; ama 145 bin km."
+  ],
+  "44841792": [
+    "DİKKAT",
+    "Sağ iki kapı değişen, üç çamurluk ve bagaj boyalı, hasar kaydı yazılmamış: ciddi yan darbe geçirmiş."
+  ],
+  "45274228": [
+    "İNCELE",
+    "Ford bayisinin 2. el ilanı, boyasız; tramer yazılmamış."
+  ],
+  "44760297": [
+    "ELE",
+    "Engelli tertibatlı alınmış, 5 yıl dolmamış: devir için ÖTV ödenmesi gerekiyor, gerçek maliyet ilandan yüksek."
+  ],
+  "45214474": [
+    "DİKKAT",
+    "1 değişen, 2 boyalı ve 161 bin TL tramer. Ucuzluğun sebebi bu; satarken de aynı itirazla karşılaşırsın."
+  ],
+  "45004999": [
+    "İNCELE",
+    "4x4, dolu paket; formda 1 değişen, tramer yazılmamış."
+  ],
+  "45284701": [
+    "İNCELE",
+    "Açıklama kısa; formda 1 değişen ve 2 lokal boya var."
+  ],
+  "44001544": [
+    "DİKKAT",
+    "5 parça boyalı ve 128 bin km: hızlı satması zor."
+  ],
+  "44867176": [
+    "İNCELE",
+    "Konsinye müşteri aracı, ilk sahibinden, yetkili servis bakımlı; formda 1 değişen. Senet seçeneği öne çıkarılmış: nakit fiyatı teyit et."
+  ],
+  "44565240": [
+    "DİKKAT",
+    "1 boyalı, 3 lokal ve 240 bin TL tramer."
+  ],
+  "44358487": [
+    "ELE",
+    "Bel altı boyalı, sağ ön çamurluk değişen, 6 boyalı parça ve 500 bin TL tramer."
+  ],
+  "45227686": [
+    "DİKKAT",
+    "4 boyalı, 1 lokal ve 73 bin TL tramer; şase-podye temiz diyor."
+  ],
+  "45312421": [
+    "İNCELE",
+    "Boyasız-değişensiz; galeri senetli satış reklamı yapıyor, nakit fiyatı teyit et."
+  ],
+  "42691612": [
+    "DİKKAT",
+    "Boyasız görünse de 600 bin TL karşı hasar ödemesi (tramer) var."
+  ],
+  "44682421": [
+    "İNCELE",
+    "Arka kaput ve motor kaputu lokal boyalı; 131 bin km."
+  ],
+  "44432558": [
+    "İNCELE",
+    "Formda 1 değişen 1 boyalı; satıcı daha önce sattığını ama paranın gelmediğini yazıyor. Ekspertizi eksiksiz yaptır."
+  ],
+  "45335729": [
+    "DİKKAT",
+    "214 bin TL yeni tarihli tramer (servis şişirmesi), 1 değişen ve 1 boyalı."
+  ],
+  "44936808": [
+    "DİKKAT",
+    "2 değişen, 2 boyalı ve 70 bin TL tramer."
+  ],
+  "45101777": [
+    "DİKKAT",
+    "1 değişen ve 3 boyalı parça, 109 bin km."
+  ],
+  "45311852": [
+    "AL",
+    "Hatasız-boyasız, 26 bin km, 180 HP T-GDI; Tucson hızlı satılır."
+  ],
+  "38534630": [
+    "ELE",
+    "Ön kaput boyalı ve çarpma sonucu airbag açmış (tamir edilmiş)."
+  ],
+  "44380728": [
+    "ELE",
+    "2 aydır ticari kullanımda ve sonradan LPG (tüp) takılmış; ruhsata işlenmemiş."
+  ],
+  "44968306": [
+    "ELE",
+    "Engelli raporlu araç: yalnızca engelliden engelliye satılabiliyor, fiyat bu yüzden düşük."
+  ],
+  "45278039": [
+    "DİKKAT",
+    "3 boyalı ve 215 bin TL (2 adet) tramer."
+  ],
+  "45249425": [
+    "İNCELE",
+    "Sol ön çamurluk boyalı, kaput lokal; hasar kaydı yok."
+  ],
+  "44132971": [
+    "İNCELE",
+    "2 boyalı 1 lokal, hasar kaydı yok; 'acil, fiyat düştü' diyor."
+  ],
+  "45197271": [
+    "İNCELE",
+    "Ön plastik aksamdan 36 bin TL tramer, 1 boyalı; yetkili servis bakımlı."
+  ],
+  "45151746": [
+    "İNCELE",
+    "2 boyalı, dolu paket; Jeep'in ikinci el talebi orta, 120 bin km."
+  ],
+  "43162763": [
+    "DİKKAT",
+    "Yetkili bayi ilanı ama 205.500 TL tramer, 1 değişen, 1 boyalı, 1 lokal."
+  ],
+  "44927068": [
+    "AL",
+    "Hatasız-boyasız Xcellence, 88 bin km."
+  ],
+  "42771529": [
+    "İNCELE",
+    "Formda boya bilgisi yok, satıcı ufak sürtme boyaları olduğunu yazıyor; 142 bin km, ~20 bin TL tramer."
+  ],
+  "45358520": [
+    "AL",
+    "38 bin km, sadece 3 küçük lokal boya, tramer yok."
+  ],
+  "44201385": [
+    "İNCELE",
+    "Kaput ve sağ arka çamurluk boyalı, 13 bin TL tramer; 150 bin km."
+  ],
+  "44948512": [
+    "İNCELE",
+    "Galeri araç hazırlanıyor, fotoğraflar yüklenecek diyor: görmeden karar verme."
+  ],
+  "45264455": [
+    "ELE",
+    "Sağ yolcu hava yastığı işlemli, 135 bin TL tramer."
+  ],
+  "43490743": [
+    "İNCELE",
+    "4x4 Invincible, 88 bin km; boya-değişen bilgisi girilmemiş."
+  ],
+  "44548233": [
+    "DİKKAT",
+    "Kaput ve ön göğüs değişmiş, 116 bin km."
+  ],
+  "42430784": [
+    "DİKKAT",
+    "Ön sağ/sol kapı sacları değişmiş, 2-3 parça boyalı ve 83 bin TL tramer; formda boyasız görünüyor."
+  ],
+  "45014142": [
+    "AL",
+    "Boya-değişen-hasar kaydı yok, 40 bin km, cam tavanlı."
+  ],
+  "26983529": [
+    "ELE",
+    "Darbe sonrası airbag açmış, kuşak sacı işlemli."
+  ],
+  "44740693": [
+    "AL",
+    "Hatasız, garantisi Eylül 2027'ye kadar, yetkili servis bakımlı."
+  ],
+  "45053442": [
+    "İNCELE",
+    "Park halinde çarpma: arkada 3 lokal boya ve 52 bin TL tramer."
+  ],
+  "42392946": [
+    "İNCELE",
+    "127 bin km; boyalı parça bilgisi açıklamada kısmen var, ekspertiz şart."
+  ],
+  "42352655": [
+    "AL",
+    "Hatasız-boyasız-tramersiz, 106 bin km."
+  ],
+  "42147944": [
+    "DİKKAT",
+    "400 bin TL tramer kaydı."
+  ],
+  "45310013": [
+    "İNCELE",
+    "2 küçük lokal boya, değişen ve hasar kaydı yok; 145 bin km."
+  ],
+  "42334340": [
+    "DİKKAT",
+    "Bagaj kapağı değişen, sol arka çamurluk boyalı ve 165 bin TL tramer."
+  ],
+  "44962828": [
+    "DİKKAT",
+    "1 değişen ve 191 bin TL tramer."
+  ],
+  "45144650": [
+    "DİKKAT",
+    "LPG'li, 148 bin km ve boya bilgisi yok."
+  ],
+  "43380110": [
+    "İNCELE",
+    "Yetkili bayi, sol iki kapıda ezik var; Chery'nin ikinci el talebi zayıf."
+  ],
+  "45115551": [
+    "İNCELE",
+    "Hatasız-boyasız Wildtrak ama 125 bin km."
+  ],
+  "45211151": [
+    "İNCELE",
+    "Galeri kredi ilanı, 1 boyalı; tramer yazılmamış."
+  ],
+  "45041885": [
+    "AL",
+    "2024, 19 bin km, garantili, boyasız-değişensiz."
+  ],
+  "45320370": [
+    "İNCELE",
+    "Yetkili bayi, 3 ay mekanik garanti; sağ ön çamurluk değişen, arka tampon boyalı, 9 bin TL tramer."
+  ],
+  "40230072": [
+    "İNCELE",
+    "35 bin km, 1 lokal boya; tramer yazılmamış, sorgulat."
+  ],
+  "45103836": [
+    "DİKKAT",
+    "10 bin km ama ~130 bin TL hasar kaydı ve 1 boyalı parça."
+  ],
+  "44133561": [
+    "ELE",
+    "544 bin TL tramer, 139 bin km ve markanın ikinci el talebi zayıf: hızlı satılmaz."
+  ],
+  "40382789": [
+    "AL",
+    "7 bin km, hatasız-boyasız-tramersiz; Egea Cross çok aranan model."
+  ]
 }

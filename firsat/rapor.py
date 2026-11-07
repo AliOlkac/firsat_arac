@@ -18,7 +18,7 @@ def notlari_yukle():
         return {}
 
 
-def kayit(s, notlar=None):
+def kayit(s, notlar=None, mod="piyasa"):
     notlar = notlar if notlar is not None else notlari_yukle()
     c = notlar.get(s["ilan_id"])
     duzeltme = CLAUDE_DUZELTME.get(c[0], 0.0) if c else 0.0
@@ -26,9 +26,14 @@ def kayit(s, notlar=None):
         "id": s["ilan_id"], "url": s["url"], "baslik": s["baslik"], "marka": s["marka"], "seri": s["seri"],
         "model": s["model"], "yil": s["yil"], "km": s["km"], "fiyat": s["fiyat"], "adil": round(s["adil"]),
         "firsat": round(s["firsat"], 4), "guven": round(s["guven"], 2), "puan": s["puan"],
-        "son_puan": round(max(0.0, min(100.0, s["puan"] + duzeltme)), 1), "karar": s["karar"],
-        "claude": c, "p": [round(s["p_fiyat"], 1), round(s["p_kondisyon"], 1), round(s["p_satis"], 1),
-                           round(s["p_deger"], 1), round(s["ceza"], 1), round(s["bonus"], 1), duzeltme],
+        "son_puan": round(max(0.0, min(100.0, (s["puan_hizli"] if mod == "hizli" else s["puan"]) + duzeltme)), 1),
+        "karar": s["karar_hizli"] if mod == "hizli" else s["karar"], "claude": c,
+        "p": ([round(s["p_kar"], 1), round(s["p_kondisyon"], 1), round(s["p_hiz"], 1), 0.0,
+               round(s["ceza"], 1), round(s["bonus"], 1), duzeltme] if mod == "hizli" else
+              [round(s["p_fiyat"], 1), round(s["p_kondisyon"], 1), round(s["p_satis"], 1),
+               round(s["p_deger"], 1), round(s["ceza"], 1), round(s["bonus"], 1), duzeltme]),
+        "net_yarin": round(s["net_yarin"]), "net_yarin_oran": round(s["net_yarin_oran"], 4),
+        "satis_yarin": round(s["satis_yarin"]), "pazarlik": round(s["pazarlik"]), "masraf": round(s["masraf"]),
         "kimden": s["kimden"], "sehir": s["sehir"], "renk": s.get("renk"), "yakit": s.get("yakit"),
         "vites": s.get("vites"), "sanziman": s.get("sanziman"), "kasa": s.get("kasa"), "kategori": s.get("kategori"),
         "hp": s.get("hp"), "garanti": s.get("garanti"),
@@ -43,15 +48,15 @@ def kayit(s, notlar=None):
     }
 
 
-def yaz(sonuclar, yol, baslik, alt_baslik, piyasa, mod="piyasa"):
+def yaz(sonuclar, yol, baslik, alt_baslik, piyasa, mod="piyasa", ek_meta=None):
     notlar = notlari_yukle()
-    kayitlar = [kayit(s, notlar) for s in sonuclar]
+    kayitlar = [kayit(s, notlar, mod) for s in sonuclar]
     m = piyasa.model
     okunan = sum(1 for k in kayitlar if k["claude"])
     meta = {
         "baslik": baslik, "alt_baslik": alt_baslik, "mod": mod, "tarih": piyasa.bugun[:10],
         "taranan": len(piyasa.satirlar), "sigma": round(m.sigma * 100, 1), "okunan": okunan,
-        "uretim": date.today().isoformat(),
+        "uretim": date.today().isoformat(), **(ek_meta or {}),
     }
     veri = json.dumps(kayitlar, ensure_ascii=False, separators=(",", ":"))
     html = SABLON.replace("/*META*/null", json.dumps(meta, ensure_ascii=False)).replace("/*VERI*/[]", veri)
@@ -216,7 +221,19 @@ footer { color: var(--soluk); font-size: 13px; padding-block: 18px 36px; max-wid
     <div class="istat" id="istat"></div>
   </header>
 
-  <details class="yontem">
+  <details class="yontem" id="yontem-hizli" hidden>
+    <summary>Hızlı al-sat puanı nasıl hesaplanıyor?</summary>
+    <div class="yontem-ic">
+      <section><h3>Yarın satsan hesabı</h3><p>Alış: ilan fiyatı (pazarlıksız, temkinli). Satış: aracın piyasa değeri, bireysel satıcı fiyat seviyesinde, hızlı satmak için %3 altına fiyatlanmış. Noter, ekspertiz, ilan ve temizlik masrafı (~15 bin TL + %0,2) düşülür. Kalan tutar net kârdır. Pazarlıkla alırsan kâr artar.</p></section>
+      <section><h3>Kâr potansiyeli · 55</h3><p>Masraflar düştükten sonraki net kâr oranı; tahmin güveni düşükse (emsali az model, fiyat penceresi dışı) kısılır. %9 ve üstü net kâr tam puan alır. Piyasanın %20'den fazla altındaki ilanlar dolandırıcılık ya da gizli hasar şüphesiyle kırpılır.</p></section>
+      <section><h3>Satış hızı · 25</h3><p>Marka ve serinin ikinci el talebi, piyasadaki ilan derinliği, renk, km, yakıt tipi ve fiyat bandı (ucuz bantta alıcı çok). Yarın satmak istiyorsan araç aranan bir araç olmalı.</p></section>
+      <section><h3>Kondisyon · 20</h3><p>Boyasız, değişensiz, tramersiz araç hem kolay hem pazarlıksız satılır. Değişen, boya, tavan/kaput işlemi ve tramer puan düşürür.</p></section>
+      <section><h3>Kararlar</h3><ul><li><b>AL / Güçlü aday</b>: puan ≥ 78, belirgin risk yok</li><li><b>İncele</b>: 65-78 ya da sorulacak bilgi var</li><li><b>Dikkat</b>: hasar/airbag/tramer/dolandırıcılık işareti</li><li><b>Claude notu</b>: açıklama tek tek okundu; AL +3, Dikkat −15, Ele: listeden çıkarıldı</li></ul></section>
+      <section><h3>Sınırlar</h3><p>Fiyatlar ilan fiyatıdır; ilan fiyatından alıp ilan fiyatından satmak garanti değildir. Kâr, aracın gerçekten tahmin edilen değerde satılmasına bağlıdır. Ekspertiz ve tramer sorgusu olmadan alma. Yatırım tavsiyesi değildir.</p></section>
+    </div>
+  </details>
+
+  <details class="yontem" id="yontem-normal">
     <summary>Puan nasıl hesaplanıyor?</summary>
     <div class="yontem-ic">
       <section><h3>Fiyat avantajı · 45</h3><p>İlan fiyatı, aynı marka-seri-motor-paket, yıl, km, boya/değişen, tramer, renk ve satıcı tipindeki araçların piyasa değeriyle karşılaştırılır. Piyasa değeri 27 bin ilanlık veriden kurulan istatistik modelden gelir; aracın kendisi hesaba katılmaz. %12 ve üstü ucuzluk tam puan alır. Emsali az olan modellerde puan kısılır.</p></section>
@@ -252,6 +269,7 @@ footer { color: var(--soluk); font-size: 13px; padding-block: 18px 36px; max-wid
 <script>
 const META = /*META*/null;
 const VERI = /*VERI*/[];
+const HIZLI = META.mod === "hizli";
 const TL = n => n == null ? "–" : Math.round(n).toLocaleString("tr-TR") + " TL";
 const KM = n => n == null ? "–" : n.toLocaleString("tr-TR") + " km";
 const YUZDE = (x, d = 1) => (x * 100).toLocaleString("tr-TR", { minimumFractionDigits: d, maximumFractionDigits: d });
@@ -311,15 +329,24 @@ function kart(r, i) {
       <span class="ana sayi">${TL(r.fiyat)}</span>
       <span class="piyasa">piyasa değeri ~${TL(r.adil)}</span>
       <span class="fark ${fark >= 0 ? "arti" : "eksi"} sayi">${fark >= 0 ? "%" + YUZDE(r.firsat) + " ucuz · " + TL(fark) : "%" + YUZDE(-r.firsat) + " pahalı"}</span>
-      <span class="sonra sayi">18 ay sonra (reel): ${r.net18 >= 0 ? "+" : ""}${TL(r.net18)}</span>
+      ${HIZLI ? `<span class="sonra sayi"><b class="fark ${r.net_yarin >= 0 ? "arti" : "eksi"}">Yarın satsan net: ${r.net_yarin >= 0 ? "+" : ""}${TL(r.net_yarin)}</b></span>`
+              : `<span class="sonra sayi">18 ay sonra (reel): ${r.net18 >= 0 ? "+" : ""}${TL(r.net18)}</span>`}
     </div>
     <a class="sema" href="${esc(r.url)}" target="_blank" rel="noopener" title="İlanı aç">${sema(r)}<span class="tr">${esc(r.hasar)}</span><span>${esc(tramerYazi(r.tramer))}</span></a>
-    <details class="detay"><summary>Puan dökümü, 18 ay hesabı ve emsaller</summary><div class="detay-ic">
+    <details class="detay"><summary>${HIZLI ? "Puan dökümü, kâr hesabı ve emsaller" : "Puan dökümü, 18 ay hesabı ve emsaller"}</summary><div class="detay-ic">
       <section><h4>Puan ${r.son_puan.toLocaleString("tr-TR")} / 100</h4>
-        ${cub("Fiyat avantajı", pf, 45)}${cub("Kondisyon", pk, 20)}${cub("Satılabilirlik", ps, 20)}${cub("Değer koruma", pd, 15)}
+        ${HIZLI ? cub("Kâr potansiyeli", pf, 55) + cub("Satış hızı", ps, 25) + cub("Kondisyon", pk, 20)
+                : cub("Fiyat avantajı", pf, 45) + cub("Kondisyon", pk, 20) + cub("Satılabilirlik", ps, 20) + cub("Değer koruma", pd, 15)}
         ${ceza ? cub("Açıklama riski", ceza, 40, true) : ""}${cdz < 0 ? cub("Claude düzeltmesi", cdz, 40, true) : ""}
         <p class="sonra">Tahmin güveni: %${Math.round(r.guven * 100)} · aynı motor ve yılda ${r.n_benzer} ilan</p></section>
-      <section><h4>18 ay sonra (bugünkü parayla)</h4><table class="hesap">
+      ${HIZLI ? `<section><h4>Yarın satsan</h4><table class="hesap">
+        <tr><td>Alış (ilan fiyatı, pazarlıksız)</td><td>${TL(r.fiyat)}</td></tr>
+        <tr><td>Piyasa değeri</td><td>${TL(r.adil)}</td></tr>
+        <tr><td>Hızlı satış fiyatı (bireysel, %3 altı)</td><td>${TL(r.satis_yarin)}</td></tr>
+        <tr><td>Noter, ekspertiz, ilan, temizlik</td><td>−${TL(r.masraf)}</td></tr>
+        <tr class="top"><td>Net kâr</td><td>${r.net_yarin >= 0 ? "+" : ""}${TL(r.net_yarin)} (%${YUZDE(r.net_yarin_oran)})</td></tr></table>
+        <p class="sonra">Pazarlıkla alırsan (${esc(r.kimden)} için tipik ~${TL(r.pazarlik)}) kâr o kadar artar.</p></section>` : ""}
+      <section${HIZLI ? " hidden" : ""}><h4>18 ay sonra (bugünkü parayla)</h4><table class="hesap">
         <tr><td>Alış (ilan fiyatı)</td><td>${TL(r.fiyat)}</td></tr>
         <tr><td>Bugünkü piyasa değeri</td><td>${TL(r.adil)}</td></tr>
         <tr><td>18 ay, +26 bin km sonra satış</td><td>${TL(r.satis18)}</td></tr>
@@ -350,7 +377,7 @@ function ciz() {
     if (durum.sahibi && r.kimden !== "Sahibinden") return false;
     return true;
   });
-  const anahtar = { puan: r => -r.son_puan, firsat: r => -r.firsat, net: r => -r.net18, fiyat: r => r.fiyat, km: r => r.km }[durum.sirala];
+  const anahtar = { puan: r => -r.son_puan, firsat: r => -r.firsat, net: r => -(HIZLI ? r.net_yarin : r.net18), fiyat: r => r.fiyat, km: r => r.km }[durum.sirala];
   l.sort((a, b) => anahtar(a) - anahtar(b));
   const liste = document.getElementById("liste");
   liste.innerHTML = l.length ? l.map(kart).join("") : `<p class="bos">Bu filtrelere uyan ilan yok. Filtreleri gevşet.</p>`;
@@ -361,11 +388,21 @@ function kur() {
   const tarih = new Date(META.tarih + "T12:00:00").toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
   document.getElementById("ust-etiket").textContent = `arabam.com · ${tarih}`;
   const nAl = ANA.filter(r => (r.claude ? r.claude[0] : r.karar) === "AL" || (!r.claude && r.karar === "GÜÇLÜ")).length;
-  document.getElementById("ozet").textContent = META.mod === "aday"
+  if (HIZLI) {
+    document.getElementById("yontem-hizli").hidden = false; document.getElementById("yontem-normal").hidden = true;
+    document.querySelector('#sirala option[value="net"]').textContent = "Sırala: net kâr (TL)";
+  }
+  document.getElementById("ozet").textContent = HIZLI
+    ? `${META.taranan.toLocaleString("tr-TR")} ilan tarandı. ${META.n_karli.toLocaleString("tr-TR")} tanesi yarın satılsa masraflar düştükten sonra kâr bırakıyor; bunların en sağlam ${ANA.length} tanesi aşağıda. Ölçüt: alış ile hızlı satış fiyatı arasındaki net fark, satış hızı ve kondisyon.`
+    : META.mod === "aday"
     ? `${VERI.length} yeni ilan, ${META.taranan.toLocaleString("tr-TR")} ilanlık güncel piyasaya göre puanlandı. Üstte piyasanın altında, temiz ve satması kolay olanlar var.`
     : `${META.taranan.toLocaleString("tr-TR")} ilan tarandı. Piyasanın altında fiyatlanmış, temiz ve 1-2 yıl sonra satarken baş ağrıtmayacak araçlar 100 üzerinden puanlanıp sıralandı.`;
-  const ist = [[META.taranan.toLocaleString("tr-TR"), "taranan ilan"], [ANA.length, "listede"], [nAl, "AL / güçlü aday"],
-    [META.okunan, "açıklaması okunan"], ["±%" + META.sigma.toLocaleString("tr-TR"), "fiyat modeli hata payı"]];
+  const ist = HIZLI
+    ? [[META.taranan.toLocaleString("tr-TR"), "taranan ilan"], [META.n_karli.toLocaleString("tr-TR"), "yarın satılsa kâr eden"],
+       [META.n_karli_100.toLocaleString("tr-TR"), "100 bin TL+ net kâr"], [ANA.length, "listede"], [nAl, "AL / güçlü aday"],
+       [META.okunan, "açıklaması okunan"]]
+    : [[META.taranan.toLocaleString("tr-TR"), "taranan ilan"], [ANA.length, "listede"], [nAl, "AL / güçlü aday"],
+       [META.okunan, "açıklaması okunan"], ["±%" + META.sigma.toLocaleString("tr-TR"), "fiyat modeli hata payı"]];
   document.getElementById("istat").innerHTML = ist.map(([b, s]) => `<div><b class="sayi">${b}</b><small>${s}</small></div>`).join("");
   document.getElementById("alt-not").textContent = `Rapor ${META.uretim} tarihinde üretildi. Fiyatlar ilan fiyatıdır; piyasa değeri istatistiksel tahmindir. Almadan önce ekspertiz, tramer (hasar kaydı) ve borç/haciz sorgusu yaptır. Yatırım tavsiyesi değildir.`;
   if (ELENEN.length) {

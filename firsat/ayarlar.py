@@ -5,6 +5,12 @@ YILLIK_KM = 17_500            # elde tutarken yapılacak km varsayımı
 MASRAF_SABIT = 15_000         # ekspertiz + noter + ilan + temizlik (TL)
 MASRAF_ORAN = 0.002           # noter harcı benzeri oransal masraf
 
+# Hızlı al-sat ("yarın satsam") hesabı
+HIZLI_SATIS_ISKONTO = 0.03    # hızlı satmak için piyasa değerinin bu kadar altına fiyatlama
+ALIS_PAZARLIK = {"Sahibinden": 0.04, "Galeriden": 0.02, "Yetkili Bayiden": 0.01}  # alışta beklenen pazarlık (yalnızca bilgi)
+PH_KAR, PH_HIZ, PH_KONDISYON = 55, 25, 20   # hızlı al-sat puan ağırlıkları
+HIZLI_KAR_TAVAN = 0.09        # masraflar düşüldükten sonra %9 net kâr tam puan
+
 # Puan ağırlıkları (toplam 100)
 P_FIYAT = 45                  # piyasaya göre ucuzluk
 P_KONDISYON = 20              # boya / değişen / tramer

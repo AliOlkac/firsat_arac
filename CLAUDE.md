@@ -11,6 +11,12 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
    python3 firsat.py ekle <dosya.json> [...]
    python3 firsat.py piyasa --n 150 --min-puan 60
    ```
+   Kullanıcı "yarın satsam kârlı olacak / hızlı al-sat / FP" isterse:
+   ```bash
+   python3 firsat.py hizli --n 150 --min-puan 60
+   ```
+   Hızlı al-sat puanı: net kâr 55 (alış = ilan fiyatı, satış = piyasa değeri × bireysel seviye × %97, masraf düşülür),
+   satış hızı 25, kondisyon 20. 18 ay değer koruması bu puana girmez.
 2. **Değerlendirilecek ilanlar** (kullanıcı "bunlara bak / hangilerini alayım" der, genelde yüzlerce ilan):
    ```bash
    python3 firsat.py degerlendir <dosya.json> --ad aday-YYYY-MM-DD
@@ -40,7 +46,7 @@ Yeni bir kalıp tekrar ediyorsa `firsat/metin.py` içindeki kurallara ekle.
 
 ## Yayınlama ve teslim
 
-- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Aday değerlendirmeleri için yeni artifact açılabilir.
+- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Hızlı al-sat listesi: https://claude.ai/artifact/WDmzJfbKH9a7ojw1r2cNhJ (aynı şekilde güncelle). Aday değerlendirmeleri için yeni artifact açılabilir.
 - Kullanıcıya kısa özet ver: kaç ilan tarandı, kaç AL/güçlü aday, ilk 5 araç (fiyat, piyasa değeri, ucuzluk %, Claude notu).
 - Değişiklikleri commit edip geliştirme dalına pushla. `veri/piyasa.db`, `veri/model.pkl`, `*-inceleme.txt` depoya girmez.
 

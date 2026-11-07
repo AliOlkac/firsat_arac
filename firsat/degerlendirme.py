@@ -77,7 +77,14 @@ class Piyasa:
         masraf = A.MASRAF_SABIT + A.MASRAF_ORAN * r["fiyat"]
         net = satis - r["fiyat"] - masraf
 
+        # Yarın satsam: bireysel satıcı olarak, hızlı satmak için piyasanın biraz altına fiyatlayıp
+        satis_yarin = adil * math.exp(sahibinden_fark) * (1 - A.HIZLI_SATIS_ISKONTO)
+        net_yarin = satis_yarin - r["fiyat"] - masraf
+        pazarlik = r["fiyat"] * A.ALIS_PAZARLIK.get(r.get("kimden"), 0.02)
+
         sonuc = dict(r)
+        sonuc.update(satis_yarin=satis_yarin, net_yarin=net_yarin, net_yarin_oran=net_yarin / r["fiyat"],
+                     pazarlik=pazarlik, sahibinden_fark=sahibinden_fark, masraf=masraf)
         sonuc.update(adil=adil, firsat=firsat, guven=guven, emsal_fiyat=ems_fiyat, n_benzer=n_benzer,
                      pencere_konum=konum, firsat_model=firsat_model, gelecek_oran=oran, satis_18ay=satis, net_18ay=net,
                      net_18ay_oran=net / r["fiyat"], referansta=referansta,
@@ -175,14 +182,29 @@ def puanla(s, piyasa):
 
     toplam = max(0.0, min(100.0, p_fiyat + p_kondisyon + p_satis + p_deger - ceza + bonus))
     agir_risk = any(c >= 15 for _, _, c in s.get("riskler") or []) or s["firsat"] > A.SUPHELI_UCUZ
-    if agir_risk:
-        karar = "DİKKAT"
-    elif toplam >= A.ESIK_GUCLU:
-        karar = "GÜÇLÜ"
-    elif toplam >= A.ESIK_INCELE:
-        karar = "İNCELE"
-    else:
-        karar = "PAS"
-    return {"puan": round(toplam, 1), "karar": karar, "p_fiyat": p_fiyat, "p_kondisyon": p_kondisyon,
+
+    def karar_ver(puan):
+        if agir_risk:
+            return "DİKKAT"
+        return "GÜÇLÜ" if puan >= A.ESIK_GUCLU else "İNCELE" if puan >= A.ESIK_INCELE else "PAS"
+
+    # Hızlı al-sat (yarın satsam) puanı: kâr 55 + satış hızı 25 + kondisyon 20
+    etkin_firsat = max(0.0, s["firsat"]) * s["guven"]
+    oran_e = math.exp(s["sahibinden_fark"]) * (1 - A.HIZLI_SATIS_ISKONTO) / (1 - etkin_firsat)
+    net_e = oran_e - 1 - s["masraf"] / s["fiyat"]
+    p_kar = A.PH_KAR * (min(1.0, max(0.0, net_e) / A.HIZLI_KAR_TAVAN) ** 0.85)
+    if s["firsat"] > A.SUPHELI_UCUZ:
+        p_kar *= 0.6
+    if s.get("pesinat_gecer") and s["firsat"] > 0.08:
+        p_kar *= 0.8
+    km_simdi = s["km"] or 0
+    h_km = 5.0 if km_simdi <= 60_000 else 4.0 if km_simdi <= 100_000 else 2.5 if km_simdi <= 130_000 else 1.2
+    h_bant = 2.0 if s["fiyat"] <= 1_500_000 else 1.0 if s["fiyat"] <= 1_800_000 else 0.0   # ucuz bantta alıcı çok
+    p_hiz = min(A.PH_HIZ, 12.0 * talep + p_renk + h_km + p_yakit + h_bant)
+    toplam_h = max(0.0, min(100.0, p_kar + p_hiz + p_kondisyon - ceza + bonus))
+
+    return {"puan": round(toplam, 1), "karar": karar_ver(toplam), "p_fiyat": p_fiyat, "p_kondisyon": p_kondisyon,
             "p_satis": p_satis, "p_deger": p_deger, "ceza": ceza, "bonus": bonus,
+            "puan_hizli": round(toplam_h, 1), "karar_hizli": karar_ver(toplam_h), "p_kar": p_kar, "p_hiz": p_hiz,
+            "net_etkin_oran": net_e,
             "notlar": notlar, "uyarilar": uyarilar, "ilan_gun": gun, "talep": talep}

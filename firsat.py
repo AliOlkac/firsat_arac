@@ -21,13 +21,14 @@ from firsat.veritabani import KOK
 RAPORLAR = KOK / "raporlar"
 
 
-def _kaydet(sonuclar, ad, baslik, alt_baslik, piyasa, mod):
+def _kaydet(sonuclar, ad, baslik, alt_baslik, piyasa, mod, ek_meta=None):
     RAPORLAR.mkdir(exist_ok=True)
     html_yol = RAPORLAR / f"{ad}.html"
     json_yol = RAPORLAR / f"{ad}.json"
-    rapor.yaz(sonuclar, html_yol, baslik=baslik, alt_baslik=alt_baslik, piyasa=piyasa, mod=mod)
+    rapor.yaz(sonuclar, html_yol, baslik=baslik, alt_baslik=alt_baslik, piyasa=piyasa, mod=mod, ek_meta=ek_meta)
+    notlar_ = rapor.notlari_yukle()
     with open(json_yol, "w", encoding="utf-8") as f:
-        json.dump([rapor.kayit(s) for s in sonuclar], f, ensure_ascii=False, indent=1, default=str)
+        json.dump([rapor.kayit(s, notlar_, mod) for s in sonuclar], f, ensure_ascii=False, indent=1, default=str)
     # Claude'un okuması için: notu olmayan en iyi adayların açıklamaları (telefonlar maskeli, depoya girmez)
     notlar = rapor.notlari_yukle()
     satirlar = []
@@ -36,7 +37,7 @@ def _kaydet(sonuclar, ad, baslik, alt_baslik, piyasa, mod):
             continue
         aciklama = re.sub(r"\s+", " ", s.get("aciklama") or "")
         aciklama = re.sub(r"(\+?90)?\s?0?\s?5\d{2}[\s\d]{7,12}", "[tel]", aciklama)
-        satirlar.append(f"#{i} [{s['ilan_id']}] {s['puan']} {s['karar']} | {s['marka']} {s['seri']} {s['model']} {s['yil']} "
+        satirlar.append(f"#{i} [{s['ilan_id']}] {s['puan_hizli'] if mod == 'hizli' else s['puan']} {s['karar']} | {s['marka']} {s['seri']} {s['model']} {s['yil']} "
                         f"{s['km']} km | {s['fiyat']:,} TL, piyasa ~{s['adil']:,.0f} (%{s['firsat']*100:.1f}) | "
                         f"{s['n_boya']} boya {s['n_degisen']} değişen {s['n_lokal']} lokal, tramer {s['tramer_durum']} "
                         f"{s.get('tramer_tl') or ''} | {s['kimden']} {s['sehir']} | riskler: {', '.join(k for k, _, _ in s['riskler'])}"
@@ -64,6 +65,9 @@ def main():
     p = alt.add_parser("piyasa")
     p.add_argument("--n", type=int, default=150, help="rapora girecek en fazla ilan")
     p.add_argument("--min-puan", type=float, default=60)
+    h = alt.add_parser("hizli", help="yarın satsam en kârlı olacaklar (hızlı al-sat)")
+    h.add_argument("--n", type=int, default=150)
+    h.add_argument("--min-puan", type=float, default=60)
     d = alt.add_parser("degerlendir")
     d.add_argument("dosyalar", nargs="+")
     d.add_argument("--ad", default=None, help="rapor dosya adı (varsayılan: aday-<tarih>)")
@@ -95,6 +99,18 @@ def main():
         _ozet_yaz(sonuclar)
         _kaydet(sonuclar, f"piyasa-firsatlari-{bugun}", "Fırsat Araç Listesi",
                 f"arabam.com piyasası, {bugun} — {len(piyasa.satirlar):,} ilan tarandı".replace(",", "."), piyasa, "piyasa")
+    elif a.komut == "hizli":
+        tum = [piyasa.degerlendir(r) for r in piyasa.satirlar]
+        tum = analiz._tekille(sorted(tum, key=lambda s: -s["puan_hizli"]))
+        ek = {"n_karli": sum(s["net_yarin"] > 0 for s in tum), "n_karli_100": sum(s["net_yarin"] > 100_000 for s in tum)}
+        sonuclar = [s for s in tum if s["net_yarin"] > 0 and s["puan_hizli"] >= a.min_puan][: a.n]
+        print(f"\n  Yarın satılsa kâr eden: {ek['n_karli']} ilan (100 bin TL üstü: {ek['n_karli_100']})")
+        print(f"\n  {'#':>3} {'Puan':>5}  {'Net kâr':>10}  Araç")
+        for i, s in enumerate(sonuclar[:15], 1):
+            print(f"  {i:>3} {s['puan_hizli']:5.1f}  {s['net_yarin']:>10,.0f}  {s['marka']} {s['seri']} {s['model']} {s['yil']} | "
+                  f"{s['km']:,} km | {s['fiyat']:,} TL".replace(",", "."))
+        _kaydet(sonuclar, f"hizli-al-sat-{bugun}", "Hızlı Al-Sat Listesi",
+                f"arabam.com piyasası, {bugun}", piyasa, "hizli", ek)
     elif a.komut == "degerlendir":
         for y in a.dosyalar:
             analiz.aday_dosyasini_sakla(y)
