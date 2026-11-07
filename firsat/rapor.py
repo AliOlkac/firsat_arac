@@ -75,7 +75,7 @@ SABLON = r"""<title>{{BASLIK}}</title>
    Kimlik: Türkiye plakasının mavi şeridi vurgu rengi; boya şeması renkleri ekspertiz raporlarındaki sarı/turuncu/kırmızı. */
 :root {
   --zemin: #eef1f5; --kart: #ffffff; --murekkep: #132030; --soluk: #5a6879; --cizgi: #d6dde6; --ince: #e8edf2;
-  --vurgu: #2347a6; --vurgu-yumusak: #e3e9f8;
+  --vurgu: #2347a6; --vurgu-yumusak: #e3e9f8; --vurgu-ustu: #ffffff;
   --iyi: #17804a; --iyi-z: #ddf2e5; --orta: #a8690f; --orta-z: #fbefd9; --kotu: #bf3a28; --kotu-z: #fbe4e0;
   --orj: #dfe5ec; --lokal: #efc84a; --boya: #ee8a2a; --degisen: #d23a2e; --belirsiz: #f6f8fa;
   --f-baslik: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
@@ -84,13 +84,13 @@ SABLON = r"""<title>{{BASLIK}}</title>
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --zemin: #0e141b; --kart: #161f29; --murekkep: #e4eaf1; --soluk: #9aa8b8; --cizgi: #2b3746; --ince: #1d2733;
-  --vurgu: #86a6ff; --vurgu-yumusak: #1c2740;
+  --vurgu: #86a6ff; --vurgu-yumusak: #1c2740; --vurgu-ustu: #0e141b;
   --iyi: #4cc27f; --iyi-z: #133022; --orta: #e3ab4e; --orta-z: #34280f; --kotu: #ff6f5e; --kotu-z: #3a1a16;
   --orj: #2f3b49; --lokal: #e6c04a; --boya: #f29a44; --degisen: #ff5e51; --belirsiz: #1b2430;
   --golge: 0 1px 2px rgba(0, 0, 0, .3); color-scheme: dark; } }
 :root[data-theme="dark"] {
   --zemin: #0e141b; --kart: #161f29; --murekkep: #e4eaf1; --soluk: #9aa8b8; --cizgi: #2b3746; --ince: #1d2733;
-  --vurgu: #86a6ff; --vurgu-yumusak: #1c2740;
+  --vurgu: #86a6ff; --vurgu-yumusak: #1c2740; --vurgu-ustu: #0e141b;
   --iyi: #4cc27f; --iyi-z: #133022; --orta: #e3ab4e; --orta-z: #34280f; --kotu: #ff6f5e; --kotu-z: #3a1a16;
   --orj: #2f3b49; --lokal: #e6c04a; --boya: #f29a44; --degisen: #ff5e51; --belirsiz: #1b2430;
   --golge: 0 1px 2px rgba(0, 0, 0, .3); color-scheme: dark; }
@@ -164,6 +164,10 @@ details.yontem summary { cursor: pointer; padding-block: 12px; font-weight: 600;
 .fark { font-weight: 600; font-size: 14px; }
 .fark.arti { color: var(--iyi); } .fark.eksi { color: var(--kotu); }
 .sonra { font-size: 12.5px; color: var(--soluk); }
+.git { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 7px 14px; border-radius: 8px;
+  background: var(--vurgu); color: var(--vurgu-ustu); font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap; }
+.git:hover { filter: brightness(1.08); text-decoration: underline; }
+.git small { font-weight: 500; opacity: .8; font-size: 12px; }
 .sema { display: grid; justify-items: center; gap: 3px; text-decoration: none; color: var(--soluk); font-size: 12px; text-align: center; }
 .sema svg { width: 54px; height: auto; display: block; }
 .sema:hover svg { filter: drop-shadow(0 0 2px var(--vurgu)); }
@@ -331,6 +335,7 @@ function kart(r, i) {
       <span class="fark ${fark >= 0 ? "arti" : "eksi"} sayi">${fark >= 0 ? "%" + YUZDE(r.firsat) + " ucuz · " + TL(fark) : "%" + YUZDE(-r.firsat) + " pahalı"}</span>
       ${HIZLI ? `<span class="sonra sayi"><b class="fark ${r.net_yarin >= 0 ? "arti" : "eksi"}">Yarın satsan net: ${r.net_yarin >= 0 ? "+" : ""}${TL(r.net_yarin)}</b></span>`
               : `<span class="sonra sayi">18 ay sonra (reel): ${r.net18 >= 0 ? "+" : ""}${TL(r.net18)}</span>`}
+      <a class="git" href="${esc(r.url)}" target="_blank" rel="noopener">İlana git ↗ <small>#${esc(r.id)}</small></a>
     </div>
     <a class="sema" href="${esc(r.url)}" target="_blank" rel="noopener" title="İlanı aç">${sema(r)}<span class="tr">${esc(r.hasar)}</span><span>${esc(tramerYazi(r.tramer))}</span></a>
     <details class="detay"><summary>${HIZLI ? "Puan dökümü, kâr hesabı ve emsaller" : "Puan dökümü, 18 ay hesabı ve emsaller"}</summary><div class="detay-ic">
