@@ -136,7 +136,7 @@ TRAMER_YOK = re.compile(
     r"tramer(siz| kaydi yok| kaydi bulunmamakta| yok| yoktur| 0 ?(tl)?\b| bulunmamakta| sifir)|"
     r"hasar kaydi (yok|bulunmamakta)|hasar kayitsiz|sifir tramer|\b0 tramer|tramer kaydi yoktur|degisen ve tramer yok|"
     r"boya ?(,|ve)? ?degisen ?(,|ve)? ?tramer yok")
-TRAMER_ANAHTAR = re.compile(r"tramer|hasar kaydi|hasar kayit")
+TRAMER_ANAHTAR = re.compile(r"tramer|hasar kaydi|hasar kayit|hasar\s?\d|normal kayit")
 
 
 def _tutar(ham, carpani):
@@ -153,14 +153,14 @@ def tramer_metinden(t):
         return None, None
     adaylar = []
     # "tramer 45.000 tl", "hasar kaydı: 120 bin"
-    for m in re.finditer(r"(tramer|hasar kaydi|hasar kayit)(\w*)", t):
+    for m in re.finditer(r"(tramer|hasar kaydi|hasar kayit|hasar(?=\s?\d))([^\W\d]*)", t):
         if "siz" in m.group(2):                          # tramersiz / hasar kayıtsız
             continue
         pencere = t[m.end(): m.end() + 45]
         for n in re.finditer(r"(\d{1,3}(?:[.,]\d{3})+|\d+)\s*(bin|k\b)?\s*(tl|lira|₺)?(\s*(km|adet|parca|kalem|kez|kayit))?", pencere):
             if n.start() > 32:
                 break
-            if n.group(4):                                   # "30.000 km", "2 adet"
+            if n.group(4) and ("km" in n.group(4) or not n.group(2)):   # "30.000 km", "2 adet" ("45 bin parça halinde" sayılır)
                 continue
             deger = _tutar(n.group(1), n.group(2))
             if 1990 <= deger <= 2030 and not n.group(3):   # yıl
@@ -172,9 +172,15 @@ def tramer_metinden(t):
     # "45 bin tl tramer", "1 milyon 200 bin hasar kaydı"
     # "123 bin yeni tarihli tramer" gibi araya en fazla 3 kelime girebilir (km ise sayılmaz)
     for m in re.finditer(r"(?:(\d+)\s*milyon\s*)?(\d{1,3}(?:[.,]\d{3})*|\d+)\s*(bin|k\b|tl|₺)(?!\s*(?:km|kilometre))\s*(tl\s*)?(lik\s*)?"
-                         r"(?:(?!km\b)\w+\s+){0,3}?(tramer|hasar kaydi|hasar kayit)", t):
+                         r"(?:(?!km\b)\w+\s+){0,3}?(tramer|hasar kaydi|hasar kayit|normal kayit)", t):
         deger = int(m.group(1) or 0) * 1_000_000 + _tutar(m.group(2), m.group(3))
         adaylar.append(deger)
+    # "50000 tramer", "45.000 hasar kaydı" (birimsiz, en az 4 hane)
+    for m in re.finditer(r"(?<![\d.,])(\d{1,3}(?:[.,]\d{3})+|\d{4,7})(?!\s*(?:km|kilometre|model|yil))\s*(?:tl\s*|₺\s*)?"
+                         r"(?:(?!km\b)\w+\s+){0,2}?(tramer|hasar kaydi|hasar kayit)", t):
+        deger = _tutar(m.group(1), None)
+        if not (1990 <= deger <= 2030):
+            adaylar.append(deger)
     adaylar = [a for a in adaylar if 1000 <= a <= 3_000_000]
     if adaylar:
         return "tutar", max(adaylar)

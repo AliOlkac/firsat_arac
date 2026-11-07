@@ -23,6 +23,13 @@ def _marka_n(s):
     return re.sub(r"[^a-z0-9]", "", sade(s))
 
 
+def _yakit_uyumlu(a, b):
+    """Hafif hibritler (e-Tec, eTSI, mHEV) satıcıya göre 'Benzin' ya da 'Hibrit' yazılır; ikisi aynı paket sayılır."""
+    if not a or not b or a == b:
+        return True
+    return {a, b} <= {"Benzin", "Hibrit"}
+
+
 def _hacim(toklar):
     """'1.3' gibi motor hacmi; '1.3 TCe' -> '1.3'."""
     for t in toklar:
@@ -113,7 +120,7 @@ class Eslestirici:
             if hacim and mh and hacim != mh:
                 continue
             m_yakit = self.model_bilgi[(r["marka"], seri, m)][1]
-            if r.get("yakit") and m_yakit and r["yakit"] != m_yakit:      # benzinli "A 180" dizel "A 180 d" ile eşleşmesin
+            if not _yakit_uyumlu(r.get("yakit"), m_yakit):      # benzinli "A 180" dizel "A 180 d" ile eşleşmesin
                 continue
             puan = len(ms & hedef_set) / len(ms | hedef_set)
             hp = self.model_bilgi[(r["marka"], seri, m)][2]
@@ -124,6 +131,9 @@ class Eslestirici:
                 en_iyi, en_iyi_puan = m, puan
         if en_iyi and en_iyi_puan >= 0.6:
             r["model"] = en_iyi
+            m_yakit = self.model_bilgi[(r["marka"], seri, en_iyi)][1]
+            if m_yakit and r.get("yakit") != m_yakit and _yakit_uyumlu(r.get("yakit"), m_yakit):
+                r["yakit"] = m_yakit                       # arabam'daki yaygın yazımla aynı özellik
             self._doldur(r, (r["marka"], seri, en_iyi))
             r["motor"] = self.model_bilgi[(r["marka"], seri, en_iyi)][0]
             r["eslesme"] = "paket"
@@ -135,7 +145,7 @@ class Eslestirici:
             motorlar = Counter()
             for m, adet in modeller.items():
                 motor, yakit, _ = self.model_bilgi[(r["marka"], seri, m)]
-                if motor.startswith(f"{hacim} {kod}".strip()) and (not r.get("yakit") or yakit == r["yakit"]):
+                if motor.startswith(f"{hacim} {kod}".strip()) and _yakit_uyumlu(r.get("yakit"), yakit):
                     motorlar[motor] += adet
             if motorlar:
                 r["motor"] = motorlar.most_common(1)[0][0]

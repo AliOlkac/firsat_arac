@@ -73,7 +73,7 @@ Yeni bir risk kalıbı eklersen `RISK_SORUSU` sözlüğüne de soru ekle.
 
 ## Yayınlama ve teslim
 
-- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Hızlı al-sat listesi: https://claude.ai/artifact/WDmzJfbKH9a7ojw1r2cNhJ (aynı şekilde güncelle). Aday değerlendirmeleri için yeni artifact açılabilir (Skoda ön eleme: https://claude.ai/artifact/NzHso4K8PuEKnWjpTUutqV, Superb detay: https://claude.ai/artifact/UVTLnV5xkP5wapgjzabCgf).
+- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Hızlı al-sat listesi: https://claude.ai/artifact/WDmzJfbKH9a7ojw1r2cNhJ (aynı şekilde güncelle). Aday değerlendirmeleri için yeni artifact açılabilir (Skoda ön eleme: https://claude.ai/artifact/NzHso4K8PuEKnWjpTUutqV, Superb detay: https://claude.ai/artifact/UVTLnV5xkP5wapgjzabCgf, Octavia detay: https://claude.ai/artifact/LeMYPkFmb98orqSDSimFvC).
 - Kullanıcıya kısa özet ver: kaç ilan tarandı, kaç AL/güçlü aday, ilk 5 araç (fiyat, piyasa değeri, ucuzluk %, Claude notu).
 - Değişiklikleri commit edip geliştirme dalına pushla. `veri/piyasa.db`, `veri/model.pkl`, `*-inceleme.txt` depoya girmez.
 
