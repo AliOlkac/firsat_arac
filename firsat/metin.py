@@ -148,6 +148,7 @@ def _tutar(ham, carpani):
 
 def tramer_metinden(t):
     """Sade metinden tramer bilgisi. (durum, tutar) döner: ('yok',0) | ('tutar',x) | (None,None)."""
+    t = t.replace("tiramer", "tramer").replace("taramer", "tramer")
     if not TRAMER_ANAHTAR.search(t):
         return None, None
     adaylar = []
@@ -169,8 +170,9 @@ def tramer_metinden(t):
             adaylar.append(deger)
             break
     # "45 bin tl tramer", "1 milyon 200 bin hasar kaydı"
-    for m in re.finditer(r"(?:(\d+)\s*milyon\s*)?(\d{1,3}(?:[.,]\d{3})*|\d+)\s*(bin|k\b|tl|₺)\s*(tl\s*)?(lik\s*)?"
-                         r"(normal\s*)?(tramer|hasar kaydi|hasar kayit)", t):
+    # "123 bin yeni tarihli tramer" gibi araya en fazla 3 kelime girebilir (km ise sayılmaz)
+    for m in re.finditer(r"(?:(\d+)\s*milyon\s*)?(\d{1,3}(?:[.,]\d{3})*|\d+)\s*(bin|k\b|tl|₺)(?!\s*(?:km|kilometre))\s*(tl\s*)?(lik\s*)?"
+                         r"(?:(?!km\b)\w+\s+){0,3}?(tramer|hasar kaydi|hasar kayit)", t):
         deger = int(m.group(1) or 0) * 1_000_000 + _tutar(m.group(2), m.group(3))
         adaylar.append(deger)
     adaylar = [a for a in adaylar if 1000 <= a <= 3_000_000]

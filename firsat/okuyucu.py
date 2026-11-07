@@ -75,8 +75,14 @@ def filtre_kapsami(url):
             "min_yil": ilk("minYear"), "max_km": ilk("maxkm"), "url": url}
 
 
+PARCA_ESLE = {"Bagaj Kapağı": "Arka Kaput", "Bagaj Kapagi": "Arka Kaput"}   # sahibinden -> arabam parça adı
+
+
 def hasar_ozet(bd):
-    p = (bd or {}).get("parcalar") or {}
+    def _ad(x):            # "Ön Tampon (Mini Onarım / Tamir)" -> "Ön Tampon"
+        x = re.sub(r"\s*\(.*?\)\s*$", "", x or "").strip()
+        return PARCA_ESLE.get(x, x)
+    p = {k: [_ad(x) for x in (v or [])] for k, v in ((bd or {}).get("parcalar") or {}).items()}
     lokal = p.get("Lokal boyalı") or p.get("Lokal Boyalı") or []
     boya = p.get("Boyalı") or []
     degisen = p.get("Değişmiş") or p.get("Değişen") or []
@@ -285,7 +291,8 @@ def dosya_oku(yol):
     except Exception:
         toplanma = datetime.fromtimestamp(Path(yol).stat().st_mtime)
     satirlar, tur = [], "detay"
-    if "pazar" in d or meta.get("mod") == "pazar_taramasi":
+    detayli = any(isinstance(x, dict) and x.get("genel_bilgiler") for x in (d.get("ilanlar") or [])[:5])
+    if not detayli and ("pazar" in d or meta.get("mod") == "pazar_taramasi"):
         tur = "pazar"
         gorulen = set()
         marka_slug, seri_slug, kat_slug = sahibinden_filtre_seri(meta.get("filtre_url"))

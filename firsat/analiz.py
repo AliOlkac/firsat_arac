@@ -10,7 +10,7 @@ from .model import FiyatModeli
 from .okuyucu import dosya_oku
 from .veritabani import HAM, KOK, aktif_ilanlar, kur
 
-MODEL_SURUM = "8"
+MODEL_SURUM = "9"
 MODEL_YOLU = KOK / "veri" / "model.pkl"
 ADAYLAR = KOK / "veri" / "adaylar"
 
