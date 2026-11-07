@@ -138,6 +138,16 @@ def main():
             (RAPORLAR / f"{ad}-linkler.txt").write_text("\n".join(s["url"] for s in sonuclar if s.get("url")) + "\n", encoding="utf-8")
             (RAPORLAR / f"{ad}-ilan-numaralari.txt").write_text(",".join(s["ilan_id"] for s in sonuclar) + "\n", encoding="utf-8")
             print(f"  Detaylı taranacak {len(sonuclar)} ilan: raporlar/{ad}-linkler.txt ve -ilan-numaralari.txt")
+            # Sohbete doğrudan yapıştırmak için: seri seri, alt alta linkler
+            from collections import defaultdict
+            seri = defaultdict(list)
+            for s_ in sonuclar:
+                seri[f"{s_['marka']} {s_['seri']}"].append(s_["url"])
+            print("\n===== LİNKLER (sohbete aynen yapıştır) =====")
+            for ad_, linkler in seri.items():
+                if len(seri) > 1:
+                    print(f"\n{ad_} ({len(linkler)})")
+                print("\n".join(linkler))
 
 if __name__ == "__main__":
     sys.exit(main())

@@ -25,9 +25,10 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
 3. **sahibinden dosyaları** (kullanıcı oradan gerçek alınacak araçları arar): arabam piyasası emsal/temel olarak kalır,
    sahibinden ilanları **veritabanına eklenmez** (`ekle` reddeder). Her zaman `degerlendir` ile puanla:
    - **Genel tarama** (`"pazar"` listesi ya da `meta.mod = "pazar_taramasi"`; boya/tramer/açıklama yok):
-     `python3 firsat.py degerlendir <dosya.json> --n 250` → kâr potansiyeline göre ön eleme raporu +
-     `raporlar/<ad>-linkler.txt` ve `-ilan-numaralari.txt` (kullanıcı bunları detaylı tarar; en fazla 200-300).
-     Bu iki txt'yi kullanıcıya dosya olarak da gönder.
+     `python3 firsat.py degerlendir <dosya.json> --n 250` → çıktının sonundaki "LİNKLER" bölümünü **sohbete düz metin
+     olarak, alt alta** yapıştır. KULLANICI İSTEĞİ: bu adımda dosya gönderme, artifact/HTML yayınlama, uzun açıklama
+     yapma; sadece linkler (birden fazla seri varsa kısa seri başlığıyla ayrılmış, çünkü eklenti seri sayfası başına
+     toplar) ve en fazla bir-iki cümle. Kullanıcı linkleri detaylı tarayıp geri gönderir; fırsat listesi (HTML) o zaman yapılır.
    - **Detaylı tarama** (genel_bilgiler + arac_bilgileri + boya_degisen_tramer, sahibinden.com linkli):
      `python3 firsat.py degerlendir <dosya.json>` → tam rapor; ardından Claude incelemesi ve yayın.
    - Model adları `firsat/eslestir.py` ile arabam adlarına eşlenir (paket > motor > seri). Raporda "arabam eşleşmesi"
