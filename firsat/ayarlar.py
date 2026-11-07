@@ -11,6 +11,10 @@ ALIS_PAZARLIK = {"Sahibinden": 0.04, "Galeriden": 0.02, "Yetkili Bayiden": 0.01}
 PH_KAR, PH_HIZ, PH_KONDISYON = 55, 25, 20   # hızlı al-sat puan ağırlıkları
 HIZLI_KAR_TAVAN = 0.09        # masraflar düşüldükten sonra %9 net kâr tam puan
 
+# Genel taramadan (sahibinden pazar) detaylı taramaya önerme eşikleri: piyasanın en az bu kadar altında olmalı
+ONELEME_TEMIZ_ESIK = 0.025    # boyasız + değişensiz ilanlar (tahmin güvenilir, yalnızca tramer bilinmiyor)
+ONELEME_BOYALI_ESIK = 0.05    # boyalı/değişenli ilanlar (parça sayısı bilinmiyor, 2 parça varsayıldı)
+
 # Puan ağırlıkları (toplam 100)
 P_FIYAT = 45                  # piyasaya göre ucuzluk
 P_KONDISYON = 20              # boya / değişen / tramer

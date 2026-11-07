@@ -36,19 +36,33 @@ class Eslestirici:
         self.markalar = {}                          # marka_n -> arabam marka adı
         self.seriler = defaultdict(dict)            # marka_n -> {seri_n: seri adı}
         self.modeller = defaultdict(Counter)        # (marka, seri) -> Counter(model)
-        self.model_bilgi = {}                       # (marka, seri, model) -> (motor, yakıt, hp)
+        self.model_bilgi = {}                       # (marka, seri, model) -> [motor, yakıt, hp] (en yaygın / medyan)
+        self.dolgu = {}                             # (marka, seri, model) -> eksik alanlar için en yaygın değerler
+        say = defaultdict(lambda: defaultdict(Counter))
         hp = defaultdict(list)
         for r in satirlar:
             mn = _marka_n(r["marka"])
             self.markalar[mn] = r["marka"]
             self.seriler[mn][" ".join(_tok(r["seri"]))] = r["seri"]
+            k = (r["marka"], r["seri"], r["model"])
             self.modeller[(r["marka"], r["seri"])][r["model"]] += 1
             if r.get("hp"):
-                hp[(r["marka"], r["seri"], r["model"])].append(r["hp"])
-            self.model_bilgi.setdefault((r["marka"], r["seri"], r["model"]), [r["motor"], r.get("yakit"), None])
-        for k, v in hp.items():
-            v.sort()
-            self.model_bilgi[k][2] = v[len(v) // 2]
+                hp[k].append(r["hp"])
+            for alan in ("motor", "yakit", "kasa", "sanziman", "cekis", "vites"):
+                if r.get(alan):
+                    say[k][alan][r[alan]] += 1
+        for k, alanlar in say.items():
+            enc = {alan: c.most_common(1)[0][0] for alan, c in alanlar.items()}
+            v = sorted(hp.get(k) or [])
+            enc["hp"] = v[len(v) // 2] if v else None
+            self.dolgu[k] = enc
+            self.model_bilgi[k] = [enc.get("motor"), enc.get("yakit"), enc["hp"]]
+
+    def _doldur(self, r, anahtar):
+        """Genel taramada olmayan yakıt/kasa/şanzıman/hp gibi alanları arabam'daki aynı paketten tamamlar."""
+        for alan, deger in (self.dolgu.get(anahtar) or {}).items():
+            if alan != "motor" and not r.get(alan) and deger is not None:
+                r[alan] = deger
 
     def _seri_bul(self, mn, seri, model, baslik):
         adaylar = self.seriler.get(mn) or {}
@@ -77,6 +91,11 @@ class Eslestirici:
             mn = max(uyan, key=len)
         r["marka"] = self.markalar[mn]
         seri = self._seri_bul(mn, r.get("seri") or "", r.get("model") or "", r.get("baslik") or "")
+        if not seri and r.get("seri"):
+            # filtre adresinden gelen 'benz c serisi' gibi: marka adının parçalarını at
+            marka_tok = set(_tok(self.markalar[mn]))
+            kalan = " ".join(t for t in _tok(r["seri"]) if t not in marka_tok)
+            seri = self._seri_bul(mn, kalan, r.get("model") or "", r.get("baslik") or "")
         if not seri:
             r["eslesme"] = "marka"
             return r
@@ -105,6 +124,7 @@ class Eslestirici:
                 en_iyi, en_iyi_puan = m, puan
         if en_iyi and en_iyi_puan >= 0.6:
             r["model"] = en_iyi
+            self._doldur(r, (r["marka"], seri, en_iyi))
             r["motor"] = self.model_bilgi[(r["marka"], seri, en_iyi)][0]
             r["eslesme"] = "paket"
             return r
@@ -119,6 +139,9 @@ class Eslestirici:
                     motorlar[motor] += adet
             if motorlar:
                 r["motor"] = motorlar.most_common(1)[0][0]
+                ornek = max((m for m in modeller if self.model_bilgi[(r["marka"], seri, m)][0] == r["motor"]),
+                            key=lambda m: modeller[m])
+                self._doldur(r, (r["marka"], seri, ornek))
                 r["eslesme"] = "motor"
                 return r
         # motor hacmi yazmayan adlar ("320i ED Luxury Line"): okuyucunun motor anahtarı aynı mı?

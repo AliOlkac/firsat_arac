@@ -122,8 +122,11 @@ def main():
             print("  arabam eşleşmesi: " + ", ".join(f"{k} {v}" for k, v in bilgi["eslesme"].most_common()))
         if pazar:
             # genel tarama: detaylı taramaya değecekleri seç (kâr potansiyeline göre)
+            from firsat import ayarlar as A
             sonuclar.sort(key=lambda s: -s["puan_hizli"])
-            sonuclar = [s for s in sonuclar if s["net_yarin"] > 0 and s["karar_hizli"] != "PAS" or s["firsat"] > 0.06][: a.n]
+            sonuclar = [s for s in sonuclar if s["firsat"] * s["guven"] >= (A.ONELEME_TEMIZ_ESIK if not (s["n_boya"] or s["n_degisen"])
+                                                                 else A.ONELEME_BOYALI_ESIK)
+                        and not any(c >= 15 for _, _, c in s["riskler"])][: a.n]
         _ozet_yaz(sonuclar, 30)
         site_adi = "Sahibinden" if sahibinden else "Aday"
         ad = a.ad or f"{'sahibinden-on-eleme' if pazar else ('sahibinden' if sahibinden else 'aday')}-{date.today().isoformat()}"

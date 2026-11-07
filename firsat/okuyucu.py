@@ -243,6 +243,26 @@ def pazar_satiri(x):
     return r
 
 
+def sahibinden_filtre_seri(url):
+    """'https://www.sahibinden.com/skoda-octavia/otomatik?...' -> ('skoda', 'octavia', 'otomobil').
+    Marka/seri ayrımı kesin değildir ('mercedes-benz-c-serisi' -> 'mercedes', 'benz c serisi'); eşleştirici düzeltir."""
+    if not url or "sahibinden.com" not in url:
+        return None, None, None
+    yol = urlparse(url).path.strip("/").split("/")
+    if not yol or not yol[0]:
+        return None, None, None
+    slug = yol[0]
+    kategori = "otomobil"
+    for on in ("arazi-suv-pickup-", "arazi-suv-pick-up-", "otomobil-"):
+        if slug.startswith(on):
+            kategori = "suv" if on.startswith("arazi") else "otomobil"
+            slug = slug[len(on):]
+    if slug in ("otomobil", "arazi-suv-pickup", "vasita"):
+        return None, None, kategori
+    parca = slug.split("-")
+    return parca[0], " ".join(parca[1:]), kategori
+
+
 def dosya_oku(yol):
     """(meta, satırlar) döner. meta: toplanma zamanı, filtre kapsamları, kaynak (arabam/sahibinden), tür (detay/pazar)."""
     with ac(yol) as f:
@@ -268,11 +288,17 @@ def dosya_oku(yol):
     if "pazar" in d or meta.get("mod") == "pazar_taramasi":
         tur = "pazar"
         gorulen = set()
+        marka_slug, seri_slug, kat_slug = sahibinden_filtre_seri(meta.get("filtre_url"))
         for x in d.get("pazar") or d.get("ilanlar") or []:
             if str(x.get("ilan_id")) in gorulen or (x.get("para_birimi") not in (None, "TL")):
                 continue
             gorulen.add(str(x.get("ilan_id")))
-            satirlar.append(pazar_satiri(x))
+            if not x.get("marka") and not x.get("kategori") and marka_slug:
+                x = dict(x, marka=marka_slug, seri=seri_slug)
+            r = pazar_satiri(x)
+            if kat_slug:
+                r["kategori"] = kat_slug
+            satirlar.append(r)
     else:
         for x in d.get("ilanlar") or []:
             g = x.get("genel_bilgiler") or {}

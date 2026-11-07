@@ -56,7 +56,7 @@ RISKLER = [
      r"agir hasar kayitli|agir hasarli|agir hasar kaydi (var|mevcut|bulunmakta)|agir hasar (cikmakta|cikiyor|cikar|gorun|gozuk|var)",
      True),
     ("engelli", "Engelli/ÖTV muafiyetli araç: devirde ÖTV ödenmesi ya da yalnızca engelliye satış gerekebilir", 30,
-     r"\bengelli\b|otv (muaf|istisna|indirimli)|otvsiz|otv siz", True),
+     r"\bengelli(den|ye|lere|ler)?\b|engelli raporlu|otv (muaf|istisna|indirimli)|otvsiz|otv siz", False),
     ("yapisal", "Şasi/podye/direk/tavan işlemi ifadesi", 15,
      r"(sasi|sase|sasesi|sasisi|sasede|saside|saseye|sasiye) (hasar|duzelt|kesme|islemli|islem gor|islem var|degis|cekil)|"
      r"podye (hasar|degis|islemli|islem gor|duzelt|kaynak)|"

@@ -101,6 +101,9 @@ class Piyasa:
 def hasar_kisa(r):
     if r.get("boya_bilinmiyor"):
         return "boya bilgisi yok"
+    if r.get("liste_satiri"):
+        p = (["değişenli"] if r["n_degisen"] else []) + (["boyalı"] if r["n_boya"] else [])
+        return (" ve ".join(p) + " (parça sayısı bilinmiyor)") if p else "boyasız, değişensiz"
     p = []
     if r["n_degisen"]:
         p.append(f"{r['n_degisen']} değişen")

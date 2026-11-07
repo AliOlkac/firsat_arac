@@ -10,7 +10,7 @@ from .model import FiyatModeli
 from .okuyucu import dosya_oku
 from .veritabani import HAM, KOK, aktif_ilanlar, kur
 
-MODEL_SURUM = "6"
+MODEL_SURUM = "8"
 MODEL_YOLU = KOK / "veri" / "model.pkl"
 ADAYLAR = KOK / "veri" / "adaylar"
 
@@ -79,7 +79,12 @@ def aday_dosyasini_sakla(yol):
     """Değerlendirilen dosyanın sıkıştırılmış kopyasını veri/adaylar/ altına koyar."""
     yol = Path(yol)
     ADAYLAR.mkdir(parents=True, exist_ok=True)
-    hedef = ADAYLAR / (yol.name if yol.name.endswith(".xz") else yol.name + ".xz")
+    ad = yol.name
+    for on in ("sahibinden-", "arabam-"):          # yükleme önekini (ör. '838a3f94-') at
+        if on in ad and not ad.startswith(on):
+            ad = ad[ad.index(on):]
+            break
+    hedef = ADAYLAR / (ad if ad.endswith(".xz") else ad + ".xz")
     if not hedef.exists():
         if yol.name.endswith(".xz"):
             shutil.copy(yol, hedef)

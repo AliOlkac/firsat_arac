@@ -32,7 +32,12 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
      `python3 firsat.py degerlendir <dosya.json>` → tam rapor; ardından Claude incelemesi ve yayın.
    - Model adları `firsat/eslestir.py` ile arabam adlarına eşlenir (paket > motor > seri). Raporda "arabam eşleşmesi"
      yazar; eşleşme seri/marka seviyesindeyse fiyat tahmini zayıftır, buna göre yorumla.
-   - İlk gerçek sahibinden dosyası geldiğinde etiket adlarını kontrol et (okuyucu `_al(...)` alternatifleri, `pazar_satiri`).
+   - Gerçek biçim (2026-11-07'de doğrulandı): genel taramada `marka`/`seri` null gelir, seri `meta.filtre_url`
+     yolundan alınır (`/skoda-octavia/...`); yakıt/kasa/şanzıman yoktur, eşleşen arabam paketinden doldurulur.
+     `boyasiz=false` = boyalı (parça sayısı bilinmiyor, 2 parça varsayılır). Detaylı ilan etiketleri: "Yakıt / Motor Tipi",
+     "Vites", "KM", "Kasa Tipi", "Motor Gücü", "Motor Hacmi", "Servis Garantisi", "Ağır Hasar Kayıtlı".
+   - Ön eleme eşiği (`ayarlar.ONELEME_*`): fırsat × güven ≥ %2,5 (boyasız) / %5 (boyalı); ağır risk bayraklı ilanlar çıkar.
+     Başlıkları da oku (engelliden engelliye, peşinat/senet, %20 KDV gibi).
 4. Veritabanı yoksa ilk komut onu `veri/ham/*.json.xz` dosyalarından otomatik kurar (~1 dk). Model `veri/model.pkl` içinde önbelleklenir.
 
 ## Claude incelemesi (atlanmaz)
@@ -63,7 +68,7 @@ Yeni bir risk kalıbı eklersen `RISK_SORUSU` sözlüğüne de soru ekle.
 
 ## Yayınlama ve teslim
 
-- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Hızlı al-sat listesi: https://claude.ai/artifact/WDmzJfbKH9a7ojw1r2cNhJ (aynı şekilde güncelle). Aday değerlendirmeleri için yeni artifact açılabilir.
+- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Hızlı al-sat listesi: https://claude.ai/artifact/WDmzJfbKH9a7ojw1r2cNhJ (aynı şekilde güncelle). Aday değerlendirmeleri için yeni artifact açılabilir (Skoda ön eleme: https://claude.ai/artifact/NzHso4K8PuEKnWjpTUutqV).
 - Kullanıcıya kısa özet ver: kaç ilan tarandı, kaç AL/güçlü aday, ilk 5 araç (fiyat, piyasa değeri, ucuzluk %, Claude notu).
 - Değişiklikleri commit edip geliştirme dalına pushla. `veri/piyasa.db`, `veri/model.pkl`, `*-inceleme.txt` depoya girmez.
 
