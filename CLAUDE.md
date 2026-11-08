@@ -37,7 +37,8 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
      yazar; eşleşme seri/marka seviyesindeyse fiyat tahmini zayıftır, buna göre yorumla.
    - Gerçek biçim (2026-11-07'de doğrulandı): genel taramada `marka`/`seri` null gelir, seri `meta.filtre_url`
      yolundan alınır (`/skoda-octavia/...`); yakıt/kasa/şanzıman yoktur, eşleşen arabam paketinden doldurulur.
-     `boyasiz=false` = boyalı (parça sayısı bilinmiyor, 2 parça varsayılır). Detaylı ilan etiketleri: "Yakıt / Motor Tipi",
+     `boyasiz=false` = boyalı (parça sayısı bilinmiyor, 2 parça varsayılır). `boyasiz=null` ama `meta.etiketler`de
+     "Boyasız" seçeneği ≥%95 tarandıysa (ör. 858'de 852, durum "eksik") okuyucu null'u boyalı sayar. Detaylı ilan etiketleri: "Yakıt / Motor Tipi",
      "Vites", "KM", "Kasa Tipi", "Motor Gücü", "Motor Hacmi", "Servis Garantisi", "Ağır Hasar Kayıtlı".
    - Detaylı dosya (`meta.mod = "secili_ilanlar"`) içinde ayrıca `pazar`/`kumeler` de bulunur; okuyucu `ilanlar` içindeki
      detaylı kayıtları okur. Eklenti yalnızca o anki filtre sayfasının taramasındaki numaraları toplar

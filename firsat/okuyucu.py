@@ -300,7 +300,17 @@ def dosya_oku(yol):
         for c in d.get("kumeler") or []:
             for i in c.get("ilan_idleri") or []:
                 kume[str(i)] = (c.get("marka"), c.get("seri"))
+        # "Boyasız" seçeneği neredeyse tamamen tarandıysa (ör. 858'de 852) o listede çıkmayan ilan boyalıdır;
+        # eklenti tarama eksik kaldığı için null yazar. null'u boyasız saymak boyalı araçları temiz gösterirdi.
+        boya_tarandi = {}
+        for e in meta.get("etiketler") or []:
+            sec = {"Boyasız": "boyasiz", "Değişensiz": "degisensiz"}.get(e.get("secenek"))
+            if sec and e.get("sitedeki") and (e.get("bulunan") or 0) >= 0.95 * e["sitedeki"]:
+                boya_tarandi[sec] = True
         for x in d.get("pazar") or d.get("ilanlar") or []:
+            for alan in boya_tarandi:
+                if x.get(alan) is None:
+                    x = dict(x, **{alan: False})
             if str(x.get("ilan_id")) in gorulen or (x.get("para_birimi") not in (None, "TL")):
                 continue
             gorulen.add(str(x.get("ilan_id")))
