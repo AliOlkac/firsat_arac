@@ -76,7 +76,7 @@ RISKLER = [
      r"yurt ?disindayim|yurt ?disinda (yasiyorum|oldugum|bulundugum)|sadece (whatsapp|wp|mesaj)|whatsapp (uzerinden|tan) ulas|"
      r"kargo ile teslim|kapora (gonder|yatir)|cekici ile (gonder|teslim)", False),
     ("lpg_sonradan", "Açıklamada LPG geçiyor: LPG'li araçların ikinci el talebi düşüktür", 5,
-     r"\blpg\b|\blpgli\b|\blpg li\b", False),
+     r"\blpg\b|\blpgli\b|\blpg li\b|\btuplu\b|\btup takil|\bbrc\b", False),
     ("kiralik", "Kiralık/filo/taksi/ticari kullanım geçmişi olabilir", 10,
      r"kiralik|rent ?a ?car|\bfilo\b|\btaksi\b|ticari plaka|ticari kayit|ticariye|ticari olarak kullan|\bhizmet araci", True),
     ("mekatronik", "Mekatronik/şanzıman beyni değişimi yapılmış", 3, r"mekatronik|sanziman beyni", False),
