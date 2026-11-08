@@ -48,8 +48,11 @@ class Piyasa:
         referansta = r["ilan_id"] in self.oof
         lp_ham = self.oof[r["ilan_id"]] if referansta else m.log_tahmin(r)
         lp_tam = self.tam.get(r["ilan_id"]) or m.log_tahmin(r)
+        konum = m.penceredeki_konum(lp_ham, r.get("kategori"))    # adil fiyat referans penceresinin dışındaysa tahmin daha belirsiz
+        # sahibinden ilanı: o seri/motor sahibinden'de arabam'dan farklı seviyede listeleniyorsa piyasa değerini kaydır
+        d = r.get("site_duzeltme") or 0.0
+        lp_ham, lp_tam = lp_ham + d, lp_tam + d
         lp = lp_ham
-        konum = m.penceredeki_konum(lp, r.get("kategori"))        # adil fiyat referans penceresinin dışındaysa tahmin daha belirsiz
         adil = math.exp(lp)
         firsat_model = 1 - r["fiyat"] / adil
         ems = self.emsaller(r, lp_tam)
@@ -190,6 +193,10 @@ def puanla(s, piyasa):
                        "seri": "arabam'da aynı motor/paket bulunamadı, seri ortalamasıyla karşılaştırıldı",
                        "marka": "arabam'da bu seri yok: fiyat tahmini güvenilmez",
                        "yok": "arabam'da bu marka yok: fiyat tahmini güvenilmez"}[s["eslesme"]])
+    d = s.get("site_duzeltme") or 0.0
+    if abs(d) >= 0.02:
+        notlar.append(f"Bu motor sahibinden'de arabam'dan ~%{abs(d) * 100:.0f} {'ucuz' if d < 0 else 'pahalı'} "
+                      f"listeleniyor; piyasa değeri sahibinden seviyesine göre düzeltildi")
     if s.get("liste_satiri"):
         notlar.append("Genel tarama satırı: boya-değişen, tramer ve açıklama bilinmiyor; detaylı taramayla doğrula")
 

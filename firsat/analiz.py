@@ -2,6 +2,7 @@
 import hashlib
 import json
 import lzma
+import math
 import shutil
 from pathlib import Path
 
@@ -10,7 +11,7 @@ from .model import FiyatModeli
 from .okuyucu import dosya_oku
 from .veritabani import HAM, KOK, aktif_ilanlar, kur
 
-MODEL_SURUM = "10"
+MODEL_SURUM = "11"
 MODEL_YOLU = KOK / "veri" / "model.pkl"
 ADAYLAR = KOK / "veri" / "adaylar"
 
@@ -121,13 +122,59 @@ def referansa_ekle(yollar):
     return eklenen
 
 
+DUZELTME_BUZME = 20        # grup başına bu kadar ilan olana kadar düzeltme sıfıra doğru büzülür
+DUZELTME_TAVAN = 0.08
+
+
+def sahibinden_duzeltmesi(piyasa, eslestirici, sessiz=False):
+    """sahibinden genel taramalarından (veri/adaylar/*pazar*) seri ve motor bazında site farkı.
+
+    Aynı araç sahibinden'de arabam'dan farklı seviyede listelenebilir (ör. Golf eTSI ~%5 ucuz). Bu fark
+    düzeltilmezse o serinin bütün ilanları "fırsat" görünür. Yalnızca boyasız/değişensiz, paket ya da motor
+    düzeyinde eşleşen satırlar kullanılır; medyan log fark örnek sayısına göre sıfıra büzülür.
+    Dönüş: {(marka, seri, motor): d, (marka, seri): d}; d < 0 ise sahibinden daha ucuz."""
+    import statistics as st
+    from collections import defaultdict
+    gorulen = {}
+    for yol in sorted(ADAYLAR.glob("*pazar*.json*")):
+        try:
+            _, satirlar = dosya_oku(yol)
+        except Exception:
+            continue
+        for r in satirlar:
+            if r.get("fiyat") and r.get("yil") and r.get("km") is not None and r.get("marka"):
+                gorulen[r["ilan_id"]] = r            # sonraki tarama öncekinin yerine geçer
+    seri, motor = defaultdict(list), defaultdict(list)
+    for r in gorulen.values():
+        r = dict(r)
+        eslestirici.eslestir(r)
+        if r["eslesme"] not in ("paket", "motor") or r["n_boya"] or r["n_degisen"]:
+            continue
+        fark = math.log(r["fiyat"]) - piyasa.model.log_tahmin(r)
+        if abs(fark) > 0.35:                         # yanlış eşleşme / peşinat fiyatı gibi uç değerler
+            continue
+        seri[(r["marka"], r["seri"])].append(fark)
+        motor[(r["marka"], r["seri"], r["motor"])].append(fark)
+    k = DUZELTME_BUZME
+    sinirla = lambda d: max(-DUZELTME_TAVAN, min(DUZELTME_TAVAN, d))
+    sonuc = {}
+    for s, v in seri.items():
+        sonuc[s] = sinirla(len(v) / (len(v) + k) * st.median(v))
+    for m, v in motor.items():
+        ds = sonuc.get(m[:2], 0.0)
+        sonuc[m] = sinirla(ds + len(v) / (len(v) + k) * (st.median(v) - ds))
+    if not sessiz:
+        print(f"  sahibinden site farkı: {len(gorulen)} genel tarama ilanından {len(seri)} seri / {len(motor)} motor")
+    return sonuc
+
+
 def adaylari_degerlendir(piyasa, yollar):
     """Aday dosyalarını (arabam ya da sahibinden; detaylı ya da genel tarama) referans piyasaya göre puanlar.
     Adaylar veritabanına EKLENMEZ. (sonuçlar, bilgi) döner; bilgi: kaynaklar, türler, eşleşme sayıları."""
     from collections import Counter
     from .eslestir import Eslestirici
     sonuclar, bilgi = [], {"kaynak": set(), "tur": set(), "eslesme": Counter(), "okunamayan": 0}
-    eslestirici = None
+    eslestirici, duzeltme = None, None
     for yol in yollar:
         meta, satirlar = dosya_oku(yol)
         bilgi["kaynak"].add(meta["kaynak"])
@@ -138,8 +185,13 @@ def adaylari_degerlendir(piyasa, yollar):
                 continue
             if r.get("kaynak") == "sahibinden":
                 eslestirici = eslestirici or Eslestirici(piyasa.satirlar)
+                if duzeltme is None:
+                    duzeltme = sahibinden_duzeltmesi(piyasa, eslestirici)
                 eslestirici.eslestir(r)
                 bilgi["eslesme"][r["eslesme"]] += 1
+                if r["eslesme"] in ("paket", "motor", "seri"):
+                    r["site_duzeltme"] = duzeltme.get((r["marka"], r["seri"], r.get("motor")),
+                                                      duzeltme.get((r["marka"], r["seri"]), 0.0))
             sonuclar.append(piyasa.degerlendir(r))
     sonuclar.sort(key=lambda s: -s["puan"])
     return _tekille(sonuclar), bilgi

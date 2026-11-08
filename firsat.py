@@ -48,6 +48,11 @@ def _kaydet(sonuclar, ad, baslik, alt_baslik, piyasa, mod, ek_meta=None):
     print(f"  Okunacak (notu olmayan) {len(satirlar)} aday: {inceleme.relative_to(KOK)}")
 
 
+def _link(url):
+    """Eklenti virgül içeren adresleri ilan adresi saymıyor (2026-11-08: 300 linkten 7'si toplanmadı); virgülü kodla."""
+    return url.replace(",", "%2C")
+
+
 def _ozet_yaz(sonuclar, n=15):
     print(f"\n  {'#':>3} {'Puan':>5} {'Karar':7} {'Fırsat':>7}  Araç")
     for i, s in enumerate(sonuclar[:n], 1):
@@ -126,7 +131,7 @@ def main():
             sonuclar.sort(key=lambda s: -s["puan_hizli"])
             sonuclar = [s for s in sonuclar if s["firsat"] * s["guven"] >= (A.ONELEME_TEMIZ_ESIK if not (s["n_boya"] or s["n_degisen"])
                                                                  else A.ONELEME_BOYALI_ESIK)
-                        and not any(c >= 15 or k in ("lpg_sonradan", "manuel", "kiralik") for k, _, c in s["riskler"])][: a.n]
+                        and not any(c >= 15 or k in ("lpg_sonradan", "manuel", "kiralik", "kiralik_firma") for k, _, c in s["riskler"])][: a.n]
         _ozet_yaz(sonuclar, 30)
         site_adi = "Sahibinden" if sahibinden else "Aday"
         ad = a.ad or f"{'sahibinden-on-eleme' if pazar else ('sahibinden' if sahibinden else 'aday')}-{date.today().isoformat()}"
@@ -135,19 +140,19 @@ def main():
                 f"{len(sonuclar)} ilan, {len(piyasa.satirlar):,} ilanlık arabam piyasasına göre puanlandı".replace(",", "."),
                 piyasa, "aday")
         if pazar:
-            (RAPORLAR / f"{ad}-linkler.txt").write_text("\n".join(s["url"] for s in sonuclar if s.get("url")) + "\n", encoding="utf-8")
+            (RAPORLAR / f"{ad}-linkler.txt").write_text("\n".join(_link(s["url"]) for s in sonuclar if s.get("url")) + "\n", encoding="utf-8")
             (RAPORLAR / f"{ad}-ilan-numaralari.txt").write_text(",".join(s["ilan_id"] for s in sonuclar) + "\n", encoding="utf-8")
             print(f"  Detaylı taranacak {len(sonuclar)} ilan: raporlar/{ad}-linkler.txt ve -ilan-numaralari.txt")
             # Sohbete doğrudan yapıştırmak için: seri seri, alt alta linkler
             from collections import defaultdict
             seri = defaultdict(list)
             for s_ in sonuclar:
-                seri[f"{s_['marka']} {s_['seri']}"].append(s_["url"])
+                seri[f"{s_['marka']} {s_['seri']}"].append(_link(s_["url"]))
             # Tek tarama sayfasından geldiyse (çok markalı da olsa) tek blok; birden çok seri sayfasıysa seri seri
             sayfa_sayisi = len(a.dosyalar)
             print("\n===== LİNKLER (sohbete aynen yapıştır) =====")
             if sayfa_sayisi == 1:
-                print("\n".join(s_["url"] for s_ in sonuclar))
+                print("\n".join(_link(s_["url"]) for s_ in sonuclar))
             else:
                 for ad_, linkler in seri.items():
                     print(f"\n{ad_} ({len(linkler)})")

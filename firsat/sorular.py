@@ -10,6 +10,7 @@ RISK_SORUSU = {
     "airbag": "Açıklamada airbag işleminden söz ediliyor: hangi olayda açıldı, orijinal parçayla mı değişti, servis faturası var mı?",
     "engelli": "Araç engelli/ÖTV muafiyetiyle mi alındı? Devirde ÖTV ödenmesi gerekiyor mu, normal noter satışı yapılabiliyor mu?",
     "kiralik": "Araç kiralık, filo ya da ticari olarak kullanıldı mı?",
+    "kiralik_firma": "Araç kiralama filosundan mı çıktı? Kaç kişi kullandı, bakım geçmişi ve hasar kayıtları paylaşılabilir mi?",
     "yabanci": "Araç yurt dışından mı getirildi? Gümrük ve ruhsat işlemleri tamamlandı mı?",
     "motor": "Motor ya da şanzımanda hangi işlem yapıldı, ne zaman ve nerede? Faturası var mı?",
     "yapisal": "Şasi, podye veya direklerde işlem var mı? Güncel ekspertiz raporunu paylaşabilir misiniz?",

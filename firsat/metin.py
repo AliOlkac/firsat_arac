@@ -58,15 +58,18 @@ RISKLER = [
     ("engelli", "Engelli/ÖTV muafiyetli araç: devirde ÖTV ödenmesi ya da yalnızca engelliye satış gerekebilir", 30,
      r"\bengelli(den|ye|lere|ler)?\b|engelli raporlu|otv (muaf|istisna|indirimli)|otvsiz|otv siz", False),
     ("yapisal", "Şasi/podye/direk/tavan işlemi ifadesi", 15,
-     r"(sasi|sase|sasesi|sasisi|sasede|saside|saseye|sasiye) (hasar|duzelt|kesme|islemli|islem gor|islem var|degis|cekil)|"
-     r"podye (hasar|degis|islemli|islem gor|duzelt|kaynak)|"
-     r"direk (degis|hasar|islemli|islem gor|kaynak)|tavan (degisen|degismis|degisti|kesme)", True),
+     r"(sasi|sase|sasesi|sasisi|sasede|saside|saseye|sasiye) (hasar|duzelt|kesme|islemli|islem gor(mus|du|en)|islem var|degis|cekil)|"
+     r"podye (hasar|degis|islemli|islem gor(mus|du|en)|duzelt|kaynak)|"
+     r"direk (degis|hasar|islemli|islem gor(mus|du|en)|kaynak)|tavan (degisen|degismis|degisti|kesme)", True),
     ("motor", "Motor/şanzıman işlemi ya da arıza ifadesi", 14,
      r"motor (revizyon|rektifiye|yenilen|yenilendi|degisti|degismis|degisimi|degistiril\w*|arizali|arizasi)|motor indi|sandik motor|"
      r"sanziman (degisti|degismis|degismistir|arizali|arizasi|revizyon|yenilendi)|vites (arizali|kutusu degis)", False),
     ("airbag", "Airbag açmış/değişmiş: ciddi kaza geçmişi", 18,
      r"(airbag|airbeg|airbaq|egirbe|eirbe|eyirbe|ayrbag|erbag|erbeg|hava yastig)\w*\W{0,3}(\w+\W+){0,3}?"
-     r"(acti|acmis|acmistir|acilmis|patladi|patlamis|patlak|degis\w*|yenilen\w*|onarim\w*|onaril\w*|tamir\w*|islemli\w*|islem gor\w*)", False),
+     r"(acti|acmis|acmistir|acilmis|patladi|patlamis|patlak|degis\w*|yenilen\w*|onarim\w*|onaril\w*|tamir\w*|islemli\w*|islem gor(mus|du|en)\w*|"
+     r"islem var\w*|islem mevcut\w*|islem bulunmakta\w*|islem bulunuyor)|"
+     # "torpido ve direksiyon simidi yenilendi": sürücü + yolcu airbag'i açılmış demektir
+     r"torpido\W+(ve\W+)?direksiyon[^|.]{0,60}?(degis\w*|yenilen\w*)", False),
     ("km", "KM düzeltme ya da km'si belirsiz ifadesi", 12,
      r"km (dusur|oynan|duzelt|geri al)|km si belirsiz|km belirsiz", True),
     ("yabanci", "Yurt dışından getirilmiş / yabancı plaka: ikinci elde satışı zor", 14,
@@ -79,6 +82,8 @@ RISKLER = [
      r"\blpg\b|\blpgli\b|\blpg li\b|\btuplu\b|\btup takil|\bbrc\b", False),
     ("kiralik", "Kiralık/filo/taksi/ticari kullanım geçmişi olabilir", 10,
      r"kiralik|rent ?a ?car|\bfilo\b|\btaksi\b|ticari plaka|ticari kayit|ticariye|ticari olarak kullan|\bhizmet araci", True),
+    ("kiralik_firma", "Araç kiralama şirketinin 2. el satışı (Enterprise vb.): kiralık filo geçmişi", 10,
+     r"enterprise\W*(2|ikinci)\W*el", False),
     ("mekatronik", "Mekatronik/şanzıman beyni değişimi yapılmış", 3, r"mekatronik|sanziman beyni", False),
     ("kaza", "Açıklamada aracın kaza geçirdiği yazıyor", 10,
      r"kazaya karis\w*|kaza gecir\w*|kaza yapmis|kaza yapti|kazasi (var|mevcut|olmustur)|kazasi fotograf\w*|"

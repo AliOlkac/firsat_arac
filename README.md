@@ -22,6 +22,9 @@ Yapay zekâ modeli eğitmek gerekmiyor. Sistem üç katmandan oluşuyor:
      ~250 ilanı seçer, linklerini ve ilan numaralarını verir.
   2. O ilanları detaylı tara ve gönder: tam puanlı rapor, Claude incelemesi ve satıcıya sorular gelir.
 - sahibinden'deki model adları arabam'daki paket adlarına otomatik eşlenir (aynı paket > aynı motor > aynı seri).
+- Bazı modeller sahibinden'de arabam'dan farklı fiyat seviyesinde listelenir (ör. Golf eTSI ~%5 daha ucuz). Sistem bu farkı
+  gönderdiğin genel taramalardan model model hesaplar ve sahibinden ilanlarını sahibinden seviyesine göre puanlar. Böyle
+  olmasa o modelin bütün ilanları "fırsat" görünürdü.
 
 ## Satıcıya sorular
 
