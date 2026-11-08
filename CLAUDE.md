@@ -28,7 +28,9 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
      `python3 firsat.py degerlendir <dosya.json> --n 250` → çıktının sonundaki "LİNKLER" bölümünü **sohbete düz metin
      olarak, alt alta** yapıştır; linkleri tek tıkla kopyalanabilsin diye bir kod bloğu (```text) içine koy (seri başına bir blok). KULLANICI İSTEĞİ: bu adımda dosya gönderme, artifact/HTML yayınlama, uzun açıklama
      yapma; sadece linkler (birden fazla seri varsa kısa seri başlığıyla ayrılmış, çünkü eklenti seri sayfası başına
-     toplar) ve en fazla bir-iki cümle. Kullanıcı linkleri detaylı tarayıp geri gönderir; fırsat listesi (HTML) o zaman yapılır.
+     toplar) ve en fazla bir-iki cümle. Tek bir tarama dosyası (çok markalı `/otomobil/...` taraması dahil) gelirse linkler
+     tek blokta verilir; kullanıcı link listesini yapıştırınca eklenti (`mod: adres_listesi`) sayfadan bağımsız toplar.
+     Çok markalı taramada marka `kategori` alanında, seri boşsa `kumeler[].ilan_idleri` eşlemesinden alınır. Kullanıcı linkleri detaylı tarayıp geri gönderir; fırsat listesi (HTML) o zaman yapılır.
    - **Detaylı tarama** (genel_bilgiler + arac_bilgileri + boya_degisen_tramer, sahibinden.com linkli):
      `python3 firsat.py degerlendir <dosya.json>` → tam rapor; ardından Claude incelemesi ve yayın.
    - Model adları `firsat/eslestir.py` ile arabam adlarına eşlenir (paket > motor > seri). Raporda "arabam eşleşmesi"

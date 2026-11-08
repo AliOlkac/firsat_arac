@@ -126,7 +126,7 @@ def main():
             sonuclar.sort(key=lambda s: -s["puan_hizli"])
             sonuclar = [s for s in sonuclar if s["firsat"] * s["guven"] >= (A.ONELEME_TEMIZ_ESIK if not (s["n_boya"] or s["n_degisen"])
                                                                  else A.ONELEME_BOYALI_ESIK)
-                        and not any(c >= 15 for _, _, c in s["riskler"])][: a.n]
+                        and not any(c >= 15 or k in ("lpg_sonradan", "manuel", "kiralik") for k, _, c in s["riskler"])][: a.n]
         _ozet_yaz(sonuclar, 30)
         site_adi = "Sahibinden" if sahibinden else "Aday"
         ad = a.ad or f"{'sahibinden-on-eleme' if pazar else ('sahibinden' if sahibinden else 'aday')}-{date.today().isoformat()}"
@@ -143,11 +143,15 @@ def main():
             seri = defaultdict(list)
             for s_ in sonuclar:
                 seri[f"{s_['marka']} {s_['seri']}"].append(s_["url"])
+            # Tek tarama sayfasından geldiyse (çok markalı da olsa) tek blok; birden çok seri sayfasıysa seri seri
+            sayfa_sayisi = len(a.dosyalar)
             print("\n===== LİNKLER (sohbete aynen yapıştır) =====")
-            for ad_, linkler in seri.items():
-                if len(seri) > 1:
+            if sayfa_sayisi == 1:
+                print("\n".join(s_["url"] for s_ in sonuclar))
+            else:
+                for ad_, linkler in seri.items():
                     print(f"\n{ad_} ({len(linkler)})")
-                print("\n".join(linkler))
+                    print("\n".join(linkler))
 
 if __name__ == "__main__":
     sys.exit(main())

@@ -296,11 +296,18 @@ def dosya_oku(yol):
         tur = "pazar"
         gorulen = set()
         marka_slug, seri_slug, kat_slug = sahibinden_filtre_seri(meta.get("filtre_url"))
+        kume = {}                                   # çok markalı taramada marka/seri "kumeler" listesinden
+        for c in d.get("kumeler") or []:
+            for i in c.get("ilan_idleri") or []:
+                kume[str(i)] = (c.get("marka"), c.get("seri"))
         for x in d.get("pazar") or d.get("ilanlar") or []:
             if str(x.get("ilan_id")) in gorulen or (x.get("para_birimi") not in (None, "TL")):
                 continue
             gorulen.add(str(x.get("ilan_id")))
-            if not x.get("marka") and not x.get("kategori") and marka_slug:
+            k_marka, k_seri = kume.get(str(x.get("ilan_id")), (None, None))
+            if not x.get("marka") and (k_marka or k_seri):
+                x = dict(x, marka=k_marka or x.get("kategori"), seri=x.get("seri") or k_seri)
+            elif not x.get("marka") and not x.get("kategori") and marka_slug:
                 x = dict(x, marka=marka_slug, seri=seri_slug)
             r = pazar_satiri(x)
             if kat_slug:
