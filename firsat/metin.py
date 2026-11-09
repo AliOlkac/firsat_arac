@@ -15,7 +15,7 @@ _OLUMSUZ = re.compile(r"^.{0,8}?\b(degil|degildir|yok|yoktur|olmayan|olmamistir|
 
 
 # Galeri kalıp cümleleri: "firmamız ağır hasarlı, pert kayıtlı araç alım satımı yapmaz" gibi.
-_KALIP = re.compile(r"yapma|yapilma|yapmaz|yer alma|yer verme|satma|satilma|almay|almaz|alinma|kabul etm|bulunma|"
+_KALIP = re.compile(r"yapma|yapilma|yapmaz|yer alma|yer verme|satma|satilma|almay|almaz|alinma|kabul etm|bulunmam|bulunmaz|bulunmay|"
                     r"\basla\b|degil|taahhut|islemsiz|yoktur|\byok\b|hatasiz|olmayan|kesinlikle|iade|ticaret|"
                     r"portfoy|firmamiz|tarafimiz|\baraclar|garantisi|garantili|sorgula|sozlesme|sayilir|kapsam|\balim\b|alim ?satim|"
                     r"kabul edem|kabul edil|takas|teklif etme|almiyoruz|satmiyoruz|almamaktayiz|satmamaktayiz")
@@ -58,7 +58,8 @@ RISKLER = [
     ("engelli", "Engelli/ÖTV muafiyetli araç: devirde ÖTV ödenmesi ya da yalnızca engelliye satış gerekebilir", 30,
      r"\bengelli(den|ye|lere|ler)?\b|engelli raporlu|otv (muaf|istisna|indirimli)|otvsiz|otv siz", False),
     ("yapisal", "Şasi/podye/direk/tavan işlemi ifadesi", 15,
-     r"(sasi|sase|sasesi|sasisi|sasede|saside|saseye|sasiye) (hasar|duzelt|kesme|islemli|islem gor(mus|du|en)|islem var|degis|cekil)|"
+     r"(sasi|sase|sasesi|sasisi|sasede|saside|saseye|sasiye) (hasar|duzelt|kesme|islemli|islem gor(mus|du|en)|islem var|islem mevcut|islem bulunmakta\w*|islem bulunuyor|degis|cekil)|"
+     r"havuz sac\w* (degis|islemli|islem var|islem mevcut|islem bulunmakta\w*)|"
      r"podye (hasar|degis|islemli|islem gor(mus|du|en)|duzelt|kaynak)|"
      r"direk (degis|hasar|islemli|islem gor(mus|du|en)|kaynak)|tavan (degisen|degismis|degisti|kesme)", True),
     ("motor", "Motor/şanzıman işlemi ya da arıza ifadesi", 14,
