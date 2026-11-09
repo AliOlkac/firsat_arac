@@ -51,6 +51,8 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
      başına medyan fark hesaplanır (20 ilana kadar sıfıra büzülür, ±%8 tavan) ve sahibinden ilanının piyasa değeri bu kadar
      kaydırılır. Genel tarama dosyalarını `veri/adaylar/` içinde tut; yeni taramalar farkı günceller.
    - Eklenti virgül içeren adresleri ilan adresi saymıyor: link listesinde virgül `%2C` olarak yazılır.
+   - Ön elemede daha önce detaylı taranmış (`veri/adaylar/sahibinden-ilanlar-*`) ve fiyatı düşmemiş ilanlar çıkarılır
+     (`analiz.onceki_detaylar`); fiyatı düşenler yeniden önerilir. Detaylı dosyaları `veri/adaylar/` içinde tut.
 4. Veritabanı yoksa ilk komut onu `veri/ham/*.json.xz` dosyalarından otomatik kurar (~1 dk). Model `veri/model.pkl` içinde önbelleklenir.
 
 ## Claude incelemesi (atlanmaz)

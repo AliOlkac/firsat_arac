@@ -129,6 +129,13 @@ def main():
             # genel tarama: detaylı taramaya değecekleri seç (kâr potansiyeline göre)
             from firsat import ayarlar as A
             sonuclar.sort(key=lambda s: -s["puan_hizli"])
+            # daha önce detaylı taranmış ve fiyatı düşmemiş ilanları tekrar önerme
+            onceki = analiz.onceki_detaylar()
+            tekrar = [s for s in sonuclar if s["ilan_id"] in onceki and onceki[s["ilan_id"]] and s["fiyat"] >= onceki[s["ilan_id"]]]
+            if tekrar:
+                ids = {s["ilan_id"] for s in tekrar}
+                sonuclar = [s for s in sonuclar if s["ilan_id"] not in ids]
+                print(f"  Daha önce detaylı taranmış, fiyatı düşmemiş {len(tekrar)} ilan listeden çıkarıldı")
             sonuclar = [s for s in sonuclar if s["firsat"] * s["guven"] >= (A.ONELEME_TEMIZ_ESIK if not (s["n_boya"] or s["n_degisen"])
                                                                  else A.ONELEME_BOYALI_ESIK)
                         and not any(c >= 15 or k in ("lpg_sonradan", "manuel", "kiralik", "kiralik_firma") for k, _, c in s["riskler"])][: a.n]

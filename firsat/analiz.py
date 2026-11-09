@@ -197,6 +197,23 @@ def adaylari_degerlendir(piyasa, yollar):
     return _tekille(sonuclar), bilgi
 
 
+def onceki_detaylar():
+    """Daha önce detaylı taranmış sahibinden ilanları: {ilan_id: fiyat} (veri/adaylar/*ilanlar*)."""
+    from .okuyucu import sayi
+    fiyatlar = {}
+    for yol in sorted(ADAYLAR.glob("sahibinden-ilanlar-*.json*")):
+        try:
+            with lzma.open(yol) if yol.suffix == ".xz" else open(yol, "rb") as f:
+                d = json.load(f)
+        except Exception:
+            continue
+        for x in d.get("ilanlar") or []:
+            g = x.get("genel_bilgiler") or {}
+            if g.get("ilan_id") and g.get("fiyat"):
+                fiyatlar[str(g["ilan_id"])] = sayi(g["fiyat"])
+    return fiyatlar
+
+
 def sahibinden_mi(yol):
     """Dosya sahibinden taraması mı? (sahibinden dosyaları referans veritabanına eklenmez)"""
     try:
