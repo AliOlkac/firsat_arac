@@ -83,8 +83,8 @@ RISKLER = [
      r"\blpg\b|\blpgli\b|\blpg li\b|\btuplu\b|\btup takil|\bbrc\b", False),
     ("kiralik", "Kiralık/filo/taksi/ticari kullanım geçmişi olabilir", 10,
      r"kiralik|rent ?a ?car|\bfilo\b|\btaksi\b|ticari plaka|ticari kayit|ticariye|ticari olarak kullan|\bhizmet araci", True),
-    ("kiralik_firma", "Araç kiralama şirketinin 2. el satışı (Enterprise vb.): kiralık filo geçmişi", 10,
-     r"enterprise\W*(2|ikinci)\W*el", False),
+    ("kiralik_firma", "Araç kiralama şirketinin 2. el satışı (Enterprise, Intercity vb.): kiralık filo geçmişi", 10,
+     r"enterprise\W*(2|ikinci)\W*el|\bintercity\b", False),
     ("mekatronik", "Mekatronik/şanzıman beyni değişimi yapılmış", 3, r"mekatronik|sanziman beyni", False),
     ("kaza", "Açıklamada aracın kaza geçirdiği yazıyor", 10,
      r"kazaya karis\w*|kaza gecir\w*|kaza yapmis|kaza yapti|kazasi (var|mevcut|olmustur)|kazasi fotograf\w*|"
