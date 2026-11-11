@@ -19,6 +19,11 @@
    "AL",
    "Sahibinden, ilk sahibi, 24 bin km'de 'hasar kaydı yok' diyor. Fiyat ~%10 altında; tramer sorgusunu yaptır."
   ],
+  "sorular": [
+   "Şasi numarasını atarsanız tramer sorgusunu kendim yaptırabilir miyim?",
+   "5 yılda sadece 24 bin km yapmış, araç uzun süre yattı mı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu oluyor mu?"
+  ],
   "p": [
    36.7,
    20,
@@ -162,6 +167,10 @@
    "AL",
    "Galeri (arabam). Tamponlar dahil boyasız, değişen ve hasar kaydı yok, Aralık 2023 çıkışlı Limited. Aynı araç sahibinden'de de ilanda; sahibinden fiyat seviyesine göre ucuzluk ~%5, arabam seviyesine göre ~%10."
   ],
+  "sorular": [
+   "Aynı aracı sahibinden'de de gördüm, nakit alırsam son rakamınız ne olur?",
+   "Bakımları Fiat serviste mi yapıldı, kayıtlar sistemde görünüyor mu?"
+  ],
   "p": [
    37.3,
    20,
@@ -304,6 +313,10 @@
   "claude": [
    "İNCELE",
    "Hatasız boyasız, 17,5 bin km. Ama Easy Plus alt paket; emsaller Urban/Limited gibi üst paketler olduğu için %14 ucuzluk abartılı. Gerçek fırsat daha küçük, Easy Plus ilanlarıyla elle karşılaştır."
+  ],
+  "sorular": [
+   "Paket tam olarak Easy Plus mı, multimedya ekranı ve geri görüş kamerası var mı?",
+   "17 bin km'deki araç neden satışta, ilk sahibi kimdi?"
   ],
   "p": [
    45.0,
@@ -462,6 +475,10 @@
    "İNCELE",
    "Sahibinden (öğretmen), Ağustos 2025 sıfır alınmış, ekspertizde boya/değişen yok. Ama pickup ve KGM'nin ikinci el talebi dar; aynı paketin emsalleri 1,60-1,65 M, gerçek ucuzluk ~%5."
   ],
+  "sorular": [
+   "Aracı aldıktan birkaç ay sonra neden satıyorsunuz?",
+   "Ruhsatta kamyonet mi yazıyor, muayene ve vergisi ne kadar geliyor?"
+  ],
   "p": [
    40.8,
    19.0,
@@ -607,6 +624,10 @@
    "AL",
    "Sahibinden. Boya, değişen ve tramer yok, bakımlı; şehirlerarası ve kampta kullanılmış. Aynı yıl 70-95 bin km'lik emsaller 1,75 M civarında, bu ~%11 altında. Pickup: ruhsat sınıfını ve ÖTV durumunu sor."
   ],
+  "sorular": [
+   "Kampta kullandım demişsiniz, arazide alt takımı vurdu mu ya da çamura girdi mi?",
+   "4x4 ve diferansiyel kilidi sorunsuz çalışıyor mu?"
+  ],
   "p": [
    45.0,
    18.0,
@@ -750,6 +771,10 @@
    "İNCELE",
    "Galeri (İzmir). Ekspertiz ve hasar kaydı yalnız fotoğraflarda; açıklamada boya/tramer yazılmamış. 101 bin km."
   ],
+  "sorular": [
+   "Fotoğraftaki ekspertiz raporu güncel mi, tramer kaydı tam olarak ne kadar?",
+   "2 yılda 101 bin km yapmış, şirket ya da kiralık aracı mıydı?"
+  ],
   "p": [
    37.3,
    18.0,
@@ -892,6 +917,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Başlıkta 'hatasız boyasız' yazıyor, açıklama kalıp metin; tramer belirtilmemiş."
+  ],
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vites geçişlerinde vuruntu var mı?"
   ],
   "p": [
    36.2,
@@ -1039,6 +1068,10 @@
    "AL",
    "Galeri, ilk elden, 7,8 bin km. Formda 1 lokal boya, tramer yok. Fiyat ~%10 altında."
   ],
+  "sorular": [
+   "Kaputtaki lokal boya taş izi mi, yoksa bir sürtme mi?",
+   "7.800 km'lik araç neden satışta?"
+  ],
   "p": [
    40.6,
    18.5,
@@ -1184,6 +1217,10 @@
    "İNCELE",
    "Galeri (Konya). Hatasız boyasız, ama 1 adet tutarı yazılmamış çarpma kaydı var: sorgulat. Hilux'un ikinci el talebi güçlü."
   ],
+  "sorular": [
+   "Hasar kaydındaki çarpma ne kadar ve hangi taraftan?",
+   "Araç şirket aracı mıydı, faturalı mı satılıyor?"
+  ],
   "p": [
    40.0,
    18.0,
@@ -1326,6 +1363,10 @@
   "claude": [
    "İNCELE",
    "Galeri (Ankara). Dolu Tiggo 8 Pro, hatasız diyor. Chery'nin ikinci el fiyatları hızlı düşüyor; 18 ay sonrası için temkinli ol."
+  ],
+  "sorular": [
+   "Garantisi devam ediyor mu, bakımları Chery serviste mi yapıldı?",
+   "Tramer kaydı var mı, varsa ne kadar?"
   ],
   "p": [
    41.0,
@@ -1472,6 +1513,10 @@
    "AL",
    "Galeri (Denizli). Hatasız boyasız, çift renk, 50 bin km. Fiyat ~%10 altında."
   ],
+  "sorular": [
+   "Tramer kaydı tamamen sıfır mı?",
+   "Bakımları serviste mi yapıldı, triger kayışı kontrol edildi mi?"
+  ],
   "p": [
    39.6,
    18.0,
@@ -1615,6 +1660,11 @@
   "claude": [
    "ELE",
    "Açıklamada 'sağ sol şasi ucu onarım boya', sağ kapı direği onarım, çok sayıda sök-tak ve boyalı parça yazıyor: ciddi önden darbe."
+  ],
+  "sorular": [
+   "Motor kaputu ve sol arka kapı neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
   ],
   "p": [
    45.0,
@@ -1763,6 +1813,10 @@
    "AL",
    "Sahibinden, kazasız boyasız değişensiz, bayan kullanmış. Tasarruf finansmanından sırası geldiği için fiyatı düşürmüş. 100 bin km."
   ],
+  "sorular": [
+   "100 bin km'de yağ içindeki triger kayışı değişti mi?",
+   "Yeni aracınız gelene kadar mı kullanacaksınız, teslim ne zaman olur?"
+  ],
   "p": [
    37.9,
    18.0,
@@ -1906,6 +1960,10 @@
    "AL",
    "Galeri (Trabzon). Boya ve değişen yok; yalnız sunroof camı değişiminden 45 bin TL tramer. Makyajlı kasa, cam tavanlı."
   ],
+  "sorular": [
+   "45 bin TL'lik kayıt sadece sunroof camı mı, başka parça yok mu?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    43.0,
    16.6,
@@ -2048,6 +2106,10 @@
   "claude": [
    "AL",
    "Galeri. Boyasız değişensiz tramersiz, 36,8 bin km; yalnız sağ arka kapıda boyasız göçük onarımı. Fiyat ~%11 altında."
+  ],
+  "sorular": [
+   "Sağ arka kapıdaki göçük neyden oldu, boyasız düzeltmeyle mi yapıldı?",
+   "Garantisi ne zamana kadar devam ediyor?"
   ],
   "p": [
    43.4,
@@ -2193,6 +2255,10 @@
    "İNCELE",
    "Galeri. Açıklama boş: boya, değişen ve tramer bilgisini iste."
   ],
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Aracı benim seçtiğim ekspertize götürebilir miyiz?"
+  ],
   "p": [
    34.5,
    19.0,
@@ -2337,6 +2403,10 @@
    "AL",
    "Sahibinden. Boyasız, değişensiz, hasar kayıtsız Titanium."
   ],
+  "sorular": [
+   "Kaçıncı sahibisiniz, araç sizin üzerinize mi?",
+   "Bakımlar Ford serviste mi yapıldı?"
+  ],
   "p": [
    31.9,
    20,
@@ -2479,6 +2549,10 @@
   "claude": [
    "AL",
    "Galeri (Balıkesir). Hatasız, cam tavanlı Shine, 33 bin km."
+  ],
+  "sorular": [
+   "Tramer kaydı tamamen sıfır mı?",
+   "Bakımları serviste mi yapıldı, triger kayışı kontrol edildi mi?"
   ],
   "p": [
    34.3,
@@ -2624,6 +2698,10 @@
    "DİKKAT",
    "Satıcı yayaya çarptığını, 'kafada ayar' yapıldığını ve adaptif hız sabitleyicinin (radar) çalışmadığını yazıyor; kaputta rötuş var. Tramer yok dese de önden darbe ve arıza var."
   ],
+  "sorular": [
+   "Yayaya çarpınca kaput ve ön tamponda tam olarak ne yapıldı, fotoğrafı var mı?",
+   "Radarın arızası için serviste ne kadar fiyat verdiler?"
+  ],
   "p": [
    36.8,
    20,
@@ -2764,6 +2842,10 @@
   "claude": [
    "ELE",
    "Açıklamada 1.000.000 TL tramer kaydı yazıyor (aracın fiyatına yakın). 'Hatasız boyasız' dense de bu tutar çok büyük onarım demek."
+  ],
+  "sorular": [
+   "1.000.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Nakit alırsam son rakam ne olur?"
   ],
   "p": [
    45.0,
@@ -2906,6 +2988,10 @@
    "İNCELE",
    "Sahibinden. Hasar kaydı, boya, değişen yok, bakımlar yeni. Ama panoramik cam tavanda çatlak var: değişim masrafını öğrenip fiyattan düş."
   ],
+  "sorular": [
+   "Cam tavan değişimi için serviste ne kadar fiyat verdiler?",
+   "Çatlaktan içeri su alıyor mu?"
+  ],
   "p": [
    36.6,
    20,
@@ -3046,6 +3132,10 @@
   "claude": [
    "AL",
    "Sahibinden (doktor), ilk sahibi, Audi servisinde bakımlı. Tramer yok; sol arka çamurlukta rötuşlu çizik."
+  ],
+  "sorular": [
+   "Şanzıman yağı hiç değişti mi?",
+   "Sol arka çamurluktaki rötuş ne kadarlık bir çizik?"
   ],
   "p": [
    37.3,
@@ -3190,6 +3280,10 @@
    "AL",
    "Galeri. Değişen ve boya yok, 5 bin TL tramer, ekspertiz garantili."
   ],
+  "sorular": [
+   "5 bin TL'lik kayıt neyden, hangi parça yapıldı?",
+   "Ekspertiz raporunu önceden atabilir misiniz?"
+  ],
   "p": [
    35.1,
    19.6,
@@ -3330,6 +3424,10 @@
   "claude": [
    "İNCELE",
    "Sahibinden, 150 bin km. İki parçada kuru çekiç (boyasız göçük) ve kaputta rötuş; triger ve EGR yeni. Şanzıman tipini sor (Powershift olabilir)."
+  ],
+  "sorular": [
+   "Şanzıman Powershift mi, debriyaj hiç değişti mi?",
+   "Kuru çekiç yapılan iki parça hangileri?"
   ],
   "p": [
    45.0,
@@ -3476,6 +3574,10 @@
    "İNCELE",
    "Sahibinden, orijinal ve tramersiz. Ama başlıkta 'Trend X', formda 'Titanium' yazıyor: paket Trend X ise fırsat daha küçük."
   ],
+  "sorular": [
+   "Paket Trend X mi Titanium mu, ruhsatta hangisi yazıyor?",
+   "Kaçıncı sahibisiniz?"
+  ],
   "p": [
    32.3,
    20,
@@ -3617,6 +3719,10 @@
    "AL",
    "Galeri (Kayseri). Boya ve değişen yok, 10 bin TL tramer, bakımları düzenli. 2025 Bayon Style."
   ],
+  "sorular": [
+   "10 bin TL'lik kayıt neyden, hangi parça yapıldı?",
+   "Bir yılda 45 bin km yapmış, şirket ya da kiralık aracı mıydı?"
+  ],
   "p": [
    32.1,
    20,
@@ -3757,6 +3863,10 @@
   "claude": [
    "DİKKAT",
    "Mart 2026 tarihli 197 bin TL kaza kaydı var (tramer mesajı açıklamada). 37 bin km'lik araç için büyük onarım."
+  ],
+  "sorular": [
+   "197 bin TL'lik kazada hangi parçalar değişti, onarım faturası var mı?",
+   "O kazada airbag açıldı mı?"
   ],
   "p": [
    45.0,
@@ -3903,6 +4013,10 @@
    "AL",
    "Galeri (Erzurum). Tramer, boya ve değişen yok; yalnız kılcal çizikler. Fiyat ~%11 altında."
   ],
+  "sorular": [
+   "Kılcal çizikler dışında boya ya da lokal işlem var mı?",
+   "98 bin km'de triger seti değişti mi?"
+  ],
   "p": [
    38.1,
    18.0,
@@ -4046,6 +4160,10 @@
    "DİKKAT",
    "Body kit, spoiler, özel jant gibi modifiyeler yapılmış; satarken alıcı kitlesi daralır. Kendisi hatasız tramersiz."
   ],
+  "sorular": [
+   "Orijinal tampon, spoiler ve jantlar duruyor mu, satışla birlikte verir misiniz?",
+   "LPG sisteminin bakımı en son ne zaman yapıldı?"
+  ],
   "p": [
    33.6,
    20,
@@ -4186,6 +4304,10 @@
   "claude": [
    "İNCELE",
    "Galeri. 158 bin km (üst sınırda); sol arka kapı boyalı, 21 bin TL tramer."
+  ],
+  "sorular": [
+   "21 bin TL'lik kayıt sol arka kapıdan mı?",
+   "Şanzıman yağı ve ağır bakımı yapıldı mı?"
   ],
   "p": [
    43.8,
@@ -4331,6 +4453,9 @@
   "claude": [
    "İNCELE",
    "Galeri. Yalnız kaput boyalı; tutarı yazılmamış 1 çarpma kaydı var: sorgulat."
+  ],
+  "sorular": [
+   "Hasar kaydı ne kadar, kaput o kazadan mı boyandı?"
   ],
   "p": [
    36.1,
@@ -4478,6 +4603,10 @@
    "AL",
    "Sahibinden. Tamamen orijinal, hasar ve tramer kaydı yok, Nissan servisinde bakımlı. 59 bin km."
   ],
+  "sorular": [
+   "Kaçıncı sahibisiniz, araç sizin adınıza mı?",
+   "Şanzımanda kalkışta titreme var mı?"
+  ],
   "p": [
    35.1,
    19.0,
@@ -4622,6 +4751,10 @@
   "claude": [
    "İNCELE",
    "Sahibinden, ilk sahibi, hatasız. Chery'nin ikinci el talebi zayıf; fırsat orta."
+  ],
+  "sorular": [
+   "Neden satıyorsunuz, garantisi ne zamana kadar?",
+   "Tramer kaydı tamamen sıfır mı?"
   ],
   "p": [
    30.4,
@@ -4769,6 +4902,10 @@
    "AL",
    "Galeri. Hatasız boyasız, tramer kaydı yok, 61 bin km."
   ],
+  "sorular": [
+   "Bakımları Nissan serviste mi yapıldı?",
+   "Şanzımanda kalkışta titreme var mı?"
+  ],
   "p": [
    34.1,
    20,
@@ -4911,6 +5048,10 @@
   "claude": [
    "AL",
    "Sahibinden, ilk sahibi, 21 bin km. Kaza ve tramer yok; arka cam değişmiş (dışarıdan cisim), ön tamponda sürtme."
+  ],
+  "sorular": [
+   "Arka camı orijinal logolu camla mı değiştirdiniz?",
+   "Ön tampondaki sürtme boyandı mı, öyle mi duruyor?"
   ],
   "p": [
    29.2,
@@ -5055,6 +5196,10 @@
    "AL",
    "Sahibinden, 21 bin km. Değişen, boya ve hata yok."
   ],
+  "sorular": [
+   "Garantisi devam ediyor mu, bakımları serviste mi?",
+   "Neden satıyorsunuz?"
+  ],
   "p": [
    31.1,
    20,
@@ -5195,6 +5340,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Boya-değişen-hasar kaydı yok ama etrafında göçük düzeltmeler var; 128 bin km. İlan aylardır yayında."
+  ],
+  "sorular": [
+   "Göçük düzeltme yapılan yerler hangileri, kaç parça?",
+   "İlan uzun süredir yayında, nakit son rakamınız ne?"
   ],
   "p": [
    37.5,
@@ -5340,6 +5489,10 @@
    "İNCELE",
    "Hatasız-boyasız Wildtrak ama 125 bin km."
   ],
+  "sorular": [
+   "125 bin km'de araç şirket aracı mıydı, faturalı mı?",
+   "Ağır bakımı ve şanzıman yağı değişti mi?"
+  ],
   "p": [
    31.9,
    20,
@@ -5480,6 +5633,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Hatasız tramersiz ama ışıklarda arkadan dokunma sonrası ön 3 parçada ayar işlemi yapılmış."
+  ],
+  "sorular": [
+   "Ön 3 parçadaki ayar işleminde boya ya da değişen var mı?",
+   "Tramer sorgu ekranını atabilir misiniz?"
   ],
   "p": [
    30.2,
@@ -5624,6 +5781,10 @@
    "İNCELE",
    "Renault'un 2Plan noktası, açıklama boş. Ekspertiz ve tramer bilgisini iste."
   ],
+  "sorular": [
+   "Ekspertiz raporunu ve tramer sorgusunu atabilir misiniz?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    33.1,
    18.0,
@@ -5766,6 +5927,10 @@
   "claude": [
    "İNCELE",
    "Sahibinden. Açıklama tek satır ('2024 ilk elden'): boya ve tramer sor."
+  ],
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Neden satıyorsunuz?"
   ],
   "p": [
    27.6,
@@ -5911,6 +6076,10 @@
    "İNCELE",
    "Galeri (Ankara). 4x4 otomatik Hilux, tramer yok. Fırsat orta (~%8)."
   ],
+  "sorular": [
+   "Araç şirket aracı mıydı, faturalı mı satılıyor?",
+   "Arazide ya da ağır yükte kullanıldı mı?"
+  ],
   "p": [
    30.1,
    20,
@@ -6054,6 +6223,10 @@
   "claude": [
    "İNCELE",
    "Kaput, sol ön kapı ve çamurluk boyalı; değişen ve tramer yok."
+  ],
+  "sorular": [
+   "Kaput, sol ön kapı ve çamurluk aynı olaydan mı boyandı?",
+   "LPG sisteminin bakımı en son ne zaman yapıldı?"
   ],
   "p": [
    41.8,
@@ -6200,6 +6373,10 @@
    "AL",
    "Sahibinden. Kaza, boya, değişen ve tramer yok; garantisi 2029'a kadar."
   ],
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Bakımlar serviste mi yapıldı?"
+  ],
   "p": [
    28.0,
    20,
@@ -6342,6 +6519,10 @@
   "claude": [
    "AL",
    "Sahibinden, ilk sahibi. Hatasız tramersiz, garantili; birkaç küçük çizik var."
+  ],
+  "sorular": [
+   "Küçük çizikler nerede, fotoğrafını atabilir misiniz?",
+   "Garantisi ne zamana kadar?"
   ],
   "p": [
    28.7,
@@ -6487,6 +6668,10 @@
    "İNCELE",
    "Galeri. Hatasız boyasız tramersiz; şanzıman tipini sor (bu yıllarda Powershift)."
   ],
+  "sorular": [
+   "Şanzıman Powershift mi, tork konvertörlü mü?",
+   "Triger ve ağır bakımı yapıldı mı?"
+  ],
   "p": [
    31.4,
    20,
@@ -6627,6 +6812,10 @@
   "claude": [
    "AL",
    "Galeri. 39 bin km Golf, kış paketli, form temiz, tramer yok. Fiyat ~%9 altında."
+  ],
+  "sorular": [
+   "Bakım kayıtları VW serviste mi?",
+   "Nakit alırsam son rakam ne olur?"
   ],
   "p": [
    31.1,
@@ -6773,6 +6962,10 @@
    "İNCELE",
    "Sahibinden. Bakımlı, garantili; boya ve tramer yazılmamış."
   ],
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Kaçıncı sahibisiniz?"
+  ],
   "p": [
    31.1,
    19.0,
@@ -6915,6 +7108,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Boyasız; plastik aksamdan 21 bin TL hasar kaydı."
+  ],
+  "sorular": [
+   "21 bin TL'lik kayıt hangi plastik parçalardan, tampon mu?",
+   "Şanzımanda kalkışta titreme var mı?"
   ],
   "p": [
    31.2,
@@ -7060,6 +7257,10 @@
    "İNCELE",
    "Galeri. Formda 1 boyalı parça, 105 bin km."
   ],
+  "sorular": [
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Kiralık ya da şirket aracı olarak kullanıldı mı?"
+  ],
   "p": [
    34.8,
    16.0,
@@ -7203,6 +7404,10 @@
    "İNCELE",
    "Sahibinden. Kaza, boya, tramer yok; bagaj kapağında iki gamze, çamurluk dodiğinde çatlak. 102 bin km 4x2."
   ],
+  "sorular": [
+   "Bagaj kapağındaki gamzeler ve dodikteki çatlak için fiyattan ne kadar düşersiniz?",
+   "Kasada sürekli yük taşındı mı?"
+  ],
   "p": [
    28.1,
    20,
@@ -7343,6 +7548,10 @@
   "claude": [
    "İNCELE",
    "Sahibinden. Cam tavan arızalı (fiyat bu yüzden düşük); tamir masrafını öğren. Arka dodikten 100 TL kayıt."
+  ],
+  "sorular": [
+   "Cam tavanın tamiri için ustadan fiyat aldınız mı?",
+   "Şanzıman Powershift mi, vites geçişlerinde sorun var mı?"
   ],
   "p": [
    32.9,
@@ -7490,6 +7699,10 @@
    "İNCELE",
    "Galeri. Formda 2 boyalı parça, 127 bin km."
   ],
+  "sorular": [
+   "İki ön çamurluk neden boyandı, hasar kaydı var mı?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    40.8,
    12.0,
@@ -7636,6 +7849,10 @@
    "DİKKAT",
    "113 bin TL tramer ve değişmiş marşpiyel var (form değişensiz gösteriyor). Kavrama 90 binde değişmiş; 132 bin km."
   ],
+  "sorular": [
+   "113 bin TL'lik kazada marşpiyel dışında hangi parçalar yapıldı?",
+   "Kavrama 90 binde neden değişti?"
+  ],
   "p": [
    28.7,
    18.0,
@@ -7778,6 +7995,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Hatasız, garantili Omoda 5. Chery'nin ikinci el talebi zayıf."
+  ],
+  "sorular": [
+   "Garantisi devam ediyor mu, bakımları Chery serviste mi?",
+   "Tramer kaydı sıfır mı?"
   ],
   "p": [
    27.3,
@@ -7923,6 +8144,9 @@
    "İNCELE",
    "Galeri. 1 parça lokal boya, 16 bin TL hasar kaydı."
   ],
+  "sorular": [
+   "16 bin TL'lik kayıt hangi parçadan, lokal boya oradan mı?"
+  ],
   "p": [
    30.3,
    19.6,
@@ -8063,6 +8287,10 @@
   "claude": [
    "İNCELE",
    "Galeri. 1,5 parça boya (sürtme), hasar kaydı yok. İlan çok uzun süredir yayında: pazarlık payı yüksek olabilir."
+  ],
+  "sorular": [
+   "Sol ön kapı ne kadarlık bir sürtmeden boyandı?",
+   "İlan uzun süredir yayında, nakit son rakamınız ne?"
   ],
   "p": [
    31.2,
@@ -8210,6 +8438,10 @@
    "İNCELE",
    "Sahibinden. 9.500 TL kayıt var, formda 2 boyalı parça; açıklama çok kısa."
   ],
+  "sorular": [
+   "9.500 TL'lik kayıt ön tampon ve çamurluktan mı?",
+   "5 yılda sadece 25 bin km yapmış, araç uzun süre yattı mı?"
+  ],
   "p": [
    33.0,
    12.5,
@@ -8356,6 +8588,9 @@
    "DİKKAT",
    "10 bin km ama ~130 bin TL hasar kaydı ve 1 boyalı parça."
   ],
+  "sorular": [
+   "130 bin TL'lik kayıt neyden, değişen parça var mı?"
+  ],
   "p": [
    35.6,
    14.0,
@@ -8500,6 +8735,10 @@
   "claude": [
    "AL",
    "Galeri (konsinye). Tamponlar dahil boyasız, ilk sahibinden, tam servis bakımlı."
+  ],
+  "sorular": [
+   "Araç sahibi kim, noter satışını kendisi mi yapacak?",
+   "Tramer kaydı tamamen sıfır mı?"
   ],
   "p": [
    28.2,
@@ -8646,6 +8885,10 @@
    "İNCELE",
    "Galeri. Boyasız tramersiz, 20 bin km. Fırsat orta."
   ],
+  "sorular": [
+   "Garantisi devam ediyor mu?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    24.9,
    20,
@@ -8786,6 +9029,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Tek parça boya; tramer yazılmamış."
+  ],
+  "sorular": [
+   "Kaput neden boyandı, taş izi mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
   ],
   "p": [
    30.4,
@@ -8945,6 +9192,10 @@
    "AL",
    "Sahibinden. Boya, değişen ve hasar kaydı yok, cam tavanlı Shine."
   ],
+  "sorular": [
+   "64 bin km'de yağ içindeki triger kayışı kontrol ettirildi mi?",
+   "Kaçıncı sahibisiniz?"
+  ],
   "p": [
    29.0,
    20,
@@ -9087,6 +9338,10 @@
   "claude": [
    "İNCELE",
    "Sahibinden, sıfırdan tek el. Boya-değişen yok; tramer yazılmamış."
+  ],
+  "sorular": [
+   "Tramer kaydı tamamen sıfır mı?",
+   "Neden satıyorsunuz?"
   ],
   "p": [
    28.2,
@@ -9232,6 +9487,9 @@
    "İNCELE",
    "Galeri. 83 bin TL tramer var."
   ],
+  "sorular": [
+   "83 bin TL'lik kazada hangi parçalar yapıldı, değişen var mı?"
+  ],
   "p": [
    27.6,
    14.7,
@@ -9376,6 +9634,10 @@
    "İNCELE",
    "Sahibinden, bayi bakımlı, 30 bin km. Fırsat orta (~%6)."
   ],
+  "sorular": [
+   "Neden satıyorsunuz, garantisi ne zamana kadar?",
+   "Nakit alırsam son rakamınız ne olur?"
+  ],
   "p": [
    25.4,
    20,
@@ -9517,6 +9779,10 @@
    "İNCELE",
    "Galeri. Hatasız tramersiz. Fırsat küçük."
   ],
+  "sorular": [
+   "Şanzımanda kalkışta titreme var mı, yağı değişti mi?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    24.5,
    20,
@@ -9657,6 +9923,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Boya, değişen, hasar kaydı yok. Fırsat küçük."
+  ],
+  "sorular": [
+   "Bakımları Toyota serviste mi yapıldı?",
+   "Kiralık ya da şirket aracı mıydı?"
   ],
   "p": [
    21.4,
@@ -9801,6 +10071,10 @@
    "İNCELE",
    "Galeri. İki çarpma kaydı (11 bin + 26 bin TL)."
   ],
+  "sorular": [
+   "11 bin ve 26 bin TL'lik iki kayıt hangi parçalardan?",
+   "1,5 yılda 76 bin km yapmış, kiralık ya da şirket aracı mıydı?"
+  ],
   "p": [
    27.9,
    18.9,
@@ -9941,6 +10215,10 @@
   "claude": [
    "İNCELE",
    "Sahibinden. Gerçek km 1.800 diyor (formda 6.000). İlan uzun süredir yayında."
+  ],
+  "sorular": [
+   "Gerçek km 1.800 ise ilanda neden 6.000 yazıyor?",
+   "İlan uzun süredir yayında, son rakamınız ne?"
   ],
   "p": [
    27.7,
@@ -10086,6 +10364,10 @@
    "AL",
    "Sahibinden. Boyasız, hatasız, tramersiz, 49 bin km Flame."
   ],
+  "sorular": [
+   "Bakımları Toyota serviste mi yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    27.8,
    18.0,
@@ -10228,6 +10510,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Hasar kaydı yok; Jeep'in ikinci el talebi düşük."
+  ],
+  "sorular": [
+   "Bakımları Jeep serviste mi yapıldı?",
+   "Şanzımanda kalkışta titreme var mı?"
   ],
   "p": [
    27.1,
@@ -10372,6 +10658,10 @@
    "İNCELE",
    "Galeri. Hatasız tramersiz, 23 bin km. Fırsat orta."
   ],
+  "sorular": [
+   "Garantisi devam ediyor mu?",
+   "Ekspertiz raporu var mı, yoksa benim seçtiğim yere götürebilir miyiz?"
+  ],
   "p": [
    27.5,
    20,
@@ -10514,6 +10804,10 @@
   "claude": [
    "İNCELE",
    "İlk elden, garantili, 'acil'. Tramer bilgisi yok."
+  ],
+  "sorular": [
+   "Kaput ve sağ ön çamurluk neden boyandı, hasar kaydı ne kadar?",
+   "Neden acil satılıyor?"
   ],
   "p": [
    38.6,
@@ -10663,6 +10957,10 @@
    "İNCELE",
    "Galeri (Yozgat). Değişen, boya, hasar kaydı yok; 100 bin km."
   ],
+  "sorular": [
+   "İki yılda 100 bin km yapmış, şirket ya da kiralık aracı mıydı?",
+   "Şanzımanın bakımı yapıldı mı?"
+  ],
   "p": [
    25.5,
    20,
@@ -10803,6 +11101,10 @@
   "claude": [
    "İNCELE",
    "Sahibinden. RS dönüşümü ve 19 inç jant yapılmış; hatasız boyasız. Satarken modifiye bazı alıcıları kaçırır."
+  ],
+  "sorular": [
+   "Orijinal tampon, ızgara ve jantlar duruyor mu, satışla birlikte verir misiniz?",
+   "Tramer kaydı sıfır mı?"
   ],
   "p": [
    25.5,
@@ -10949,6 +11251,10 @@
    "İNCELE",
    "Galeri. Boyasız; sağ far değişiminden 62 bin TL tramer."
   ],
+  "sorular": [
+   "62 bin TL'lik kayıt sadece sağ far mı, tampon ya da çamurluk da yapıldı mı?",
+   "Şanzıman yağı değişti mi?"
+  ],
   "p": [
    30.1,
    18.0,
@@ -11092,6 +11398,10 @@
    "İNCELE",
    "Galeri. Formda 1 boyalı parça. Fırsat orta."
   ],
+  "sorular": [
+   "Kaput neden boyandı, taş izi mi vuruk mu?",
+   "Garantisi devam ediyor mu?"
+  ],
   "p": [
    28.6,
    16.0,
@@ -11234,6 +11544,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Kaput ucunda lokal boya, 17 bin TL tramer; 150 bin km."
+  ],
+  "sorular": [
+   "17 bin TL'lik kayıt kaput ucundaki işlemden mi?",
+   "150 bin km'de şanzıman yağı ve ağır bakım yapıldı mı?"
   ],
   "p": [
    37.1,
@@ -11379,6 +11693,10 @@
    "İNCELE",
    "Galeri. Hatasız boyasız ama 139 bin km."
   ],
+  "sorular": [
+   "139 bin km'de şanzıman ve ağır bakım yapıldı mı?",
+   "Şirket aracı mıydı, faturalı mı?"
+  ],
   "p": [
    24.6,
    20,
@@ -11519,6 +11837,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Hatasız tramersiz Stonic. Fırsat küçük."
+  ],
+  "sorular": [
+   "Garantisi devam ediyor mu?",
+   "Nakit alırsam son rakam ne olur?"
   ],
   "p": [
    21.7,
@@ -11663,6 +11985,10 @@
    "İNCELE",
    "Galeri. Hatasız boyasız tramersiz. Fırsat küçük."
   ],
+  "sorular": [
+   "Garantisi devam ediyor mu?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    22.9,
    20,
@@ -11806,6 +12132,10 @@
    "İNCELE",
    "Galeri, 8 bin km. Orijinal, tramer yok. Fırsat küçük."
   ],
+  "sorular": [
+   "8 bin km'lik araç neden satışta?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    23.9,
    20,
@@ -11946,6 +12276,10 @@
   "claude": [
    "İNCELE",
    "Galeri, %20 faturalı. Boyasız tramersiz."
+  ],
+  "sorular": [
+   "Fiyata KDV dahil mi, şahıs olarak alırsam toplam ne ödeyeceğim?",
+   "Bir yılda 45 bin km yapmış, kiralık ya da şirket aracı mıydı?"
   ],
   "p": [
    28.5,
@@ -12104,6 +12438,10 @@
    "İNCELE",
    "Yetkili bayi (Ateş). Hasar kaydı yok; bagajda fabrikasyon mikron farkı. Fırsat küçük."
   ],
+  "sorular": [
+   "Bagajdaki mikron farkı fabrikadan mı, ekspertiz raporunda ne yazıyor?",
+   "Bayi olarak ek garanti ya da indirim veriyor musunuz?"
+  ],
   "p": [
    22.4,
    20,
@@ -12248,6 +12586,10 @@
    "İNCELE",
    "Galeri. 8 bin km, 5 yıl garantili. İlan uzun süredir yayında."
   ],
+  "sorular": [
+   "Tramer kaydı var mı?",
+   "İlan uzun süredir yayında, nakit son rakamınız ne?"
+  ],
   "p": [
    27.8,
    19.0,
@@ -12390,6 +12732,9 @@
   "claude": [
    "İNCELE",
    "Galeri. Formda 1 boyalı parça; tramer son fotoğrafta."
+  ],
+  "sorular": [
+   "Sol ön çamurluk neden boyandı, hasar kaydı ne kadar?"
   ],
   "p": [
    27.8,
@@ -12535,6 +12880,10 @@
   "claude": [
    "AL",
    "Sahibinden. Değişen ve boya yok, servis bakımlı, 42 bin km. Fiyat ~%9 altında."
+  ],
+  "sorular": [
+   "Tramer kaydı tamamen sıfır mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
   ],
   "p": [
    28.7,
@@ -12682,6 +13031,10 @@
    "İNCELE",
    "Galeri. Hasar kaydı yok. Fırsat küçük."
   ],
+  "sorular": [
+   "Şanzımanda kalkışta titreme var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    23.3,
    20,
@@ -12824,6 +13177,11 @@
   "claude": [
    "ELE",
    "Açıklamada sağ arka şase kolunda boya işlemi var yazıyor (arka tampon değişimiyle birlikte): arkadan darbe."
+  ],
+  "sorular": [
+   "Sağ ön kapı neden boyandı, çizik mi vuruk mu?",
+   "17.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
   ],
   "p": [
    29.1,
@@ -12970,6 +13328,10 @@
    "İNCELE",
    "Sahibinden. 17 bin km, servis bakımlı Musso; pickup ve KGM, ikinci el talebi dar."
   ],
+  "sorular": [
+   "Ruhsatta kamyonet mi yazıyor, neden satıyorsunuz?",
+   "Kasada yük taşındı mı?"
+  ],
   "p": [
    26.0,
    19.0,
@@ -13114,6 +13476,10 @@
    "İNCELE",
    "Galeri, 6 bin km. 'Hatasız' diyor, tramer yazılmamış."
   ],
+  "sorular": [
+   "Tramer kaydı var mı?",
+   "6 bin km'lik araç neden satışta?"
+  ],
   "p": [
    29.3,
    18.0,
@@ -13257,6 +13623,9 @@
   "claude": [
    "DİKKAT",
    "Formda 3 boyalı parça ve açıklamada 138 bin TL yeni tarihli kayıt var."
+  ],
+  "sorular": [
+   "138 bin TL'lik kayıt sağ taraftaki boyalı parçalardan mı, değişen var mı?"
   ],
   "p": [
    39.3,
@@ -13405,6 +13774,10 @@
    "İNCELE",
    "Galeri, açıklama boş. Başlıkta yarısı peşin/senet var: nakit fiyatı teyit et."
   ],
+  "sorular": [
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "Boya değişen ve tramer durumu ne?"
+  ],
   "p": [
    25.5,
    18.0,
@@ -13549,6 +13922,10 @@
    "İNCELE",
    "Sahibinden, garantili, hatasız. Fırsat küçük."
   ],
+  "sorular": [
+   "Garantisi ne zamana kadar, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    21.2,
    20,
@@ -13692,6 +14069,10 @@
    "İNCELE",
    "Sahibinden. Boyasız değişensiz, 1.750 TL kayıt. Fırsat küçük."
   ],
+  "sorular": [
+   "1.750 TL'lik kayıt neyden?",
+   "Kaçıncı sahibisiniz?"
+  ],
   "p": [
    26.0,
    19.8,
@@ -13832,6 +14213,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Tek parça boya, 15 bin TL yeni tarihli tramer; 120 bin km."
+  ],
+  "sorular": [
+   "15 bin TL'lik yeni kayıt kaputtan mı?",
+   "120 bin km'de triger ve şanzıman bakımı yapıldı mı?"
   ],
   "p": [
    30.0,
@@ -13975,6 +14360,10 @@
   "claude": [
    "İNCELE",
    "Galeri. Form temiz. Fırsat küçük (~%5)."
+  ],
+  "sorular": [
+   "Garantisi devam ediyor mu?",
+   "Nakit alırsam son rakam ne olur?"
   ],
   "p": [
    19.6,
@@ -14120,6 +14509,10 @@
    "İNCELE",
    "Sahibinden. Sağ kapıda avuç içi göçük. İlan uzun süredir yayında."
   ],
+  "sorular": [
+   "Sağ kapıdaki göçük için fiyattan ne kadar düşersiniz?",
+   "İlan uzun süredir yayında, son rakamınız ne?"
+  ],
   "p": [
    26.1,
    20,
@@ -14264,6 +14657,10 @@
    "DİKKAT",
    "Form boyasız gösteriyor ama açıklamada sağ iki kapı ve sağ ön çamurluk sürtme kaynaklı boyalı yazıyor (3 parça). Değişen ve tramer yok; 3 boyayla gerçek ucuzluk küçük."
   ],
+  "sorular": [
+   "Formda boyasız yazıyor ama açıklamada sağ iki kapı ve çamurluk boyalı, hangisi doğru?",
+   "Bu boyalarla fiyatta pazarlık payı var mı?"
+  ],
   "p": [
    27.4,
    20,
@@ -14404,6 +14801,10 @@
   "son_puan": 69.4,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    28.0,
    18.0,
@@ -14545,6 +14946,10 @@
   "son_puan": 69.4,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "11.202 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    24.9,
    20,
@@ -14683,6 +15088,10 @@
   "son_puan": 69.3,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    22.8,
    20,
@@ -14824,6 +15233,9 @@
   "son_puan": 69.3,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    21.5,
    20,
@@ -14964,6 +15376,10 @@
   "son_puan": 69.3,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    24.8,
    20,
@@ -15102,6 +15518,10 @@
   "son_puan": 69.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    26.6,
    19.0,
@@ -15244,6 +15664,10 @@
   "son_puan": 69.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Arka kaput neden değişti, orijinal parça mı takıldı?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    28.9,
    10.0,
@@ -15399,6 +15823,10 @@
   "son_puan": 69.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    24.0,
    18.0,
@@ -15541,6 +15969,10 @@
   "son_puan": 68.8,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    22.2,
    20,
@@ -15681,6 +16113,11 @@
   "son_puan": 68.7,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    28.6,
    18.0,
@@ -15821,6 +16258,10 @@
   "son_puan": 68.6,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "45.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    41.4,
    16.0,
@@ -15962,6 +16403,9 @@
   "son_puan": 68.4,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    23.3,
    20,
@@ -16102,6 +16546,10 @@
   "son_puan": 68.4,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    27.1,
    14.0,
@@ -16258,6 +16706,11 @@
   "son_puan": 68.2,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    27.3,
    18.0,
@@ -16399,6 +16852,10 @@
   "son_puan": 68.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    21.8,
    19.0,
@@ -16541,6 +16998,10 @@
   "son_puan": 68.0,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    20.9,
    20,
@@ -16681,6 +17142,10 @@
   "son_puan": 67.9,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    21.2,
    20,
@@ -16821,6 +17286,10 @@
   "son_puan": 67.7,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "20.670 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    25.0,
    19.1,
@@ -16918,6 +17387,11 @@
   "son_puan": 67.7,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    22.9,
    20,
@@ -17059,6 +17533,10 @@
   "son_puan": 67.7,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    21.5,
    20,
@@ -17197,6 +17675,9 @@
   "son_puan": 67.6,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    29.9,
    20,
@@ -17337,6 +17818,9 @@
   "son_puan": 67.5,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    22.2,
    20,
@@ -17477,6 +17961,11 @@
   "son_puan": 67.5,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    24.7,
    18.0,
@@ -17617,6 +18106,11 @@
   "son_puan": 67.4,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    37.2,
    3.0,
@@ -17762,6 +18256,10 @@
   "son_puan": 67.4,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    19.9,
    18.0,
@@ -17902,6 +18400,9 @@
   "son_puan": 67.4,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    22.0,
    20,
@@ -18040,6 +18541,10 @@
   "son_puan": 67.2,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Formda değişen görünmüyor ama açıklamada geçiyor, hangi parça değişti?",
+   "56.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    34.4,
    16.0,
@@ -18180,6 +18685,10 @@
   "son_puan": 67.2,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Sağ ön kapı ve sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    30.0,
    10.0,
@@ -18323,6 +18832,11 @@
   "son_puan": 66.9,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "27.544 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzıman yağı hiç değişti mi?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    21.6,
    17.5,
@@ -18461,6 +18975,10 @@
   "son_puan": 66.8,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    23.6,
    19.0,
@@ -18603,6 +19121,11 @@
   "son_puan": 66.8,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    18.8,
    18.5,
@@ -18746,6 +19269,11 @@
   "son_puan": 66.6,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    21.0,
    18.0,
@@ -18886,6 +19414,10 @@
   "son_puan": 66.5,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "11.202 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    20.9,
    19.9,
@@ -19024,6 +19556,10 @@
   "son_puan": 66.5,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Arka kaput neden boyandı, çizik mi vuruk mu?",
+   "5.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    23.2,
    16.6,
@@ -19164,6 +19700,10 @@
   "son_puan": 66.4,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "40.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    23.6,
    16.7,
@@ -19302,6 +19842,9 @@
   "son_puan": 66.3,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    20.8,
    20,
@@ -19440,6 +19983,9 @@
   "son_puan": 66.3,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    17.6,
    20,
@@ -19578,6 +20124,10 @@
   "son_puan": 66.3,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    17.5,
    20,
@@ -19718,6 +20268,11 @@
   "son_puan": 66.2,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    29.0,
    18.0,
@@ -19859,6 +20414,11 @@
   "son_puan": 66.2,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    21.2,
    19.0,
@@ -20000,6 +20560,10 @@
   "son_puan": 66.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    18.9,
    19.0,
@@ -20140,6 +20704,10 @@
   "son_puan": 66.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Ön tampon ve arka tampon neden boyandı, çizik mi vuruk mu?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    20.3,
    18.0,
@@ -20293,6 +20861,10 @@
   "son_puan": 66.0,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "210.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    28.3,
    12.0,
@@ -20433,6 +21005,10 @@
   "son_puan": 66.0,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    29.0,
    18.0,
@@ -20574,6 +21150,10 @@
   "son_puan": 66.0,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    25.9,
    11.0,
@@ -20716,6 +21296,10 @@
   "son_puan": 65.9,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    20.4,
    19.0,
@@ -20858,6 +21442,11 @@
   "son_puan": 65.9,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "107.062 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    26.5,
    13.3,
@@ -21000,6 +21589,9 @@
   "son_puan": 65.9,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    19.1,
    20,
@@ -21140,6 +21732,10 @@
   "son_puan": 65.9,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    15.6,
    20,
@@ -21280,6 +21876,11 @@
   "son_puan": 65.8,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    25.3,
    19.0,
@@ -21421,6 +22022,11 @@
   "son_puan": 65.8,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "10.202 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    22.6,
    19.0,
@@ -21559,6 +22165,11 @@
   "son_puan": 65.8,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "12.150 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    26.9,
    15.1,
@@ -21701,6 +22312,10 @@
   "son_puan": 65.7,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    15.5,
    20,
@@ -21843,6 +22458,10 @@
   "son_puan": 65.7,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "25.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    23.2,
    19.3,
@@ -21961,6 +22580,10 @@
   "son_puan": 65.6,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "20.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    20.0,
    18.2,
@@ -22099,6 +22722,10 @@
   "son_puan": 65.6,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    20.9,
    20,
@@ -22240,6 +22867,10 @@
   "son_puan": 65.6,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    22.1,
    19.0,
@@ -22380,6 +23011,10 @@
   "son_puan": 65.6,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    27.4,
    14.0,
@@ -22535,6 +23170,10 @@
   "son_puan": 65.6,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    26.6,
    12.7,
@@ -22690,6 +23329,11 @@
   "son_puan": 65.6,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "1.600 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    22.3,
    17.4,
@@ -22830,6 +23474,11 @@
   "son_puan": 65.5,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    23.0,
    18.0,
@@ -22971,6 +23620,10 @@
   "son_puan": 65.5,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    20.6,
    20,
@@ -23109,6 +23762,10 @@
   "son_puan": 65.4,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    22.1,
    20,
@@ -23249,6 +23906,9 @@
   "son_puan": 65.2,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    17.1,
    20,
@@ -23387,6 +24047,10 @@
   "son_puan": 65.2,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "34.723 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    20.9,
    16.8,
@@ -23527,6 +24191,11 @@
   "son_puan": 65.2,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Arka tampon neden değişti, orijinal parça mı takıldı?",
+   "Sağ ön kapı neden boyandı, çizik mi vuruk mu?",
+   "138.503 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    31.6,
    6.0,
@@ -23683,6 +24352,10 @@
   "son_puan": 65.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    19.0,
    20,
@@ -23823,6 +24496,11 @@
   "son_puan": 65.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Sağ ön kapı neden değişti, orijinal parça mı takıldı?",
+   "6.202 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    26.6,
    11.5,
@@ -23976,6 +24654,11 @@
   "son_puan": 65.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    29.3,
    8.0,
@@ -24118,6 +24801,10 @@
   "son_puan": 65.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    15.2,
    20,
@@ -24258,6 +24945,11 @@
   "son_puan": 65.1,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "36.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    27.6,
    18.2,
@@ -24399,6 +25091,10 @@
   "son_puan": 65.0,
   "karar": "İNCELE",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    21.9,
    18.0,
@@ -24539,6 +25235,10 @@
   "son_puan": 65.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "40.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    22.6,
    18.2,
@@ -24680,6 +25380,10 @@
   "son_puan": 64.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "12.986 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    21.7,
    19.1,
@@ -24818,6 +25522,11 @@
   "son_puan": 64.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    21.4,
    16.5,
@@ -24961,6 +25670,11 @@
   "son_puan": 64.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda değişen görünmüyor ama açıklamada geçiyor, hangi parça değişti?",
+   "72.500 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    24.8,
    15.3,
@@ -25104,6 +25818,11 @@
   "son_puan": 64.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    28.7,
    18.0,
@@ -25244,6 +25963,11 @@
   "son_puan": 64.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk ve arka tampon neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    27.0,
    12.5,
@@ -25388,6 +26112,11 @@
   "son_puan": 64.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk ve arka kaput neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    26.1,
    10.0,
@@ -25531,6 +26260,11 @@
   "son_puan": 64.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput neden boyandı, çizik mi vuruk mu?",
+   "413.400 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    28.2,
    10.5,
@@ -25674,6 +26408,10 @@
   "son_puan": 64.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    17.0,
    20,
@@ -25814,6 +26552,11 @@
   "son_puan": 64.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "115.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    25.0,
    12.0,
@@ -25955,6 +26698,10 @@
   "son_puan": 64.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    21.9,
    20,
@@ -26093,6 +26840,10 @@
   "son_puan": 64.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    20.0,
    19.0,
@@ -26235,6 +26986,10 @@
   "son_puan": 64.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    17.2,
    20,
@@ -26375,6 +27130,10 @@
   "son_puan": 63.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    18.7,
    18.0,
@@ -26515,6 +27274,11 @@
   "son_puan": 63.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    20.7,
    15.0,
@@ -26668,6 +27432,10 @@
   "son_puan": 63.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    24.0,
    18.0,
@@ -26810,6 +27578,10 @@
   "son_puan": 63.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu, sol ön çamurluk ve sağ arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    29.4,
    8.5,
@@ -26955,6 +27727,9 @@
   "son_puan": 63.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    15.3,
    20,
@@ -27096,6 +27871,11 @@
   "son_puan": 63.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön kapı neden boyandı, çizik mi vuruk mu?",
+   "2.202 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    23.2,
    15.8,
@@ -27236,6 +28016,10 @@
   "son_puan": 63.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı ve sol ön kapı neden boyandı, çizik mi vuruk mu?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    25.6,
    11.0,
@@ -27389,6 +28173,10 @@
   "son_puan": 63.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    28.1,
    13.0,
@@ -27543,6 +28331,10 @@
   "son_puan": 63.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    19.7,
    20,
@@ -27681,6 +28473,10 @@
   "son_puan": 63.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    21.6,
    18.0,
@@ -27822,6 +28618,10 @@
   "son_puan": 63.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    13.3,
    20,
@@ -27960,6 +28760,11 @@
   "son_puan": 63.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "82.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    28.6,
    14.2,
@@ -28100,6 +28905,10 @@
   "son_puan": 63.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    17.7,
    20,
@@ -28240,6 +29049,10 @@
   "son_puan": 63.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    20.1,
    18.0,
@@ -28380,6 +29193,10 @@
   "son_puan": 63.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "26.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    21.9,
    15.2,
@@ -28522,6 +29339,11 @@
   "son_puan": 63.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    20.4,
    18.0,
@@ -28664,6 +29486,10 @@
   "son_puan": 63.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    21.5,
    18.0,
@@ -28804,6 +29630,11 @@
   "son_puan": 62.9,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Sağ ön kapı neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka kapı neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    45.0,
    9.0,
@@ -28962,6 +29793,10 @@
   "son_puan": 62.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    19.5,
    18.0,
@@ -29103,6 +29938,10 @@
   "son_puan": 62.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    18.7,
    18.0,
@@ -29244,6 +30083,10 @@
   "son_puan": 62.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    19.2,
    18.0,
@@ -29385,6 +30228,11 @@
   "son_puan": 62.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    20.0,
    18.0,
@@ -29527,6 +30375,9 @@
   "son_puan": 62.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    21.0,
    20,
@@ -29601,6 +30452,10 @@
   "son_puan": 62.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    13.2,
    20,
@@ -29741,6 +30596,11 @@
   "son_puan": 62.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "23.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    26.3,
    7.9,
@@ -29881,6 +30741,11 @@
   "son_puan": 62.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Ön tampon ve sağ arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    26.9,
    13.0,
@@ -30037,6 +30902,10 @@
   "son_puan": 62.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    13.1,
    20,
@@ -30180,6 +31049,10 @@
    "İNCELE",
    "8 bin km, hasar kaydı yok ama formda 1 değişen parça var: hangi parça olduğunu sor."
   ],
+  "sorular": [
+   "Kaput neden değişti, orijinal parça mı takıldı?",
+   "Hasar kaydı yokken değişim nasıl oldu, ekspertiz raporunu atar mısınız?"
+  ],
   "p": [
    45.0,
    10.0,
@@ -30322,6 +31195,11 @@
   "son_puan": 62.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "5.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    22.3,
    16.1,
@@ -30475,6 +31353,10 @@
   "son_puan": 62.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    16.9,
    20,
@@ -30613,6 +31495,10 @@
   "son_puan": 61.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    20.4,
    20,
@@ -30755,6 +31641,10 @@
   "son_puan": 61.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "448.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    26.8,
    12.0,
@@ -30893,6 +31783,9 @@
   "son_puan": 61.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    19.8,
    20,
@@ -31034,6 +31927,10 @@
   "son_puan": 61.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    18.0,
    20,
@@ -31172,6 +32069,10 @@
   "son_puan": 61.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    21.7,
    20,
@@ -31310,6 +32211,11 @@
   "son_puan": 61.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    21.6,
    20,
@@ -31450,6 +32356,10 @@
   "son_puan": 61.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    29.8,
    6.0,
@@ -31605,6 +32515,10 @@
   "son_puan": 61.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    23.1,
    9.0,
@@ -31750,6 +32664,11 @@
   "son_puan": 61.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "107.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    24.2,
    10.5,
@@ -31890,6 +32809,10 @@
   "son_puan": 61.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka tampon neden değişti, orijinal parça mı takıldı?",
+   "115.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    25.9,
    9.8,
@@ -32043,6 +32966,10 @@
   "son_puan": 61.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput, sağ ön çamurluk ve motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "60.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    29.7,
    2.5,
@@ -32185,6 +33112,10 @@
   "son_puan": 61.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    14.5,
    20,
@@ -32325,6 +33256,11 @@
   "son_puan": 61.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "80.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    18.2,
    14.7,
@@ -32465,6 +33401,10 @@
   "son_puan": 61.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    16.1,
    19.0,
@@ -32606,6 +33546,10 @@
   "son_puan": 61.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    13.7,
    20,
@@ -32747,6 +33691,10 @@
   "son_puan": 61.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    10.6,
    20,
@@ -32865,6 +33813,11 @@
   "son_puan": 60.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    24.9,
    4.5,
@@ -33012,6 +33965,10 @@
   "son_puan": 60.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    16.5,
    20,
@@ -33152,6 +34109,11 @@
   "son_puan": 60.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    22.9,
    15.5,
@@ -33294,6 +34256,10 @@
   "son_puan": 60.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    11.1,
    20,
@@ -33432,6 +34398,10 @@
   "son_puan": 60.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    26.3,
    20,
@@ -33572,6 +34542,9 @@
   "son_puan": 60.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    23.5,
    20,
@@ -33712,6 +34685,11 @@
   "son_puan": 60.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    30.7,
    7.0,
@@ -33857,6 +34835,10 @@
   "son_puan": 60.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    16.6,
    20,
@@ -33995,6 +34977,10 @@
   "son_puan": 60.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    11.3,
    20,
@@ -34133,6 +35119,9 @@
   "son_puan": 60.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    14.1,
    20,
@@ -34271,6 +35260,11 @@
   "son_puan": 60.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    18.3,
    18.0,
@@ -34412,6 +35406,11 @@
   "son_puan": 60.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    15.3,
    19.0,
@@ -34554,6 +35553,9 @@
   "son_puan": 60.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    14.0,
    20,
@@ -34694,6 +35696,11 @@
   "son_puan": 60.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "31.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    14.3,
    17.4,
@@ -34835,6 +35842,11 @@
   "son_puan": 60.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "130.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    29.6,
    5.0,
@@ -34977,6 +35989,11 @@
   "son_puan": 60.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda değişen görünmüyor ama açıklamada geçiyor, hangi parça değişti?",
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    34.3,
    18.0,
@@ -35121,6 +36138,11 @@
   "claude": [
    "ELE",
    "Açıklamada 'sürücü ve yolcu airbagleri tadilatlıdır' yazıyor; ayrıca boyalı ve lokal parçalar var."
+  ],
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
   ],
   "p": [
    42.7,
@@ -35271,6 +36293,11 @@
   "son_puan": 60.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    16.6,
    18.0,
@@ -35413,6 +36440,10 @@
   "son_puan": 60.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "40.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    16.1,
    17.4,
@@ -35553,6 +36584,11 @@
   "son_puan": 60.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    25.1,
    5.5,
@@ -35700,6 +36736,10 @@
   "son_puan": 60.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    14.7,
    20,
@@ -35840,6 +36880,9 @@
   "son_puan": 59.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    16.1,
    20,
@@ -35980,6 +37023,10 @@
   "son_puan": 59.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "38.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    20.1,
    16.4,
@@ -36122,6 +37169,10 @@
   "son_puan": 59.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Batarya sağlık raporu alabilir miyim?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    14.7,
    20,
@@ -36196,6 +37247,11 @@
   "son_puan": 59.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaza nasıl oldu, hangi taraftan vurdu?",
+   "Sağ ön çamurluk ve motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    40.6,
    1.0,
@@ -36341,6 +37397,11 @@
   "son_puan": 59.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk, sol arka kapı ve sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    29.1,
    7.5,
@@ -36487,6 +37548,11 @@
   "son_puan": 59.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "3.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    23.9,
    19.7,
@@ -36629,6 +37695,11 @@
   "son_puan": 59.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    22.9,
    16.0,
@@ -36769,6 +37840,10 @@
   "son_puan": 59.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    24.7,
    12.0,
@@ -36925,6 +38000,10 @@
   "son_puan": 59.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    17.6,
    13.0,
@@ -37081,6 +38160,10 @@
   "son_puan": 58.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    14.7,
    20,
@@ -37221,6 +38304,9 @@
   "son_puan": 58.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    13.4,
    20,
@@ -37362,6 +38448,10 @@
   "son_puan": 58.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    14.6,
    20,
@@ -37500,6 +38590,11 @@
   "son_puan": 58.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu ve sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "17.649 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    21.0,
    13.5,
@@ -37644,6 +38739,9 @@
   "son_puan": 58.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    12.8,
    20,
@@ -37782,6 +38880,11 @@
   "son_puan": 58.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "Arka kaput neden değişti, orijinal parça mı takıldı?",
+   "5 parça neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    29.5,
    0.0,
@@ -37929,6 +39032,10 @@
   "son_puan": 58.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı neden boyandı, çizik mi vuruk mu?",
+   "11.202 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    18.9,
    15.0,
@@ -38069,6 +39176,11 @@
   "son_puan": 58.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    15.2,
    20,
@@ -38199,6 +39311,10 @@
   "son_puan": 58.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Batarya sağlık raporu alabilir miyim?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    11.3,
    20,
@@ -38339,6 +39455,11 @@
   "son_puan": 58.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput neden değişti, orijinal parça mı takıldı?",
+   "17.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    24.6,
    10.8,
@@ -38492,6 +39613,11 @@
   "son_puan": 58.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    25.6,
    15.5,
@@ -38634,6 +39760,10 @@
   "son_puan": 58.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    11.5,
    20,
@@ -38775,6 +39905,9 @@
   "son_puan": 58.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    12.9,
    20,
@@ -38915,6 +40048,10 @@
   "son_puan": 58.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    13.8,
    20,
@@ -39055,6 +40192,11 @@
   "son_puan": 58.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "Arka kaput ve motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sol arka çamurluk ve sağ arka çamurluk neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    29.3,
    1.0,
@@ -39212,6 +40354,11 @@
   "son_puan": 58.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk ve sağ ön kapı neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    23.6,
    11.5,
@@ -39356,6 +40503,10 @@
   "son_puan": 58.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    13.1,
    20,
@@ -39496,6 +40647,11 @@
   "son_puan": 57.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "285.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    27.4,
    0.0,
@@ -39642,6 +40798,10 @@
   "son_puan": 57.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    9.5,
    20,
@@ -39780,6 +40940,11 @@
   "son_puan": 57.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Araç kiralık ya da filo aracı olarak mı kullanıldı?",
+   "11.202 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    20.8,
    20,
@@ -39920,6 +41085,10 @@
   "son_puan": 57.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    16.9,
    14.0,
@@ -40063,6 +41232,11 @@
   "son_puan": 57.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "182.400 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    24.8,
    9.5,
@@ -40203,6 +41377,10 @@
   "son_puan": 57.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    14.4,
    20,
@@ -40341,6 +41519,11 @@
   "son_puan": 57.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzıman yağı hiç değişti mi?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    20.1,
    18.0,
@@ -40483,6 +41666,11 @@
   "son_puan": 57.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk, sağ arka kapı ve motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    32.7,
    0.0,
@@ -40627,6 +41815,10 @@
   "son_puan": 57.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5.681 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    11.5,
    19.5,
@@ -40768,6 +41960,10 @@
   "son_puan": 56.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    23.5,
    20,
@@ -40910,6 +42106,10 @@
   "son_puan": 56.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "25.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    19.3,
    14.2,
@@ -41050,6 +42250,10 @@
   "son_puan": 56.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "60.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    17.3,
    12.5,
@@ -41192,6 +42396,10 @@
   "son_puan": 56.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    23.2,
    6.6,
@@ -41346,6 +42554,10 @@
   "son_puan": 56.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    22.3,
    12.0,
@@ -41502,6 +42714,11 @@
   "son_puan": 56.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Ön tampon ve arka tampon neden boyandı, çizik mi vuruk mu?",
+   "37.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    21.5,
    13.3,
@@ -41656,6 +42873,10 @@
   "son_puan": 56.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    13.9,
    18.0,
@@ -41731,6 +42952,10 @@
   "son_puan": 56.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    12.1,
    18.0,
@@ -41872,6 +43097,10 @@
   "son_puan": 56.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    10.8,
    20,
@@ -42014,6 +43243,10 @@
   "son_puan": 56.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "117.827 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    17.1,
    13.0,
@@ -42155,6 +43388,11 @@
   "son_puan": 56.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk, arka kaput ve sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    23.1,
    6.0,
@@ -42299,6 +43537,10 @@
   "son_puan": 56.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "31.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    24.2,
    9.5,
@@ -42452,6 +43694,11 @@
   "son_puan": 56.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    10.6,
    20,
@@ -42590,6 +43837,10 @@
   "son_puan": 55.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı, sağ arka çamurluk ve sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    23.4,
    9.5,
@@ -42735,6 +43986,10 @@
   "son_puan": 55.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Boya değişen var mı, tramer kaydı ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    16.8,
    13.0,
@@ -42890,6 +44145,11 @@
   "son_puan": 55.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "291.666 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    29.4,
    0.0,
@@ -43033,6 +44293,10 @@
   "son_puan": 55.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka çamurluk, sol arka çamurluk ve sol arka kapı neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    29.8,
    1.0,
@@ -43189,6 +44453,10 @@
   "son_puan": 55.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    9.8,
    19.0,
@@ -43331,6 +44599,10 @@
   "son_puan": 55.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "43.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    14.4,
    12.9,
@@ -43473,6 +44745,11 @@
   "son_puan": 55.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda değişen görünmüyor ama açıklamada geçiyor, hangi parça değişti?",
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    21.5,
    16.0,
@@ -43616,6 +44893,9 @@
   "son_puan": 55.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    16.3,
    20,
@@ -43756,6 +45036,10 @@
   "son_puan": 55.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "80.540 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    17.4,
    12.5,
@@ -43896,6 +45180,10 @@
   "son_puan": 55.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk, arka kaput ve arka tampon neden değişti, orijinal parça mı takıldı?",
+   "399.999 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    31.7,
    0.0,
@@ -44038,6 +45326,10 @@
   "son_puan": 55.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    9.0,
    20,
@@ -44176,6 +45468,10 @@
   "son_puan": 55.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    8.5,
    20,
@@ -44316,6 +45612,11 @@
   "son_puan": 55.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    24.6,
    1.0,
@@ -44466,6 +45767,11 @@
   "son_puan": 55.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "80.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    19.8,
    8.7,
@@ -44606,6 +45912,11 @@
   "son_puan": 54.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön kapı ve sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "25.500 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    25.6,
    4.1,
@@ -44747,6 +46058,11 @@
   "son_puan": 54.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk, sol ön çamurluk ve sol ön kapı neden boyandı, çizik mi vuruk mu?",
+   "70.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    24.7,
    4.5,
@@ -44893,6 +46209,11 @@
   "son_puan": 54.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu ve sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka çamurluk ve sol ön kapı neden boyandı, çizik mi vuruk mu?",
+   "10.500 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    28.8,
    0.0,
@@ -45047,6 +46368,11 @@
   "son_puan": 54.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "35.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    23.6,
    5.1,
@@ -45191,6 +46517,11 @@
   "son_puan": 54.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    23.6,
    0.0,
@@ -45340,6 +46671,11 @@
   "son_puan": 54.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "Sağ ön kapı neden değişti, orijinal parça mı takıldı?",
+   "Motor kaputu ve sağ arka kapı neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    27.1,
    1.0,
@@ -45497,6 +46833,10 @@
   "son_puan": 54.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu, sağ ön çamurluk ve sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    28.6,
    8.0,
@@ -45584,6 +46924,10 @@
   "son_puan": 54.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    9.5,
    20,
@@ -45722,6 +47066,10 @@
   "son_puan": 54.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    12.8,
    18.0,
@@ -45864,6 +47212,10 @@
   "son_puan": 54.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "65.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    10.0,
    14.7,
@@ -46002,6 +47354,11 @@
   "son_puan": 54.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput ve sağ arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "12.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    15.7,
    11.4,
@@ -46158,6 +47515,11 @@
   "son_puan": 54.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "9 parça neden boyandı, çizik mi vuruk mu?",
+   "70.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    27.2,
    0.0,
@@ -46310,6 +47672,10 @@
   "son_puan": 54.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    9.5,
    20,
@@ -46450,6 +47816,11 @@
   "son_puan": 54.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput ve sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sağ ön kapı neden boyandı, çizik mi vuruk mu?",
+   "6.202 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    30.3,
    0.4,
@@ -46604,6 +47975,10 @@
   "son_puan": 53.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    7.4,
    20,
@@ -46742,6 +48117,11 @@
   "son_puan": 53.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    10.7,
    19.0,
@@ -46883,6 +48263,11 @@
   "son_puan": 53.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    14.6,
    20,
@@ -47023,6 +48408,10 @@
   "son_puan": 53.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk, sol ön kapı ve arka kaput neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    20.3,
    7.5,
@@ -47168,6 +48557,9 @@
   "son_puan": 53.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    7.9,
    20,
@@ -47308,6 +48700,11 @@
   "son_puan": 53.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk ve sağ ön kapı neden boyandı, çizik mi vuruk mu?",
+   "48.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    21.6,
    7.6,
@@ -47451,6 +48848,10 @@
   "son_puan": 53.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    9.1,
    18.0,
@@ -47592,6 +48993,11 @@
   "son_puan": 53.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı neden değişti, orijinal parça mı takıldı?",
+   "Arka kaput, sol ön kapı ve sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "280.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    25.5,
    1.0,
@@ -47747,6 +49153,10 @@
   "son_puan": 52.9,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Kaza nasıl oldu, hangi taraftan vurdu?"
+  ],
   "p": [
    35.3,
    20,
@@ -47891,6 +49301,11 @@
   "son_puan": 52.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    9.7,
    20,
@@ -48031,6 +49446,11 @@
   "son_puan": 52.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk, sağ ön kapı ve sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "134.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    24.9,
    0.0,
@@ -48175,6 +49595,11 @@
   "son_puan": 52.4,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Aracı yerinde görüp kendi seçtiğim ekspertize götürebilir miyim?",
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    28.3,
    20,
@@ -48318,6 +49743,10 @@
   "son_puan": 52.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "32.123 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    10.1,
    17.5,
@@ -48458,6 +49887,11 @@
   "son_puan": 52.4,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Sağ arka çamurluk ve sol arka kapı neden değişti, orijinal parça mı takıldı?",
+   "Sol ön kapı neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    45.0,
    0.5,
@@ -48616,6 +50050,11 @@
   "son_puan": 52.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput, sol arka çamurluk ve sol arka kapı neden boyandı, çizik mi vuruk mu?",
+   "1.202 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    13.4,
    12.4,
@@ -48758,6 +50197,11 @@
   "son_puan": 52.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "12.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    23.6,
    6.0,
@@ -48902,6 +50346,11 @@
   "son_puan": 52.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda değişen görünmüyor ama açıklamada geçiyor, hangi parça değişti?",
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "95.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    23.8,
    8.0,
@@ -49046,6 +50495,11 @@
   "son_puan": 51.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı neden değişti, orijinal parça mı takıldı?",
+   "19.286 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    20.3,
    11.2,
@@ -49188,6 +50642,10 @@
   "son_puan": 51.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    4.7,
    20,
@@ -49326,6 +50784,11 @@
   "son_puan": 51.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk ve sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "12.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    16.0,
    9.9,
@@ -49481,6 +50944,10 @@
   "son_puan": 51.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    8.8,
    18.0,
@@ -49623,6 +51090,10 @@
   "son_puan": 51.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "11.761 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    8.4,
    18.9,
@@ -49761,6 +51232,11 @@
   "son_puan": 51.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön kapı, sol arka kapı ve sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    22.5,
    0.0,
@@ -49907,6 +51383,11 @@
   "son_puan": 51.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "60.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    27.7,
    0.0,
@@ -50063,6 +51544,10 @@
   "son_puan": 51.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "8.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    22.3,
    2.3,
@@ -50216,6 +51701,11 @@
   "son_puan": 51.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Araç kiralık ya da filo aracı olarak mı kullanıldı?",
+   "Sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "52.418 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    21.7,
    12.1,
@@ -50373,6 +51863,11 @@
   "son_puan": 51.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "14.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    18.6,
    19.0,
@@ -50513,6 +52008,11 @@
   "son_puan": 51.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk ve motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "1.180 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    19.5,
    13.9,
@@ -50668,6 +52168,10 @@
   "son_puan": 50.9,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    25.4,
    20,
@@ -50808,6 +52312,11 @@
   "son_puan": 50.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    4.9,
    19.0,
@@ -50949,6 +52458,10 @@
   "son_puan": 50.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı ve sol arka kapı neden boyandı, çizik mi vuruk mu?",
+   "17.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    10.5,
    14.6,
@@ -51093,6 +52606,11 @@
   "son_puan": 50.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    18.0,
    12.0,
@@ -51246,6 +52764,10 @@
   "son_puan": 50.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "482.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    22.4,
    12.0,
@@ -51384,6 +52906,10 @@
   "son_puan": 50.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    1.9,
    20,
@@ -51524,6 +53050,10 @@
   "son_puan": 50.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Batarya sağlık raporu alabilir miyim?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    13.0,
    20,
@@ -51664,6 +53194,11 @@
   "son_puan": 50.0,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "5 parça neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    45.0,
    0.0,
@@ -51814,6 +53349,11 @@
   "son_puan": 50.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput ve sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "34.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    23.4,
    0.0,
@@ -51957,6 +53497,11 @@
   "son_puan": 49.9,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    27.0,
    17.5,
@@ -52067,6 +53612,11 @@
   "son_puan": 49.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "700.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    16.9,
    2.5,
@@ -52224,6 +53774,10 @@
   "son_puan": 49.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    1.8,
    20,
@@ -52364,6 +53918,10 @@
   "son_puan": 49.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "8.555 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    15.6,
    4.7,
@@ -52508,6 +54066,10 @@
   "son_puan": 49.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı, sağ ön çamurluk ve sağ arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "11.202 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    12.2,
    8.5,
@@ -52651,6 +54213,11 @@
   "son_puan": 49.2,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "120.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    33.3,
    12.0,
@@ -52793,6 +54360,11 @@
   "son_puan": 49.1,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Ön tampon neden değişti, orijinal parça mı takıldı?",
+   "200.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    31.0,
    9.5,
@@ -52938,6 +54510,9 @@
    "DİKKAT",
    "Yetkili bayi ilanı ama 205.500 TL tramer, 1 değişen, 1 boyalı, 1 lokal."
   ],
+  "sorular": [
+   "205 bin TL'lik kazada sol arka çamurluk dışında neler yapıldı?"
+  ],
   "p": [
    21.6,
    0.0,
@@ -53082,6 +54657,11 @@
   "son_puan": 49.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    24.0,
    0.0,
@@ -53229,6 +54809,11 @@
   "son_puan": 49.0,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Motorda ya da şanzımanda tam olarak ne yapıldı, faturası var mı?",
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Sağ ön çamurluk ve motor kaputu neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    45.0,
    7.0,
@@ -53375,6 +54960,11 @@
   "son_puan": 48.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "150.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    19.0,
    5.0,
@@ -53530,6 +55120,10 @@
   "son_puan": 48.9,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    25.3,
    20,
@@ -53670,6 +55264,10 @@
   "son_puan": 48.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    19.0,
@@ -53812,6 +55410,10 @@
   "son_puan": 48.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    6.3,
    19.0,
@@ -53952,6 +55554,10 @@
   "son_puan": 48.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    1.8,
    20,
@@ -54093,6 +55699,11 @@
   "son_puan": 48.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "17.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    16.0,
    4.5,
@@ -54238,6 +55849,11 @@
   "son_puan": 48.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı, sağ ön kapı ve sol arka kapı neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    13.4,
    10.5,
@@ -54385,6 +56001,11 @@
   "son_puan": 48.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk, sol ön çamurluk ve sol ön kapı neden boyandı, çizik mi vuruk mu?",
+   "140.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    19.8,
    1.0,
@@ -54529,6 +56150,10 @@
   "son_puan": 48.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    12.0,
    20,
@@ -54669,6 +56294,11 @@
   "son_puan": 48.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön kapı, sol ön kapı ve motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    13.3,
    9.0,
@@ -54814,6 +56444,11 @@
   "son_puan": 47.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk, sağ ön kapı ve sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "100.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    17.3,
    1.0,
@@ -54958,6 +56593,11 @@
   "son_puan": 47.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    1.2,
    18.0,
@@ -55100,6 +56740,11 @@
   "son_puan": 47.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk ve motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "21.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    10.2,
    11.7,
@@ -55244,6 +56889,10 @@
   "son_puan": 47.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı, sağ ön çamurluk ve sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    13.8,
    7.5,
@@ -55400,6 +57049,11 @@
   "son_puan": 47.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu ve sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "87.247 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    14.2,
    5.2,
@@ -55543,6 +57197,11 @@
   "son_puan": 47.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sol arka kapı, sol ön kapı ve sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "165.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    21.5,
    1.0,
@@ -55675,6 +57334,9 @@
   "son_puan": 47.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    20,
@@ -55815,6 +57477,10 @@
   "son_puan": 47.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı ve sol ön kapı neden değişti, orijinal parça mı takıldı?",
+   "100.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    15.4,
    1.0,
@@ -55970,6 +57636,10 @@
   "son_puan": 46.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.6,
    20,
@@ -56111,6 +57781,11 @@
   "son_puan": 46.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "10.650 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    18.5,
    9.7,
@@ -56253,6 +57928,10 @@
   "son_puan": 46.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk ve sol arka kapı neden boyandı, çizik mi vuruk mu?",
+   "15.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    14.9,
    10.6,
@@ -56408,6 +58087,11 @@
   "son_puan": 46.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    3.3,
    19.0,
@@ -56548,6 +58232,11 @@
   "son_puan": 46.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "16.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    22.1,
    1.9,
@@ -56696,6 +58385,11 @@
   "son_puan": 46.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı neden boyandı, çizik mi vuruk mu?",
+   "190.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    15.2,
    9.5,
@@ -56836,6 +58530,11 @@
   "son_puan": 46.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön kapı ve sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    18.9,
    0.0,
@@ -56981,6 +58680,11 @@
   "son_puan": 46.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "23.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    18.9,
    3.4,
@@ -57127,6 +58831,10 @@
   "son_puan": 46.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    20,
@@ -57267,6 +58975,9 @@
   "son_puan": 46.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    20,
@@ -57408,6 +59119,10 @@
   "son_puan": 46.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    20,
@@ -57548,6 +59263,9 @@
   "son_puan": 46.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    20,
@@ -57688,6 +59406,11 @@
   "son_puan": 46.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "82.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    18.4,
    0.0,
@@ -57844,6 +59567,11 @@
   "son_puan": 46.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    7.4,
    20,
@@ -57984,6 +59712,10 @@
   "son_puan": 45.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    20,
@@ -58124,6 +59856,11 @@
   "son_puan": 45.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "245.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    12.7,
    8.5,
@@ -58277,6 +60014,11 @@
   "son_puan": 45.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaza nasıl oldu, hangi taraftan vurdu?",
+   "Sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sol ön kapı, sağ ön çamurluk ve motor kaputu neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    29.3,
    1.0,
@@ -58426,6 +60168,10 @@
   "son_puan": 45.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    1.6,
    20,
@@ -58569,6 +60315,11 @@
   "son_puan": 45.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    0.0,
    19.0,
@@ -58710,6 +60461,10 @@
   "son_puan": 45.7,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Aracı yerinde görüp kendi seçtiğim ekspertize götürebilir miyim?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    24.2,
    20,
@@ -58850,6 +60605,9 @@
   "son_puan": 45.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    20,
@@ -58992,6 +60750,10 @@
   "son_puan": 45.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    20,
@@ -59132,6 +60894,10 @@
   "son_puan": 45.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    19.0,
@@ -59274,6 +61040,11 @@
   "son_puan": 45.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "6 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    20.3,
    1.0,
@@ -59423,6 +61194,11 @@
   "son_puan": 45.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "8 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    21.3,
    0.0,
@@ -59579,6 +61355,10 @@
   "son_puan": 44.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5.664 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    4.5,
    19.5,
@@ -59720,6 +61500,11 @@
   "son_puan": 44.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden değişti, orijinal parça mı takıldı?",
+   "310.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    20.6,
    0.0,
@@ -59873,6 +61658,11 @@
   "son_puan": 44.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    0.0,
    18.0,
@@ -60014,6 +61804,11 @@
   "son_puan": 44.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk, sol ön kapı ve sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?"
+  ],
   "p": [
    10.6,
    10.0,
@@ -60160,6 +61955,10 @@
   "son_puan": 44.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı ve sol ön kapı neden boyandı, çizik mi vuruk mu?",
+   "45.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    9.0,
    8.4,
@@ -60316,6 +62115,11 @@
   "son_puan": 44.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka çamurluk, arka kaput ve motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "89.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    23.9,
    0.0,
@@ -60462,6 +62266,10 @@
   "son_puan": 43.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.7,
    20,
@@ -60602,6 +62410,11 @@
   "son_puan": 43.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "6.202 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    9.8,
    5.1,
@@ -60746,6 +62559,10 @@
   "son_puan": 43.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5.664 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    19.6,
@@ -60886,6 +62703,11 @@
   "son_puan": 43.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk ve sol arka kapı neden boyandı, çizik mi vuruk mu?",
+   "96.500 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    10.7,
    4.0,
@@ -61027,6 +62849,10 @@
   "son_puan": 43.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    18.0,
@@ -61168,6 +62994,11 @@
   "son_puan": 43.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    13.6,
    10.0,
@@ -61311,6 +63142,10 @@
   "son_puan": 43.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "8 parça neden boyandı, çizik mi vuruk mu?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    17.4,
    0.0,
@@ -61461,6 +63296,10 @@
   "son_puan": 43.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    18.0,
@@ -61604,6 +63443,10 @@
   "son_puan": 43.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk ve sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "70.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    7.7,
    5.5,
@@ -61747,6 +63590,11 @@
   "son_puan": 42.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden değişti, orijinal parça mı takıldı?",
+   "Sağ ön çamurluk ve motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "199.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    15.5,
    0.0,
@@ -61903,6 +63751,10 @@
   "son_puan": 42.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    0.0,
    20,
@@ -62043,6 +63895,10 @@
   "son_puan": 42.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    20,
@@ -62184,6 +64040,11 @@
   "son_puan": 42.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "10 parça neden boyandı, çizik mi vuruk mu?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    20.5,
    0.0,
@@ -62334,6 +64195,11 @@
   "son_puan": 42.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "14.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    12.1,
    6.5,
@@ -62488,6 +64354,11 @@
   "son_puan": 42.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk ve arka kaput neden boyandı, çizik mi vuruk mu?",
+   "53.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    9.9,
    8.6,
@@ -62632,6 +64503,10 @@
   "son_puan": 41.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı, sol arka kapı ve sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "200.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    13.6,
    1.0,
@@ -62776,6 +64651,10 @@
   "son_puan": 41.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    18.0,
@@ -62917,6 +64796,11 @@
   "son_puan": 41.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk ve motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    4.3,
    11.5,
@@ -63061,6 +64945,10 @@
   "son_puan": 41.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    18.0,
@@ -63203,6 +65091,11 @@
   "son_puan": 41.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı neden değişti, orijinal parça mı takıldı?",
+   "Sol ön kapı ve sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "30.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    9.8,
    3.8,
@@ -63349,6 +65242,10 @@
   "son_puan": 41.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4.202 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    0.0,
    19.7,
@@ -63489,6 +65386,11 @@
   "son_puan": 41.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı neden değişti, orijinal parça mı takıldı?",
+   "Sol arka çamurluk, tavan ve arka kaput neden boyandı, çizik mi vuruk mu?",
+   "43.500 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    25.7,
    0.0,
@@ -63638,6 +65540,10 @@
   "son_puan": 41.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    18.9,
    0.0,
@@ -63784,6 +65690,11 @@
   "son_puan": 41.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı ve sağ ön kapı neden değişti, orijinal parça mı takıldı?",
+   "280.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    19.6,
    0.0,
@@ -63939,6 +65850,11 @@
   "son_puan": 40.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "7.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    17.0,
    4.8,
@@ -64086,6 +66002,11 @@
   "son_puan": 40.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk ve ön tampon neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka kapı, sağ ön kapı ve motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "102.118 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    15.8,
    0.0,
@@ -64231,6 +66152,11 @@
   "son_puan": 40.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    0.0,
    18.0,
@@ -64372,6 +66298,11 @@
   "son_puan": 40.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "67.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    14.0,
    0.3,
@@ -64526,6 +66457,10 @@
   "son_puan": 40.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.8,
    18.0,
@@ -64667,6 +66602,11 @@
   "son_puan": 40.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda değişen görünmüyor ama açıklamada geçiyor, hangi parça değişti?",
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "62.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    1.7,
    12.5,
@@ -64810,6 +66750,10 @@
   "son_puan": 40.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "49.500 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    8.6,
    1.0,
@@ -64955,6 +66899,11 @@
   "son_puan": 40.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı, sağ ön kapı ve sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "48.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    15.8,
    3.8,
@@ -65097,6 +67046,11 @@
   "son_puan": 40.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "18.500 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    16.2,
    0.2,
@@ -65251,6 +67205,11 @@
   "son_puan": 39.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "19.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    8.1,
    4.5,
@@ -65399,6 +67358,11 @@
   "son_puan": 39.7,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?"
+  ],
   "p": [
    31.1,
    0.0,
@@ -65550,6 +67514,11 @@
   "son_puan": 39.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı ve sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka çamurluk, sağ ön kapı ve sol ön kapı neden boyandı, çizik mi vuruk mu?",
+   "73.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    14.9,
    0.0,
@@ -65698,6 +67667,11 @@
   "son_puan": 39.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaza nasıl oldu, hangi taraftan vurdu?",
+   "Sağ arka kapı neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka çamurluk ve sağ ön kapı neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    15.8,
    3.9,
@@ -65857,6 +67831,11 @@
   "son_puan": 39.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Motor kaputu neden boyandı, çizik mi vuruk mu?",
+   "100.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    10.9,
    3.0,
@@ -66011,6 +67990,10 @@
   "son_puan": 38.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    10.1,
    0.0,
@@ -66157,6 +68140,11 @@
   "son_puan": 38.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sağ ön çamurluk ve sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "100.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    8.2,
    1.0,
@@ -66302,6 +68290,11 @@
   "son_puan": 38.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk, sol arka kapı ve sol ön kapı neden boyandı, çizik mi vuruk mu?",
+   "15.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    4.2,
    11.3,
@@ -66455,6 +68448,11 @@
   "son_puan": 37.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı ve sol ön kapı neden değişti, orijinal parça mı takıldı?",
+   "Sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "79.800 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    11.7,
    1.0,
@@ -66568,6 +68566,10 @@
   "son_puan": 37.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk, sol arka çamurluk ve sol arka kapı neden boyandı, çizik mi vuruk mu?",
+   "10.202 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    3.6,
    10.1,
@@ -66711,6 +68713,10 @@
   "son_puan": 37.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    10.6,
    2.0,
@@ -66866,6 +68872,11 @@
   "son_puan": 37.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "45.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    8.2,
    0.0,
@@ -67011,6 +69022,11 @@
   "son_puan": 37.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Formda değişen görünmüyor ama açıklamada geçiyor, hangi parça değişti?",
+   "173.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    1.9,
    13.0,
@@ -67153,6 +69169,11 @@
   "son_puan": 37.4,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?"
+  ],
   "p": [
    26.0,
    4.5,
@@ -67301,6 +69322,11 @@
   "son_puan": 37.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "6 parça neden boyandı, çizik mi vuruk mu?",
+   "Batarya sağlık raporu alabilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    16.3,
    1.0,
@@ -67448,6 +69474,11 @@
   "son_puan": 37.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    9.3,
    7.0,
@@ -67604,6 +69635,11 @@
   "son_puan": 36.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput ve sağ ön kapı neden değişti, orijinal parça mı takıldı?",
+   "70.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    5.1,
    1.0,
@@ -67759,6 +69795,11 @@
   "son_puan": 36.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput neden değişti, orijinal parça mı takıldı?",
+   "Sol ön kapı ve sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?"
+  ],
   "p": [
    9.7,
    5.0,
@@ -67904,6 +69945,10 @@
   "son_puan": 36.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    0.0,
    6.5,
@@ -68050,6 +70095,11 @@
   "son_puan": 35.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    9.3,
    6.5,
@@ -68198,6 +70248,10 @@
   "son_puan": 35.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı ve sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "45.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    8.4,
    1.8,
@@ -68339,6 +70393,10 @@
   "son_puan": 35.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    7.0,
@@ -68493,6 +70551,10 @@
   "son_puan": 35.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk, sağ ön kapı ve sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    1.1,
    8.0,
@@ -68637,6 +70699,11 @@
   "son_puan": 34.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaza nasıl oldu, hangi taraftan vurdu?",
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    20.6,
    4.0,
@@ -68786,6 +70853,10 @@
   "son_puan": 34.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    0.0,
    20,
@@ -68924,6 +70995,10 @@
   "son_puan": 34.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı ve sağ ön kapı neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka çamurluk ve arka kaput neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    7.8,
    1.0,
@@ -69080,6 +71155,11 @@
   "son_puan": 34.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı ve sol ön kapı neden değişti, orijinal parça mı takıldı?",
+   "Sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "175.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    3.9,
    1.0,
@@ -69225,6 +71305,11 @@
   "son_puan": 33.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Arka kaput ve arka tampon neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "3.008 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    5.7,
    0.0,
@@ -69380,6 +71465,11 @@
   "son_puan": 33.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Ağır bakımı yapıldı mı, triger ne zaman değişti?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    0.0,
    18.0,
@@ -69521,6 +71611,10 @@
   "son_puan": 33.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı ve sağ ön kapı neden değişti, orijinal parça mı takıldı?",
+   "70.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    10.4,
    0.0,
@@ -69674,6 +71768,11 @@
   "son_puan": 33.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı ve sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?"
+  ],
   "p": [
    10.3,
    0.0,
@@ -69824,6 +71923,10 @@
   "son_puan": 33.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "70.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    1.7,
    1.0,
@@ -69971,6 +72074,11 @@
   "son_puan": 32.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "Batarya sağlık raporu alabilir miyim?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    0.0,
    7.5,
@@ -70124,6 +72232,10 @@
   "son_puan": 32.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "Nakit alırsam son rakam ne olur?"
+  ],
   "p": [
    0.0,
    7.5,
@@ -70277,6 +72389,11 @@
   "son_puan": 31.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaza nasıl oldu, hangi taraftan vurdu?",
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    17.4,
    3.0,
@@ -70435,6 +72552,11 @@
   "son_puan": 31.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka çamurluk ve sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "108.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    2.5,
    0.0,
@@ -70580,6 +72702,11 @@
   "son_puan": 31.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "38.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    7.4,
    3.4,
@@ -70734,6 +72861,11 @@
   "son_puan": 30.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka kapı neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "46.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    8.7,
    5.1,
@@ -70878,6 +73010,11 @@
   "son_puan": 30.1,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Aracı yerinde görüp kendi seçtiğim ekspertize götürebilir miyim?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    10.0,
    20,
@@ -71018,6 +73155,11 @@
   "son_puan": 29.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Araç kiralık ya da filo aracı olarak mı kullanıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "197.827 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    10.2,
    0.0,
@@ -71165,6 +73307,11 @@
   "son_puan": 29.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön kapı neden değişti, orijinal parça mı takıldı?",
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "30.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -71315,6 +73462,10 @@
   "son_puan": 29.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ arka çamurluk, arka kaput ve sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "86.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    1.0,
@@ -71468,6 +73619,11 @@
   "son_puan": 28.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk ve motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "95.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -71623,6 +73779,11 @@
   "son_puan": 28.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "6 parça neden boyandı, çizik mi vuruk mu?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    0.0,
    1.0,
@@ -71770,6 +73931,11 @@
   "son_puan": 28.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "183.976 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    1.0,
@@ -71926,6 +74092,11 @@
   "son_puan": 28.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka çamurluk ve sol arka kapı neden değişti, orijinal parça mı takıldı?",
+   "10 parça neden boyandı, çizik mi vuruk mu?",
+   "10.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    4.6,
    0.0,
@@ -72083,6 +74254,11 @@
   "son_puan": 27.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk ve motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Arka kaput ve sol arka çamurluk neden boyandı, çizik mi vuruk mu?",
+   "18.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -72227,6 +74403,11 @@
   "son_puan": 27.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "88.500 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    4.8,
    0.2,
@@ -72371,6 +74552,11 @@
   "son_puan": 27.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı ve sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sol arka çamurluk, sol arka kapı ve sağ arka kapı neden boyandı, çizik mi vuruk mu?",
+   "120.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -72517,6 +74703,11 @@
   "son_puan": 27.2,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Aracı yerinde görüp kendi seçtiğim ekspertize götürebilir miyim?",
+   "İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?",
+   "4 parça neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    27.2,
    0.5,
@@ -72663,6 +74854,11 @@
   "son_puan": 27.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "Batarya sağlık raporu alabilir miyim?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -72819,6 +75015,10 @@
   "son_puan": 26.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "3.750 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    6.2,
    0.0,
@@ -72963,6 +75163,10 @@
   "son_puan": 26.9,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "8 parça neden boyandı, çizik mi vuruk mu?",
+   "18.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    1.0,
@@ -73119,6 +75323,11 @@
   "son_puan": 26.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "180.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    3.0,
    1.0,
@@ -73273,6 +75482,11 @@
   "son_puan": 25.8,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön kapı neden değişti, orijinal parça mı takıldı?",
+   "Sağ arka çamurluk, sağ arka kapı ve sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "28.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    1.9,
@@ -73427,6 +75641,11 @@
   "son_puan": 25.4,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Arka kaput ve sol arka kapı neden boyandı, çizik mi vuruk mu?",
+   "154.319 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    5.5,
    0.0,
@@ -73570,6 +75789,11 @@
   "son_puan": 25.0,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu, tavan ve sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "171.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -73716,6 +75940,11 @@
   "son_puan": 24.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "48.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -73861,6 +76090,11 @@
   "son_puan": 24.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu, sol ön çamurluk ve ön tampon neden değişti, orijinal parça mı takıldı?",
+   "Sağ ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "197.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -74017,6 +76251,10 @@
   "son_puan": 24.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "10 parça neden boyandı, çizik mi vuruk mu?",
+   "Kaçıncı sahibisiniz, neden satıyorsunuz?"
+  ],
   "p": [
    0.0,
    1.0,
@@ -74168,6 +76406,11 @@
   "son_puan": 24.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı ve motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "75.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -74321,6 +76564,11 @@
   "son_puan": 24.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol ön kapı neden değişti, orijinal parça mı takıldı?",
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "275.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    1.0,
@@ -74478,6 +76726,11 @@
   "son_puan": 23.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Motor kaputu, sağ arka kapı ve sol ön çamurluk neden boyandı, çizik mi vuruk mu?",
+   "55.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    4.8,
    4.3,
@@ -74623,6 +76876,11 @@
   "son_puan": 23.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "6 parça neden boyandı, çizik mi vuruk mu?",
+   "118.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -74776,6 +77034,11 @@
   "son_puan": 23.3,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sağ ön çamurluk ve motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sol ön çamurluk ve arka kaput neden boyandı, çizik mi vuruk mu?",
+   "122.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -74933,6 +77196,11 @@
   "son_puan": 23.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Sol arka kapı ve sol ön kapı neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?",
+   "60.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -75088,6 +77356,11 @@
   "son_puan": 22.1,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "10 parça neden boyandı, çizik mi vuruk mu?",
+   "Tramer kaydı var mı, varsa ne kadar?",
+   "Şanzıman yağı hiç değişti mi?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -75241,6 +77514,11 @@
   "son_puan": 20.7,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "LPG ruhsata işli mi, hangi marka ve ne zaman takıldı?",
+   "5 parça neden boyandı, çizik mi vuruk mu?",
+   "134.000 TL hasar kaydı neyden, hangi parçalar yapıldı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -75387,6 +77665,11 @@
   "son_puan": 19.2,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "8 parça neden boyandı, çizik mi vuruk mu?",
+   "25.000 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -75537,6 +77820,11 @@
   "son_puan": 16.6,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaza nasıl oldu, hangi taraftan vurdu?",
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sol ön çamurluk ve ön tampon neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    2.3,
    0.0,
@@ -75696,6 +77984,11 @@
   "son_puan": 15.8,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Aracı yerinde görüp kendi seçtiğim ekspertize götürebilir miyim?",
+   "Sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    9.5,
    0.0,
@@ -75845,6 +78138,11 @@
   "son_puan": 7.5,
   "karar": "PAS",
   "claude": null,
+  "sorular": [
+   "Kaza nasıl oldu, hangi taraftan vurdu?",
+   "Sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "4 parça neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -76001,6 +78299,11 @@
   "son_puan": 7.1,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+   "Motor kaputu ve sol ön çamurluk neden değişti, orijinal parça mı takıldı?",
+   "Sol arka çamurluk, sol ön kapı ve sağ ön çamurluk neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    0.0,
    0.0,
@@ -76151,6 +78454,11 @@
   "son_puan": 0.0,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Pert, sel ya da ağır hasar kaydı var mı?",
+   "67.988 TL hasar kaydı neyden, hangi parçalar yapıldı?",
+   "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+  ],
   "p": [
    0.0,
    13.5,
@@ -76294,6 +78602,11 @@
   "son_puan": 0.0,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Pert, sel ya da ağır hasar kaydı var mı?",
+   "Ağır hasar kaydı hangi olaydan?",
+   "6 parça neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    11.2,
    1.0,
@@ -76444,6 +78757,11 @@
   "son_puan": 0.0,
   "karar": "DİKKAT",
   "claude": null,
+  "sorular": [
+   "Aracı yerinde görüp kendi seçtiğim ekspertize götürebilir miyim?",
+   "Motor kaputu neden değişti, orijinal parça mı takıldı?",
+   "Sağ ön çamurluk, sol ön çamurluk ve ön tampon neden boyandı, çizik mi vuruk mu?"
+  ],
   "p": [
    0.0,
    0.0,

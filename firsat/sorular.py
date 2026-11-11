@@ -1,98 +1,87 @@
-"""Her ilan için satıcıya sorulacak kısa, kopyalanabilir sorular.
+"""Satıcıya sorulacak kısa sorular: her biri tek cümle, gerçek bir alıcının mesajda yazacağı gibi.
 
-Sorular ilanın verisine göre seçilir: açıklamadaki riskler, boyalı/değişen parçalar, tramer, km,
-şanzıman tipi, yakıt, garanti, satıcı tipi. En fazla ~7 soru; sonda her zaman ekspertiz/borç ve son fiyat.
+Claude notu üçüncü öğe olarak elle yazılmış sorular içeriyorsa (`veri/notlar.json`: [karar, görüş, [sorular]])
+rapor onları kullanır; yoksa buradaki kurallar ilanın verisinden en fazla 3 soru seçer (önce riskler, sonra
+hasar/tramer, sonra şanzıman/bakım, en sonda pazarlık).
 """
 
 CIFT_KAVRAMALI = ("DSG", "DCT", "EDC", "Powershift", "DDCT", "e-DCS6", "eDCS6", "e-DCT6", "7G-DCT", "S-Tronic")
+CVT = ("X-tronic", "Xtronic", "CVT", "Multidrive", "Multidrive S", "e-CVT")
 
 RISK_SORUSU = {
-    "airbag": "Açıklamada airbag işleminden söz ediliyor: hangi olayda açıldı, orijinal parçayla mı değişti, servis faturası var mı?",
-    "engelli": "Araç engelli/ÖTV muafiyetiyle mi alındı? Devirde ÖTV ödenmesi gerekiyor mu, normal noter satışı yapılabiliyor mu?",
-    "kiralik": "Araç kiralık, filo ya da ticari olarak kullanıldı mı?",
-    "kiralik_firma": "Araç kiralama filosundan mı çıktı? Kaç kişi kullandı, bakım geçmişi ve hasar kayıtları paylaşılabilir mi?",
-    "yabanci": "Araç yurt dışından mı getirildi? Gümrük ve ruhsat işlemleri tamamlandı mı?",
-    "motor": "Motor ya da şanzımanda hangi işlem yapıldı, ne zaman ve nerede? Faturası var mı?",
-    "yapisal": "Şasi, podye veya direklerde işlem var mı? Güncel ekspertiz raporunu paylaşabilir misiniz?",
-    "manuel": "Vites otomatik mi, manuel mi? İlanda iki farklı bilgi var.",
-    "form_degisen": "Açıklamada değişen parça geçiyor ama ilan formunda görünmüyor: tam boya-değişen durumu nedir?",
-    "form_boya": "Açıklamada boyalı parça geçiyor ama ilan formunda görünmüyor: hangi parçalar boyalı?",
-    "lpg_sonradan": "LPG ruhsata işli mi? Hangi marka, ne zaman takıldı?",
-    "dolandiricilik": "Aracı yerinde görüp kendi seçeceğim ekspertize götürebilir miyim? (Görmeden kapora göndermiyorum.)",
-    "kaza": "Aracın geçirdiği kaza nasıl oldu, hangi parçalar onarıldı? Kaza fotoğrafı var mı?",
-    "pert": "Araçta pert, sel veya ağır hasar kaydı var mı?",
-    "agir_hasar": "Ağır hasar kaydı var mı? Varsa hangi olaydan?",
-    "km": "Kilometre orijinal mi? Servis kayıtlarındaki km'leri paylaşabilir misiniz?",
+    "airbag": "Airbag hangi olayda açıldı, orijinal parçayla mı değişti?",
+    "engelli": "Araç engelli raporuyla mı alındı, devirde ÖTV çıkar mı?",
+    "kiralik": "Araç kiralık ya da filo aracı olarak mı kullanıldı?",
+    "kiralik_firma": "Kiralama firmasından mı çıktı, kaç kişi kullandı?",
+    "yabanci": "Araç yurt dışından mı geldi, ruhsat işlemleri tamamen bitti mi?",
+    "motor": "Motorda ya da şanzımanda tam olarak ne yapıldı, faturası var mı?",
+    "yapisal": "Şasi, podye ya da direklerde herhangi bir işlem var mı?",
+    "manuel": "Vites otomatik mi manuel mi, ilanda ikisi de geçiyor?",
+    "form_degisen": "Formda değişen görünmüyor ama açıklamada geçiyor, hangi parça değişti?",
+    "form_boya": "Formda boya görünmüyor ama açıklamada geçiyor, tam olarak hangi parçalar boyalı?",
+    "lpg_sonradan": "LPG ruhsata işli mi, hangi marka ve ne zaman takıldı?",
+    "dolandiricilik": "Aracı yerinde görüp kendi seçtiğim ekspertize götürebilir miyim?",
+    "kaza": "Kaza nasıl oldu, hangi taraftan vurdu?",
+    "pert": "Pert, sel ya da ağır hasar kaydı var mı?",
+    "agir_hasar": "Ağır hasar kaydı hangi olaydan?",
+    "km": "Kilometre servis kayıtlarıyla tutuyor mu?",
 }
-
-
-def _parca_yazi(liste, adet=4):
-    liste = [p.lower() for p in liste]
-    if len(liste) > adet:
-        return ", ".join(liste[:adet]) + f" ve {len(liste) - adet} parça daha"
-    return ", ".join(liste)
 
 
 def _tl(n):
     return f"{int(round(n)):,}".replace(",", ".") + " TL"
 
 
-def sorular(s, en_fazla=7):
-    risk = []
-    gorulen = set()
+def _parcalar(liste):
+    liste = [p.lower() for p in liste]
+    if len(liste) == 1:
+        return liste[0]
+    if len(liste) <= 3:
+        return ", ".join(liste[:-1]) + " ve " + liste[-1]
+    return f"{len(liste)} parça"
+
+
+def sorular(s, en_fazla=3):
+    """İlan için en fazla `en_fazla` tek cümlelik soru."""
+    q, gorulen = [], set()
     for kod, _, _ in s.get("riskler") or []:
         if kod in RISK_SORUSU and kod not in gorulen:
             gorulen.add(kod)
-            risk.append(RISK_SORUSU[kod])
-    if s.get("firsat", 0) > 0.15:
-        risk.append("Fiyat benzerlerine göre epey uygun: aracın bilmem gereken bir durumu ya da acil satış nedeni var mı?")
+            q.append(RISK_SORUSU[kod])
     if s.get("pesinat_gecer") and s.get("firsat", 0) > 0.06:
-        risk.append("İlandaki fiyat tam nakit satış fiyatı mı? Kredili ya da senetli satışta fiyat farklı mı?")
+        q.append("İlandaki fiyat tamamen nakit fiyatı mı, peşin ödersem ne olur?")
 
-    hasar = []
     p = s.get("parcalar") or {}
-    if s.get("liste_satiri"):
-        hasar.append("Boya-değişen durumu ve hasar kaydı (tramer) nedir? Güncel ekspertiz raporu var mı?")
-    elif s.get("boya_bilinmiyor"):
-        hasar.append("Boya-değişen durumu nedir? Güncel ekspertiz raporunu paylaşabilir misiniz?")
+    if s.get("liste_satiri") or s.get("boya_bilinmiyor"):
+        q.append("Boya değişen var mı, tramer kaydı ne kadar?")
     else:
         if p.get("degisen"):
-            hasar.append(f"{_parca_yazi(p['degisen']).capitalize()} neden değişti? Orijinal parça mı, yan sanayi mi? Kaza fotoğrafı var mı?")
+            q.append(f"{_parcalar(p['degisen']).capitalize()} neden değişti, orijinal parça mı takıldı?")
         boyali = list(p.get("boya") or []) + list(p.get("lokal") or [])
-        if boyali:
-            hasar.append(f"{_parca_yazi(boyali).capitalize()} neden boyandı: çizik/sürtme mi, kaza mı?")
-    if not s.get("liste_satiri"):
+        if boyali and "form_boya" not in gorulen:
+            q.append(f"{_parcalar(boyali).capitalize()} neden boyandı, çizik mi vuruk mu?")
         if s.get("tramer_durum") == "tutar" and s.get("tramer_tl"):
-            hasar.append(f"{_tl(s['tramer_tl'])} hasar kaydı hangi olaydan? Hangi parçalar onarıldı ya da değişti?")
+            q.append(f"{_tl(s['tramer_tl'])} hasar kaydı neyden, hangi parçalar yapıldı?")
         elif s.get("tramer_durum") == "belirsiz":
-            hasar.append("Hasar kaydı (tramer) var mı, varsa tutarı ne? Şasi numarasını paylaşırsanız sorgulayabilirim.")
+            q.append("Tramer kaydı var mı, varsa ne kadar?")
 
-    bakim = ["Son bakım ne zaman ve kaç km'de yapıldı, yetkili serviste mi? Servis kaydı ya da faturası var mı?"]
     km = s.get("km") or 0
-    if km >= 80_000:
-        bakim.append("Ağır bakımı (triger/zincir, şanzıman yağı, balata, disk) yapıldı mı?")
-    if s.get("vites") == "Yarı Otomatik" or (s.get("sanziman") or "") in CIFT_KAVRAMALI:
-        bakim.append("Şanzımanda kalkışta titreme ya da vuruntu var mı? Kavrama veya mekatronik işlemi yapıldı mı?")
+    sanziman = s.get("sanziman") or ""
+    model = s.get("model") or ""
     if s.get("yakit") in ("Hibrit", "Elektrik"):
-        bakim.append("Batarya sağlık raporu (SOH) alabilir miyim? Batarya garantisi ne zamana kadar?")
-    elif s.get("garanti") == 1:
-        bakim.append("Garanti hangi tarihe kadar devam ediyor?")
+        q.append("Batarya sağlık raporu alabilir miyim?")
+    if "PureTech" in model and km >= 50_000:
+        q.append("Triger kayışı (yağ içindeki) kontrol edildi ya da değişti mi?")
+    if sanziman in CVT and km >= 80_000:
+        q.append("Şanzıman yağı hiç değişti mi?")
+    elif s.get("vites") == "Yarı Otomatik" or sanziman in CIFT_KAVRAMALI:
+        q.append("Şanzımanda kalkışta titreme ya da vuruntu var mı?")
+    if km >= 100_000:
+        q.append("Ağır bakımı yapıldı mı, triger ne zaman değişti?")
     if s.get("kimden") == "Sahibinden":
-        bakim.append("Araç sizin adınıza mı kayıtlı, kaçıncı sahibisiniz?")
-    if s.get("yakit") == "LPG & benzin" and "lpg_sonradan" not in gorulen:
-        bakim.append("LPG ruhsata işli mi, hangi marka?")
-
-    kapanis = ["Borç, haciz ya da rehin var mı? Aracı kendi seçeceğim ekspertize götürebilir miyim?",
-               "Nakit alımda son fiyatınız nedir?"]
-    govde = (risk + hasar + bakim)[: max(1, en_fazla - len(kapanis))]
-    return govde + kapanis
-
-
-def mesaj(s, liste=None):
-    liste = liste or sorular(s)
-    site = "sahibinden'deki" if "sahibinden.com" in (s.get("url") or "") else "arabam.com'daki"
-    arac = f"{s.get('yil')} {s.get('marka')} {s.get('seri')} {s.get('model')}".strip()
-    satirlar = [f"Merhaba, {site} {arac} ilanınız (ilan no {s.get('ilan_id')}) için yazıyorum. Birkaç sorum olacak:"]
-    satirlar += [f"{i}. {q}" for i, q in enumerate(liste, 1)]
-    satirlar.append("Şimdiden teşekkür ederim.")
-    return "\n".join(satirlar)
+        q.append("Kaçıncı sahibisiniz, neden satıyorsunuz?")
+    if (s.get("ilan_gun") or 0) >= 60:
+        q.append("İlan uzun süredir yayında, nakit son rakamınız ne?")
+    if len(q) < 2:
+        q.append("Nakit alırsam son rakam ne olur?")
+    return q[:en_fazla]

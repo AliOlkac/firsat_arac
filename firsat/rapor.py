@@ -4,6 +4,7 @@ from datetime import date
 from pathlib import Path
 
 from .degerlendirme import hasar_kisa
+from .sorular import sorular as soru_uret
 
 from .veritabani import KOK
 
@@ -28,7 +29,8 @@ def kayit(s, notlar=None, mod="piyasa"):
         "model": s["model"], "yil": s["yil"], "km": s["km"], "fiyat": s["fiyat"], "adil": round(s["adil"]),
         "firsat": round(s["firsat"], 4), "guven": round(s["guven"], 2), "puan": s["puan"],
         "son_puan": round(max(0.0, min(100.0, (s["puan_hizli"] if mod == "hizli" else s["puan"]) + duzeltme)), 1),
-        "karar": s["karar_hizli"] if mod == "hizli" else s["karar"], "claude": c,
+        "karar": s["karar_hizli"] if mod == "hizli" else s["karar"], "claude": c[:2] if c else None,
+        "sorular": list(c[2]) if c and len(c) > 2 else soru_uret(s),
         "p": ([round(s["p_kar"], 1), round(s["p_kondisyon"], 1), round(s["p_hiz"], 1), 0.0,
                round(s["ceza"], 1), round(s["bonus"], 1), duzeltme] if mod == "hizli" else
               [round(s["p_fiyat"], 1), round(s["p_kondisyon"], 1), round(s["p_satis"], 1),
@@ -175,6 +177,11 @@ details.yontem summary { cursor: pointer; padding-block: 12px; font-weight: 600;
 .gorus { grid-column: 2 / -1; margin: 0; padding: 10px 14px; border-radius: 8px; background: var(--zemin);
   border-left: 3px solid var(--soluk); font-size: 14.5px; line-height: 1.5; }
 .gorus b { display: block; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--soluk); margin-bottom: 2px; }
+.gorus p { margin: 0; }
+.gorus b + ul { margin-top: 0; }
+.gorus p + b { margin-top: 10px; }
+.sor { margin: 0; padding-left: 18px; display: grid; gap: 3px; }
+.sor li::marker { color: var(--soluk); }
 .gorus.g-AL { border-left-color: var(--iyi); } .gorus.g-İNCELE { border-left-color: var(--vurgu); }
 .gorus.g-DİKKAT { border-left-color: var(--kotu); }
 .okunmayan { display: flex; justify-content: center; margin: 18px 0 6px; }
@@ -373,7 +380,10 @@ function kart(r, i) {
       <section><h4>Benzer ilanlar</h4>${emsal ? `<ul class="emsal">${emsal}</ul>${r.emsal_fiyat ? `<p class="sonra">Bu araca göre uyarlanmış emsal medyanı: ${TL(r.emsal_fiyat)}</p>` : ""}` : `<p class="sonra">Yakın emsal bulunamadı (aynı motor, ±1 yıl, ±35 bin km).</p>`}</section>
       ${maddeler ? `<section><h4>Sistem notları</h4><ul class="maddeler">${maddeler}</ul></section>` : ""}
     </div></details>
-    ${r.claude ? `<p class="gorus g-${esc(r.claude[0])}"><b>Görüşüm</b>${esc(r.claude[1])}</p>` : ""}
+    ${r.claude || (r.sorular || []).length ? `<div class="gorus g-${esc(r.claude ? r.claude[0] : "yok")}">
+      ${r.claude ? `<b>Görüşüm</b><p>${esc(r.claude[1])}</p>` : ""}
+      ${(r.sorular || []).length ? `<b>Satıcıya sorarım</b><ul class="sor">${r.sorular.map(q => `<li>${esc(q)}</li>`).join("")}</ul>` : ""}
+    </div>` : ""}
   </article>`;
 }
 

@@ -71,7 +71,7 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
 Her rapordan sonra `raporlar/<ad>-inceleme.txt` dosyası notu olmayan en iyi adayların açıklamalarını içerir. Bunları oku ve `veri/notlar.json` dosyasına ekle:
 
 ```json
-"<ilan_id>": ["AL" | "İNCELE" | "DİKKAT" | "ELE", "Tek-iki cümlelik gerekçe"]
+"<ilan_id>": ["AL" | "İNCELE" | "DİKKAT" | "ELE", "Tek-iki cümlelik görüş", ["Tek cümlelik soru", "..."]]
 ```
 
 Sonra raporu aynı komutla yeniden üret. Okurken özellikle bak:
@@ -86,13 +86,17 @@ Sonra raporu aynı komutla yeniden üret. Okurken özellikle bak:
 - Emsali çok az (serinin piyasada <10 ilanı) ve çok ucuz görünen → güvenme.
 Yeni bir kalıp tekrar ediyorsa `firsat/metin.py` içindeki kurallara ekle.
 
-## HTML kartları ve Claude görüşü
+## HTML kartları, Claude görüşü ve sorular
 
-KULLANICI İSTEĞİ (2026-11-11): kartlarda satıcıya mesaj/kopyala kısmı YOK. Her kartın altında "Görüşüm" kutusu
-vardır: `veri/notlar.json` notunun metni (renk = AL/İNCELE/DİKKAT/ELE). Notlar bu yüzden araca dair kısa ama
-somut bir görüş olmalı (kim satıyor, boya/tramer, gerçek ucuzluk, sorulacak şey). Aday raporunda ≥10 notlu ilan
-varsa sayfa varsayılan olarak yalnız notlu ilanları gösterir; "okunmayan ilanları da göster" düğmesi gerisini açar.
-`firsat/sorular.py` HTML'de kullanılmıyor (ileride gerekirse duruyor).
+KULLANICI İSTEĞİ (2026-11-11): kartlarda uzun satıcı mesajı/kopyala kısmı YOK. Her kartın altında bir kutu var:
+**Görüşüm** (`veri/notlar.json` notunun metni, renk = AL/İNCELE/DİKKAT/ELE) ve **Satıcıya sorarım** (1-3 soru).
+Notlar araca dair kısa ama somut bir görüş olmalı (kim satıyor, boya/tramer, gerçek ucuzluk, sorulacak şey).
+Not biçimi: `"<ilan_id>": [karar, görüş, [soru, ...]]`. Sorular **tek cümle**, gerçek bir alıcının mesajda yazacağı
+gibi ve o araca özgü olsun ("45 bin TL'lik kayıt sadece sunroof camı mı?", "Orijinal tampon ve jantlar duruyor mu?",
+"Bir yılda 45 bin km yapmış, kiralık mıydı?"). Genel kalıp soru yığma; ELE notlarına soru gerekmez. Elle soru
+yazılmamışsa `firsat/sorular.py` veriden en fazla 3 kısa soru üretir (riskler > hasar/tramer > şanzıman/bakım >
+pazarlık); yeni risk kalıbı eklersen `RISK_SORUSU`na da tek cümlelik soru ekle. Aday raporunda ≥10 notlu ilan varsa
+sayfa varsayılan olarak yalnız notlu ilanları gösterir; "okunmayan ilanları da göster" düğmesi gerisini açar.
 
 ## Yayınlama ve teslim
 
@@ -109,7 +113,7 @@ varsa sayfa varsayılan olarak yalnız notlu ilanları gösterir; "okunmayan ila
 - `firsat/degerlendirme.py` adil fiyat, emsaller, güven, 18 ay hesabı, 100'lük puan ve karar
 - `firsat/ayarlar.py` ağırlıklar, eşikler, marka talep tablosu, masraflar
 - `firsat/rapor.py` HTML şablonu (tek dosya) ve JSON kayıt biçimi
-- `firsat/sorular.py` satıcıya sorulacak sorular ve kopyalanabilir mesaj
+- `firsat/sorular.py` satıcıya sorulacak tek cümlelik sorular (elle yazılmamışsa)
 - `firsat/eslestir.py` sahibinden marka/seri/paket adlarını arabam adlarına eşleme
 
 Model sürümünü (`firsat/analiz.py` → `MODEL_SURUM`) özellik/parsing değişikliğinde artır; önbellek yenilenir.
