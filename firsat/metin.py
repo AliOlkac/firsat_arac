@@ -68,7 +68,7 @@ RISKLER = [
     ("airbag", "Airbag açmış/değişmiş: ciddi kaza geçmişi", 18,
      r"(airbag|airbeg|airbaq|egirbe|eirbe|eyirbe|ayrbag|erbag|erbeg|hava yastig)\w*\W{0,3}(\w+\W+){0,3}?"
      r"(acti|acmis|acmistir|acilmis|patladi|patlamis|patlak|degis\w*|yenilen\w*|onarim\w*|onaril\w*|tamir\w*|islemli\w*|islem gor(mus|du|en)\w*|"
-     r"islem var\w*|islem mevcut\w*|islem bulunmakta\w*|islem bulunuyor)|"
+     r"islem var\w*|islem mevcut\w*|islem bulunmakta\w*|islem bulunuyor|tadilat\w*)|"
      # "torpido ve direksiyon simidi yenilendi": sürücü + yolcu airbag'i açılmış demektir
      r"torpido\W+(ve\W+)?direksiyon[^|.]{0,60}?(degis\w*|yenilen\w*)", False),
     ("km", "KM düzeltme ya da km'si belirsiz ifadesi", 12,
@@ -177,8 +177,11 @@ def tramer_metinden(t):
             break
     # "45 bin tl tramer", "1 milyon 200 bin hasar kaydı"
     # "123 bin yeni tarihli tramer" gibi araya en fazla 3 kelime girebilir (km ise sayılmaz)
-    for m in re.finditer(r"(?:(\d+)\s*milyon\s*)?(\d{1,3}(?:[.,]\d{3})*|\d+)\s*(bin|k\b|tl|₺)(?!\s*(?:km|kilometre))\s*(tl\s*)?(lik\s*)?"
+    # "24 binde hasar kaydı yok" (km) ya da arkasından "yok" gelen ifade tutar sayılmaz
+    for m in re.finditer(r"(?:(\d+)\s*milyon\s*)?(\d{1,3}(?:[.,]\d{3})*|\d+)\s*(bin(?=lik|\b)|k\b|tl\b|₺)(?!\s*(?:km|kilometre))\s*(tl\s*)?(lik\s*)?"
                          r"(?:(?!km\b)\w+\s+){0,3}?(tramer|hasar kaydi|hasar kayit|normal kayit)", t):
+        if re.match(r"\w*\W{0,3}(yok|bulunma|olmad)", t[m.end():m.end() + 20]):
+            continue
         deger = int(m.group(1) or 0) * 1_000_000 + _tutar(m.group(2), m.group(3))
         adaylar.append(deger)
     # "50000 tramer", "45.000 hasar kaydı" (birimsiz, en az 4 hane)

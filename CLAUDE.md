@@ -51,6 +51,9 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
      başına medyan fark hesaplanır (20 ilana kadar sıfıra büzülür, ±%8 tavan) ve sahibinden ilanının piyasa değeri bu kadar
      kaydırılır. Genel tarama dosyalarını `veri/adaylar/` içinde tut; yeni taramalar farkı günceller.
    - Eklenti virgül içeren adresleri ilan adresi saymıyor: link listesinde virgül `%2C` olarak yazılır.
+   - **arabam detaylı aday dosyası** (`arabam-ilanlar-*` ama ön elemeden gelen yüzlerce ilan): referansa EKLENMEZ,
+     `degerlendir` ile puanlanır. Kullanıcı arabam ve sahibinden detaylı dosyalarını birlikte gönderirse tek komutta
+     ver: `python3 firsat.py degerlendir <sahibinden.json> <arabam.json> --ad firsat-listesi-YYYY-MM-DD` → tek HTML.
    - **arabam liste taraması** (`meta.mod = "liste_taramasi"`, `arabam-liste-*`): sonuç sayfası satırları, açıklama/boya
      yok; `temiz=true` yalnız sitenin "Boyasız, Değişensiz ve Tramersiz" filtresinde çıkanlar (~%6). Etiketsiz ilan boyalı
      DEMEK DEĞİL (referansta %40 tam temiz): okuyucu 1 boyalı parça varsayar (gözlenen ~%1,7 fiyat farkına denk) ve
@@ -83,15 +86,17 @@ Sonra raporu aynı komutla yeniden üret. Okurken özellikle bak:
 - Emsali çok az (serinin piyasada <10 ilanı) ve çok ucuz görünen → güvenme.
 Yeni bir kalıp tekrar ediyorsa `firsat/metin.py` içindeki kurallara ekle.
 
-## Satıcıya sorular
+## HTML kartları ve Claude görüşü
 
-Her kartta "Satıcıya sor: kopyala" butonu ve detayda mesaj kutusu var (`firsat/sorular.py`). Sorular ilanın verisinden
-üretilir (değişen/boyalı parçalar, tramer, km, çift kavramalı şanzıman, hibrit batarya, garanti, riskler, ucuzluk).
-Yeni bir risk kalıbı eklersen `RISK_SORUSU` sözlüğüne de soru ekle.
+KULLANICI İSTEĞİ (2026-11-11): kartlarda satıcıya mesaj/kopyala kısmı YOK. Her kartın altında "Görüşüm" kutusu
+vardır: `veri/notlar.json` notunun metni (renk = AL/İNCELE/DİKKAT/ELE). Notlar bu yüzden araca dair kısa ama
+somut bir görüş olmalı (kim satıyor, boya/tramer, gerçek ucuzluk, sorulacak şey). Aday raporunda ≥10 notlu ilan
+varsa sayfa varsayılan olarak yalnız notlu ilanları gösterir; "okunmayan ilanları da göster" düğmesi gerisini açar.
+`firsat/sorular.py` HTML'de kullanılmıyor (ileride gerekirse duruyor).
 
 ## Yayınlama ve teslim
 
-- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Hızlı al-sat listesi: https://claude.ai/artifact/WDmzJfbKH9a7ojw1r2cNhJ (aynı şekilde güncelle). Aday değerlendirmeleri için yeni artifact açılabilir (Skoda ön eleme: https://claude.ai/artifact/NzHso4K8PuEKnWjpTUutqV, Superb detay: https://claude.ai/artifact/UVTLnV5xkP5wapgjzabCgf, Octavia detay: https://claude.ai/artifact/LeMYPkFmb98orqSDSimFvC, çok markalı detay 2026-11-08: https://claude.ai/artifact/JN94LgaDuXpqBkojUJksEE, 24 saat detay 2026-11-09: https://claude.ai/artifact/L2SGyMbUt8exBGra5SLpQD, 24 saat detay 2026-11-09 akşam: https://claude.ai/artifact/RZqj7YY76NkirjqXMAgq8f, 24 saat detay 2026-11-11: https://claude.ai/artifact/HW8FUu8X2pcmmFUhKoeNnb).
+- HTML'i Artifact olarak yayınla (kullanıcı telefondan da bakıyor). Güncel piyasa fırsat listesi şu artifact'ta: https://claude.ai/artifact/7hDqWUBJW8KTrzLk3d17H7 — yeni piyasa raporunu `url` ile bu adrese yayınla (önce `read` et). Hızlı al-sat listesi: https://claude.ai/artifact/WDmzJfbKH9a7ojw1r2cNhJ (aynı şekilde güncelle). Aday değerlendirmeleri için yeni artifact açılabilir (Skoda ön eleme: https://claude.ai/artifact/NzHso4K8PuEKnWjpTUutqV, Superb detay: https://claude.ai/artifact/UVTLnV5xkP5wapgjzabCgf, Octavia detay: https://claude.ai/artifact/LeMYPkFmb98orqSDSimFvC, çok markalı detay 2026-11-08: https://claude.ai/artifact/JN94LgaDuXpqBkojUJksEE, 24 saat detay 2026-11-09: https://claude.ai/artifact/L2SGyMbUt8exBGra5SLpQD, 24 saat detay 2026-11-09 akşam: https://claude.ai/artifact/RZqj7YY76NkirjqXMAgq8f, 24 saat detay 2026-11-11: https://claude.ai/artifact/HW8FUu8X2pcmmFUhKoeNnb, arabam + sahibinden birleşik detay 2026-11-11: https://claude.ai/artifact/VUxqZyf8YZ3uciWhmwoV3Q).
 - Kullanıcıya kısa özet ver: kaç ilan tarandı, kaç AL/güçlü aday, ilk 5 araç (fiyat, piyasa değeri, ucuzluk %, Claude notu).
 - Değişiklikleri commit edip geliştirme dalına pushla. `veri/piyasa.db`, `veri/model.pkl`, `*-inceleme.txt` depoya girmez.
 

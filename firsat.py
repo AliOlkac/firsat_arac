@@ -160,9 +160,10 @@ def main():
                         and s.get("agir_hasar") != "var"
                         and not any(c >= 15 or k in ("lpg_sonradan", "manuel", "kiralik", "kiralik_firma") for k, _, c in s["riskler"])][: a.n]
         _ozet_yaz(sonuclar, 30)
-        site_adi = "Sahibinden" if sahibinden else "Aday"
+        site_adi = ("Fırsat Listesi" if "arabam" in bilgi["kaynak"] else "Sahibinden") if sahibinden else (
+            "arabam" if "arabam" in bilgi["kaynak"] else "Aday")
         ad = a.ad or f"{'sahibinden-on-eleme' if pazar else ('sahibinden' if sahibinden else 'aday')}-{date.today().isoformat()}"
-        baslik = "Sahibinden Ön Eleme" if pazar else f"{site_adi} Fırsatları"
+        baslik = "Sahibinden Ön Eleme" if pazar else (site_adi if site_adi == "Fırsat Listesi" else f"{site_adi} Fırsatları")
         _kaydet(sonuclar, ad, baslik,
                 f"{len(sonuclar)} ilan, {len(piyasa.satirlar):,} ilanlık arabam piyasasına göre puanlandı".replace(",", "."),
                 piyasa, "aday")

@@ -4,7 +4,7 @@ from datetime import date
 from pathlib import Path
 
 from .degerlendirme import hasar_kisa
-from .sorular import mesaj, sorular
+
 from .veritabani import KOK
 
 NOT_YOLU = KOK / "veri" / "notlar.json"
@@ -46,7 +46,7 @@ def kayit(s, notlar=None, mod="piyasa"):
         "gelecek": round(s["gelecek_oran"], 4), "emsal": s["emsal_listesi"],
         "emsal_fiyat": round(s["emsal_fiyat"]) if s.get("emsal_fiyat") else None,
         "ilan_gun": s.get("ilan_gun"), "n_benzer": s["n_benzer"],
-        "sorular": sorular(s), "mesaj": mesaj(s), "eslesme": s.get("eslesme"), "kaynak_adi": s.get("kaynak_adi"),
+        "eslesme": s.get("eslesme"), "kaynak_adi": s.get("kaynak_adi"),
         "site": "sahibinden" if "sahibinden.com" in (s.get("url") or "") else "arabam",
     }
 
@@ -172,12 +172,12 @@ details.yontem summary { cursor: pointer; padding-block: 12px; font-weight: 600;
 .git:hover { filter: brightness(1.08); text-decoration: underline; }
 .git small { font-weight: 500; opacity: .8; font-size: 12px; }
 .butonlar { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
-.kopyala { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 6px 12px; border-radius: 8px;
-  background: var(--kart); color: var(--vurgu); border: 1.5px solid var(--vurgu); font: inherit; font-weight: 600;
-  font-size: 14px; cursor: pointer; white-space: nowrap; }
-.kopyala.oldu { color: var(--iyi); border-color: var(--iyi); }
-.soru-kutu { width: 100%; min-height: 9.5em; font: inherit; font-size: 13.5px; line-height: 1.45; color: var(--murekkep);
-  background: var(--zemin); border: 1px solid var(--cizgi); border-radius: 8px; padding: 8px 10px; resize: vertical; }
+.gorus { grid-column: 2 / -1; margin: 0; padding: 10px 14px; border-radius: 8px; background: var(--zemin);
+  border-left: 3px solid var(--soluk); font-size: 14.5px; line-height: 1.5; }
+.gorus b { display: block; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--soluk); margin-bottom: 2px; }
+.gorus.g-AL { border-left-color: var(--iyi); } .gorus.g-İNCELE { border-left-color: var(--vurgu); }
+.gorus.g-DİKKAT { border-left-color: var(--kotu); }
+.okunmayan { display: flex; justify-content: center; margin: 18px 0 6px; }
 .detay-ic section.genis { grid-column: 1 / -1; }
 .sema { display: grid; justify-items: center; gap: 3px; text-decoration: none; color: var(--soluk); font-size: 12px; text-align: center; }
 .sema svg { width: 54px; height: auto; display: block; }
@@ -339,7 +339,7 @@ function kart(r, i) {
       <h2><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.marka)} ${esc(r.seri)} <em>${esc(r.model)}</em></a></h2>
       <div class="etiketler">${etiket.map(e => `<span>${esc(e)}</span>`).join("")}</div>
       <span class="karar k-${esc(ke.k)}">${esc(ke.y)}</span>
-      ${r.claude ? `<p class="claude"><b>Claude:</b> ${esc(r.claude[1])}</p>` : `<p class="claude yok">Açıklama Claude tarafından okunmadı; otomatik değerlendirme.</p>`}
+      ${r.claude ? "" : `<p class="claude yok">Açıklama Claude tarafından okunmadı; otomatik değerlendirme.</p>`}
     </div>
     <div class="fiyat">
       <span class="ana sayi">${TL(r.fiyat)}</span>
@@ -347,16 +347,15 @@ function kart(r, i) {
       <span class="fark ${fark >= 0 ? "arti" : "eksi"} sayi">${fark >= 0 ? "%" + YUZDE(r.firsat) + " ucuz · " + TL(fark) : "%" + YUZDE(-r.firsat) + " pahalı"}</span>
       ${HIZLI ? `<span class="sonra sayi"><b class="fark ${r.net_yarin >= 0 ? "arti" : "eksi"}">Yarın satsan net: ${r.net_yarin >= 0 ? "+" : ""}${TL(r.net_yarin)}</b></span>`
               : `${META.mod === "aday" ? `<span class="sonra sayi">Yarın satsan net: ${r.net_yarin >= 0 ? "+" : ""}${TL(r.net_yarin)}</span>` : ""}<span class="sonra sayi">18 ay sonra (reel): ${r.net18 >= 0 ? "+" : ""}${TL(r.net18)}</span>`}
-      <div class="butonlar"><a class="git" href="${esc(r.url)}" target="_blank" rel="noopener">İlana git ↗ <small>#${esc(r.id)}</small></a>
-      <button class="kopyala" type="button" data-id="${esc(r.id)}">Satıcıya sor: kopyala</button></div>
+      <div class="butonlar"><a class="git" href="${esc(r.url)}" target="_blank" rel="noopener">İlana git ↗ <small>${esc(r.site === "arabam" ? "arabam" : "sahibinden")} #${esc(r.id)}</small></a></div>
     </div>
     <a class="sema" href="${esc(r.url)}" target="_blank" rel="noopener" title="İlanı aç">${sema(r)}<span class="tr">${esc(r.hasar)}</span><span>${esc(tramerYazi(r.tramer))}</span></a>
-    <details class="detay"><summary>${HIZLI ? "Puan dökümü, kâr hesabı, emsaller ve satıcıya sorular" : "Puan dökümü, 18 ay hesabı, emsaller ve satıcıya sorular"}</summary><div class="detay-ic">
+    <details class="detay"><summary>${HIZLI ? "Puan dökümü, kâr hesabı ve emsaller" : "Puan dökümü, 18 ay hesabı ve emsaller"}</summary><div class="detay-ic">
       <section><h4>Puan ${r.son_puan.toLocaleString("tr-TR")} / 100</h4>
         ${HIZLI ? cub("Kâr potansiyeli", pf, 55) + cub("Satış hızı", ps, 25) + cub("Kondisyon", pk, 20)
                 : cub("Fiyat avantajı", pf, 45) + cub("Kondisyon", pk, 20) + cub("Satılabilirlik", ps, 20) + cub("Değer koruma", pd, 15)}
         ${ceza ? cub("Açıklama riski", ceza, 40, true) : ""}${cdz < 0 ? cub("Claude düzeltmesi", cdz, 40, true) : ""}
-        <p class="sonra">Tahmin güveni: %${Math.round(r.guven * 100)} · aynı motor ve yılda ${r.n_benzer} ilan</p></section>
+        <p class="sonra">Tahmin güveni: %${Math.round(r.guven * 100)} · aynı motor ve yılda ${r.n_benzer} ilan${r.site === "sahibinden" && r.kaynak_adi ? ` · sahibinden adı: ${esc(r.kaynak_adi)} (arabam eşleşmesi: ${esc(r.eslesme || "-")})` : ""}</p></section>
       ${HIZLI ? `<section><h4>Yarın satsan</h4><table class="hesap">
         <tr><td>Alış (ilan fiyatı, pazarlıksız)</td><td>${TL(r.fiyat)}</td></tr>
         <tr><td>Piyasa değeri</td><td>${TL(r.adil)}</td></tr>
@@ -373,21 +372,22 @@ function kart(r, i) {
         <p class="sonra">TL bazında satış fiyatı enflasyonla daha yüksek görünür; burada reel değer kaybı gösterilir.</p></section>
       <section><h4>Benzer ilanlar</h4>${emsal ? `<ul class="emsal">${emsal}</ul>${r.emsal_fiyat ? `<p class="sonra">Bu araca göre uyarlanmış emsal medyanı: ${TL(r.emsal_fiyat)}</p>` : ""}` : `<p class="sonra">Yakın emsal bulunamadı (aynı motor, ±1 yıl, ±35 bin km).</p>`}</section>
       ${maddeler ? `<section><h4>Sistem notları</h4><ul class="maddeler">${maddeler}</ul></section>` : ""}
-      <section class="genis"><h4>Satıcıya sorulacaklar</h4>
-        <textarea class="soru-kutu" id="s${esc(r.id)}" rows="${r.mesaj.split("\n").length + 1}" readonly aria-label="Satıcıya gönderilecek mesaj">${esc(r.mesaj)}</textarea>
-        <p class="sonra">${r.site === "sahibinden" && r.kaynak_adi ? `sahibinden adı: ${esc(r.kaynak_adi)} · arabam eşleşmesi: ${esc(r.eslesme || "-")} · ` : ""}Mesajı kopyalayıp ilandaki mesaj ya da WhatsApp alanına yapıştırabilirsin.</p></section>
     </div></details>
+    ${r.claude ? `<p class="gorus g-${esc(r.claude[0])}"><b>Görüşüm</b>${esc(r.claude[1])}</p>` : ""}
   </article>`;
 }
 
-const durum = { ara: "", kat: "", fiyat: "", sirala: "puan", al: false, temiz: false, sahibi: false, dikkat: true };
+const durum = { ara: "", kat: "", fiyat: "", sirala: "puan", al: false, temiz: false, sahibi: false, dikkat: true, hepsi: false };
 try { Object.assign(durum, JSON.parse(localStorage.getItem("firsat-filtre") || "{}")); } catch (e) {}
 const ANA = VERI.filter(r => !(r.claude && r.claude[0] === "ELE"));
+// Aday raporunda varsayılan olarak yalnız açıklaması okunup görüş yazılan ilanlar gösterilir
+const OKUNAN_VAR = META.mod === "aday" && ANA.filter(r => r.claude).length >= 10;
 const ELENEN = VERI.filter(r => r.claude && r.claude[0] === "ELE");
 
 function ciz() {
   const q = durum.ara.trim().toLocaleLowerCase("tr-TR");
   let l = ANA.filter(r => {
+    if (OKUNAN_VAR && !durum.hepsi && !r.claude) return false;
     if (q && !`${r.marka} ${r.seri} ${r.model} ${r.sehir} ${r.yil}`.toLocaleLowerCase("tr-TR").includes(q)) return false;
     if (durum.kat && r.kategori !== durum.kat) return false;
     if (durum.fiyat && r.fiyat > +durum.fiyat) return false;
@@ -401,29 +401,15 @@ function ciz() {
   const anahtar = { puan: r => -r.son_puan, firsat: r => -r.firsat, net: r => -(HIZLI ? r.net_yarin : r.net18), fiyat: r => r.fiyat, km: r => r.km }[durum.sirala];
   l.sort((a, b) => anahtar(a) - anahtar(b));
   const liste = document.getElementById("liste");
-  liste.innerHTML = l.length ? l.map(kart).join("") : `<p class="bos">Bu filtrelere uyan ilan yok. Filtreleri gevşet.</p>`;
+  const okunmayan = OKUNAN_VAR ? ANA.filter(r => !r.claude).length : 0;
+  liste.innerHTML = (l.length ? l.map(kart).join("") : `<p class="bos">Bu filtrelere uyan ilan yok. Filtreleri gevşet.</p>`)
+    + (okunmayan ? `<div class="okunmayan"><button class="cip" type="button" id="hepsi">${durum.hepsi ? "Yalnız görüş yazdıklarımı göster" : `Açıklaması okunmayan ${okunmayan} ilanı da göster (otomatik puan)`}</button></div>` : "");
+  const hb = document.getElementById("hepsi");
+  if (hb) hb.onclick = () => { durum.hepsi = !durum.hepsi; ciz(); };
   document.getElementById("sayi").textContent = `${l.length} / ${ANA.length} ilan`;
   try { localStorage.setItem("firsat-filtre", JSON.stringify(durum)); } catch (e) {}
 }
-function kopyala(btn) {
-  const r = VERI_ID[btn.dataset.id];
-  const bitti = (ok) => {
-    btn.textContent = ok ? "Kopyalandı ✓" : "Metni seçtim, kopyala";
-    btn.classList.toggle("oldu", ok);
-    setTimeout(() => { btn.textContent = "Satıcıya sor: kopyala"; btn.classList.remove("oldu"); }, 2200);
-  };
-  const elle = () => {
-    const kart = btn.closest(".ilan"); const d = kart.querySelector("details.detay"); d.open = true;
-    const t = kart.querySelector(".soru-kutu"); t.focus(); t.select();
-    let ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
-    bitti(ok);
-  };
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(r.mesaj).then(() => bitti(true), elle);
-  } else { elle(); }
-}
-const VERI_ID = Object.fromEntries(VERI.map(r => [r.id, r]));
-document.addEventListener("click", e => { const b = e.target.closest(".kopyala"); if (b) kopyala(b); });
+
 
 function kur() {
   const tarih = new Date(META.tarih + "T12:00:00").toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
