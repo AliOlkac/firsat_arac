@@ -51,6 +51,14 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
      başına medyan fark hesaplanır (20 ilana kadar sıfıra büzülür, ±%8 tavan) ve sahibinden ilanının piyasa değeri bu kadar
      kaydırılır. Genel tarama dosyalarını `veri/adaylar/` içinde tut; yeni taramalar farkı günceller.
    - Eklenti virgül içeren adresleri ilan adresi saymıyor: link listesinde virgül `%2C` olarak yazılır.
+   - **arabam liste taraması** (`meta.mod = "liste_taramasi"`, `arabam-liste-*`): sonuç sayfası satırları, açıklama/boya
+     yok; `temiz=true` yalnız sitenin "Boyasız, Değişensiz ve Tramersiz" filtresinde çıkanlar (~%6). Etiketsiz ilan boyalı
+     DEMEK DEĞİL (referansta %40 tam temiz): okuyucu 1 boyalı parça varsayar (gözlenen ~%1,7 fiyat farkına denk) ve
+     boyalı eşiğini uygular. Referansa EKLENMEZ; `degerlendir` ile ön eleme yapılıp arabam linkleri ayrı blokta verilir.
+     sahibinden ön elemesini önce çalıştır: arabam ön elemesi sahibinden raporlarında aynı marka/seri/paket/yıl, ±600 km,
+     ±%2,5 fiyatla görülen araçları (iki sitede birden ilanda olan aynı araç) çıkarır (`analiz.ayni_arac_var`).
+   - Ön elemede referansın kapsamadığı yıl/km (2018 öncesi, 160 bin km üstü) çıkarılır: sahibinden SUV sayfası
+     (`/arazi-suv-pickup/`) URL'deki yıl/km filtresini uygulamıyor. `agir_hasar = "Evet"` ilanlar da çıkarılır.
    - Ön elemede daha önce detaylı taranmış (`veri/adaylar/sahibinden-ilanlar-*`) ve fiyatı düşmemiş ilanlar çıkarılır
      (`analiz.onceki_detaylar`); fiyatı düşenler yeniden önerilir. Detaylı dosyaları `veri/adaylar/` içinde tut.
 4. Veritabanı yoksa ilk komut onu `veri/ham/*.json.xz` dosyalarından otomatik kurar (~1 dk). Model `veri/model.pkl` içinde önbelleklenir.

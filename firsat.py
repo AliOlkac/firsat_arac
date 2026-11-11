@@ -136,8 +136,28 @@ def main():
                 ids = {s["ilan_id"] for s in tekrar}
                 sonuclar = [s for s in sonuclar if s["ilan_id"] not in ids]
                 print(f"  Daha önce detaylı taranmış, fiyatı düşmemiş {len(tekrar)} ilan listeden çıkarıldı")
+            # referans piyasanın kapsamadığı yıl/km (ör. sahibinden SUV sayfası yıl-km filtresini uygulamıyor)
+            kapsam = {}
+            for r in piyasa.satirlar:
+                lo, hi = kapsam.get(r["kategori"], (9999, 0))
+                kapsam[r["kategori"]] = (min(lo, r["yil"]), max(hi, r["km"]))
+            dis = [s for s in sonuclar if s["yil"] < kapsam.get(s["kategori"], (0, 10**9))[0]
+                   or s["km"] > kapsam.get(s["kategori"], (0, 10**9))[1]]
+            if dis:
+                ids = {s["ilan_id"] for s in dis}
+                sonuclar = [s for s in sonuclar if s["ilan_id"] not in ids]
+                print(f"  Referansın kapsamadığı yıl/km: {len(dis)} ilan çıkarıldı")
+            if not sahibinden:
+                # aynı araç sahibinden'de zaten önerildi ya da detaylı tarandıysa arabam'dan tekrar önerme
+                bilinen = analiz.sahibinden_bilinen_araclar()
+                cift = [s for s in sonuclar if analiz.ayni_arac_var(bilinen, s)]
+                if cift:
+                    ids = {s["ilan_id"] for s in cift}
+                    sonuclar = [s for s in sonuclar if s["ilan_id"] not in ids]
+                    print(f"  sahibinden'de de ilanda olan (zaten önerilmiş/taranmış) {len(cift)} araç çıkarıldı")
             sonuclar = [s for s in sonuclar if s["firsat"] * s["guven"] >= (A.ONELEME_TEMIZ_ESIK if not (s["n_boya"] or s["n_degisen"])
                                                                  else A.ONELEME_BOYALI_ESIK)
+                        and s.get("agir_hasar") != "var"
                         and not any(c >= 15 or k in ("lpg_sonradan", "manuel", "kiralik", "kiralik_firma") for k, _, c in s["riskler"])][: a.n]
         _ozet_yaz(sonuclar, 30)
         site_adi = "Sahibinden" if sahibinden else "Aday"
@@ -150,20 +170,10 @@ def main():
             (RAPORLAR / f"{ad}-linkler.txt").write_text("\n".join(_link(s["url"]) for s in sonuclar if s.get("url")) + "\n", encoding="utf-8")
             (RAPORLAR / f"{ad}-ilan-numaralari.txt").write_text(",".join(s["ilan_id"] for s in sonuclar) + "\n", encoding="utf-8")
             print(f"  Detaylı taranacak {len(sonuclar)} ilan: raporlar/{ad}-linkler.txt ve -ilan-numaralari.txt")
-            # Sohbete doğrudan yapıştırmak için: seri seri, alt alta linkler
-            from collections import defaultdict
-            seri = defaultdict(list)
-            for s_ in sonuclar:
-                seri[f"{s_['marka']} {s_['seri']}"].append(_link(s_["url"]))
-            # Tek tarama sayfasından geldiyse (çok markalı da olsa) tek blok; birden çok seri sayfasıysa seri seri
-            sayfa_sayisi = len(a.dosyalar)
+            # Sohbete yapıştırmak için tek blok: eklenti link listesini sayfadan bağımsız topluyor (adres_listesi)
             print("\n===== LİNKLER (sohbete aynen yapıştır) =====")
-            if sayfa_sayisi == 1:
-                print("\n".join(_link(s_["url"]) for s_ in sonuclar))
-            else:
-                for ad_, linkler in seri.items():
-                    print(f"\n{ad_} ({len(linkler)})")
-                    print("\n".join(linkler))
+            print("\n".join(_link(s_["url"]) for s_ in sonuclar if s_.get("url")))
+
 
 if __name__ == "__main__":
     sys.exit(main())

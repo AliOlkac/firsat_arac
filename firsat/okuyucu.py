@@ -249,6 +249,43 @@ def pazar_satiri(x):
     return r
 
 
+def arabam_liste_satiri(x, temiz_tarandi):
+    """arabam.com liste (sonuç sayfası) taraması satırı: açıklama ve boya şeması yoktur.
+    temiz=True: sitenin 'Boyasız, Değişensiz ve Tramersiz' filtresinde çıktı. Etiketsiz ilan boyalı demek DEĞİLDİR:
+    2026-11-11 taramasında etiket ilanların %6'sında vardı, referans piyasada ise %40'ı tam temiz. Bu yüzden
+    etiketsiz ilanın boya durumu 'bilinmiyor' sayılır (temiz_tarandi yalnız bilgi için tutulur)."""
+    baslik = x.get("baslik") or ""
+    alt = [k.strip() for k in (x.get("alt_kategori") or "").split(">") if k.strip()]
+    temiz = x.get("temiz") is True
+    bilinmiyor = not temiz
+    hp = sayi(x.get("motor_gucu"))
+    r = {
+        "ilan_id": str(x.get("ilan_id")), "kaynak": "arabam", "url": x.get("url"), "baslik": baslik,
+        "fiyat": sayi(x.get("fiyat")), "sehir": x.get("sehir"), "ilce": x.get("ilce"),
+        "ilan_tarihi": tarih_tr(x.get("ilan_tarihi")), "kimden": x.get("kimden"), "foto": None,
+        "kategori": "suv" if "suv" in sade(x.get("ana_kategori")) else "otomobil",
+        "marka": (x.get("marka") or "").strip(), "seri": (x.get("seri") or "").strip(), "model": " ".join(alt),
+        "yil": sayi(x.get("yil")), "km": sayi(x.get("km")), "vites": x.get("vites"), "yakit": yakit_norm(x.get("yakit")),
+        "kasa": kasa_norm(x.get("kasa_tipi")), "renk": x.get("renk"), "cekis": x.get("cekis"), "sanziman": None,
+        "hp": hp if hp and 40 <= hp <= 700 else None, "cc": sayi(x.get("motor_hacmi")), "segment": None,
+        "garanti": garanti_norm(x.get("garanti")), "agir_hasar": "var" if x.get("agir_hasar_kayitli") else None,
+        "cam_tavan": 0, "aciklama": "", "liste_satiri": 1,
+        # etiketsiz ilanlar temiz varsayımlı modele göre ~%1,7 daha ucuz listeleniyor (yaklaşık yarısı boyalı):
+        # 1 boyalı parça varsayımı bu beklentiyi verir ve ön elemede boyalı eşiğini (%5) uygular
+        "n_lokal": 0, "n_boya": 0 if temiz else 1, "n_degisen": 0,
+        "n_belirsiz": 0, "boya_bilinmiyor": int(bilinmiyor),
+        "tampon_lokal": 0, "tampon_boya": 0, "tampon_degisen": 0, "tavan_boya": 0, "tavan_degisen": 0, "kaput_degisen": 0,
+        "parcalar": {"lokal": [], "boya": [], "degisen": [], "belirsiz": []},
+        "tramer_durum": "yok" if temiz else "belirsiz", "tramer_tl": 0 if temiz else None, "tramer_kaynak": None,
+    }
+    r["motor"] = motor_anahtari(r["model"], r["yakit"])
+    t = sade(baslik)
+    r["riskler"] = riskler(t) + form_celiskileri(t, baslik, r)
+    r["olumlu"] = olumlular(t)
+    r["pesinat_gecer"] = int(bool(re.search(r"pesinat|kapora|\bsenet", t)))
+    return r
+
+
 def sahibinden_filtre_seri(url):
     """'https://www.sahibinden.com/skoda-octavia/otomatik?...' -> ('skoda', 'octavia', 'otomobil').
     Marka/seri ayrımı kesin değildir ('mercedes-benz-c-serisi' -> 'mercedes', 'benz c serisi'); eşleştirici düzeltir."""
@@ -263,8 +300,8 @@ def sahibinden_filtre_seri(url):
         if slug.startswith(on):
             kategori = "suv" if on.startswith("arazi") else "otomobil"
             slug = slug[len(on):]
-    if slug in ("otomobil", "arazi-suv-pickup", "vasita"):
-        return None, None, kategori
+    if slug in ("otomobil", "arazi-suv-pickup", "arazi-suv-pick-up", "vasita"):
+        return None, None, "suv" if slug.startswith("arazi") else kategori
     parca = slug.split("-")
     return parca[0], " ".join(parca[1:]), kategori
 
@@ -292,7 +329,17 @@ def dosya_oku(yol):
         toplanma = datetime.fromtimestamp(Path(yol).stat().st_mtime)
     satirlar, tur = [], "detay"
     detayli = any(isinstance(x, dict) and x.get("genel_bilgiler") for x in (d.get("ilanlar") or [])[:5])
-    if not detayli and ("pazar" in d or meta.get("mod") == "pazar_taramasi"):
+    if not detayli and meta.get("mod") == "liste_taramasi" and "arabam" in sade(meta.get("kaynak")):
+        tur = "pazar"
+        temiz_tarandi = any("tramersiz" in sade(b.get("ad")) and b.get("durum") == "bitti"
+                            and (b.get("bulunan") or 0) >= 0.95 * (b.get("sitedeki") or 1) for b in meta.get("birimler") or [])
+        gorulen = set()
+        for x in d.get("ilanlar") or []:
+            if str(x.get("ilan_id")) in gorulen or x.get("para_birimi") not in (None, "TL"):
+                continue
+            gorulen.add(str(x.get("ilan_id")))
+            satirlar.append(arabam_liste_satiri(x, temiz_tarandi))
+    elif not detayli and ("pazar" in d or meta.get("mod") == "pazar_taramasi"):
         tur = "pazar"
         gorulen = set()
         marka_slug, seri_slug, kat_slug = sahibinden_filtre_seri(meta.get("filtre_url"))
@@ -329,7 +376,12 @@ def dosya_oku(yol):
             if g.get("para_birimi") not in (None, "TL"):
                 continue
             satirlar.append(satir(x, kategori.get(str(g.get("ilan_id")))))
-    kaynak = "sahibinden" if (tur == "pazar" or "sahibinden" in sade(meta.get("kaynak"))
-                              or any(r["kaynak"] == "sahibinden" for r in satirlar[:20])) else "arabam"
+    mk = sade(meta.get("kaynak"))
+    if "arabam" in mk:
+        kaynak = "arabam"
+    elif tur == "pazar" or "sahibinden" in mk or any(r["kaynak"] == "sahibinden" for r in satirlar[:20]):
+        kaynak = "sahibinden"
+    else:
+        kaynak = "arabam"
     return {"toplanma": toplanma, "kapsamlar": kapsamlar, "kaynak": kaynak, "tur": tur,
             "ilan_sayisi": len(satirlar)}, satirlar

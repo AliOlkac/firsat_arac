@@ -214,6 +214,30 @@ def onceki_detaylar():
     return fiyatlar
 
 
+def sahibinden_bilinen_araclar():
+    """Önceki sahibinden raporlarındaki (ön eleme + detay) araçlar: {(marka, seri, model, yil): [(km, fiyat), ...]}.
+    Aynı araç arabam'da da ilandaysa iki kez taranmasın diye kullanılır."""
+    from collections import defaultdict
+    raporlar = KOK / "raporlar"
+    bilinen = defaultdict(list)
+    for yol in sorted(raporlar.glob("sahibinden-*.json")):
+        try:
+            for x in json.load(open(yol, encoding="utf-8")):
+                if x.get("km") is not None and x.get("fiyat"):
+                    bilinen[(x.get("marka"), x.get("seri"), x.get("model"), x.get("yil"))].append((x["km"], x["fiyat"]))
+        except Exception:
+            continue
+    return bilinen
+
+
+def ayni_arac_var(bilinen, r, km_tol=600, fiyat_tol=0.025):
+    """r'nin (arabam ilanı) sahibinden'de aynı marka/seri/yıl, ~aynı km ve ~aynı fiyatla görülüp görülmediği."""
+    for km, fiyat in bilinen.get((r["marka"], r["seri"], r["model"], r["yil"]), ()):
+        if abs(km - r["km"]) <= km_tol and abs(fiyat - r["fiyat"]) <= fiyat_tol * r["fiyat"]:
+            return True
+    return False
+
+
 def sahibinden_mi(yol):
     """Dosya sahibinden taraması mı? (sahibinden dosyaları referans veritabanına eklenmez)"""
     try:
