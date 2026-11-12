@@ -62,7 +62,7 @@ Dosyalar genelde `/root/.claude/uploads/...` altına gelir. Önce `meta` bölüm
      ±%2,5 fiyatla görülen araçları (iki sitede birden ilanda olan aynı araç) çıkarır (`analiz.ayni_arac_var`).
    - Ön elemede referansın kapsamadığı yıl/km (2018 öncesi, 160 bin km üstü) çıkarılır: sahibinden SUV sayfası
      (`/arazi-suv-pickup/`) URL'deki yıl/km filtresini uygulamıyor. `agir_hasar = "Evet"` ilanlar da çıkarılır.
-   - Ön elemede daha önce detaylı taranmış (`veri/adaylar/sahibinden-ilanlar-*`) ve fiyatı düşmemiş ilanlar çıkarılır
+   - Ön elemede daha önce detaylı taranmış (`veri/adaylar/sahibinden-ilanlar-*` ve `arabam-ilanlar-*`) ve fiyatı düşmemiş ilanlar çıkarılır
      (`analiz.onceki_detaylar`); fiyatı düşenler yeniden önerilir. Detaylı dosyaları `veri/adaylar/` içinde tut.
 4. Veritabanı yoksa ilk komut onu `veri/ham/*.json.xz` dosyalarından otomatik kurar (~1 dk). Model `veri/model.pkl` içinde önbelleklenir.
 

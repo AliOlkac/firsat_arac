@@ -198,10 +198,11 @@ def adaylari_degerlendir(piyasa, yollar):
 
 
 def onceki_detaylar():
-    """Daha önce detaylı taranmış sahibinden ilanları: {ilan_id: fiyat} (veri/adaylar/*ilanlar*)."""
+    """Daha önce detaylı taranmış sahibinden ve arabam ilanları: {ilan_id: fiyat} (veri/adaylar/*-ilanlar-*)."""
     from .okuyucu import sayi
     fiyatlar = {}
-    for yol in sorted(ADAYLAR.glob("sahibinden-ilanlar-*.json*")):
+    yollar = sorted(ADAYLAR.glob("sahibinden-ilanlar-*.json*")) + sorted(ADAYLAR.glob("arabam-ilanlar-*.json*"))
+    for yol in sorted(yollar, key=lambda y: y.name.split("-ilanlar-")[1]):   # tarih sırası: son görülen fiyat kalır
         try:
             with lzma.open(yol) if yol.suffix == ".xz" else open(yol, "rb") as f:
                 d = json.load(f)
