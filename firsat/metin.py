@@ -11,7 +11,8 @@ def sade(s):
     return re.sub(r"[ \t\r\f\v]+", " ", s).strip()
 
 
-_OLUMSUZ = re.compile(r"^.{0,8}?\b(degil|degildir|yok|yoktur|olmayan|olmamistir|bulunmamaktadir|bulunmuyor|mevcut degil)\b")
+_OLUMSUZ = re.compile(r"^.{0,8}?\b(degil|degildir|yok|yoktur|olmayan|olmamistir|bulunmamaktadir|bulunmuyor|mevcut degil|"
+                      r"takilmamis\w*|takili degil)\b")
 
 
 # Galeri kalıp cümleleri: "firmamız ağır hasarlı, pert kayıtlı araç alım satımı yapmaz" gibi.
@@ -96,8 +97,8 @@ RISKLER = [(k, a, c, re.compile(d), kl) for k, a, c, d, kl in RISKLER]
 
 # Formdaki bilgiyle çelişen ifadeler (form "boyasız / otomatik" derken açıklama başka şey söylüyorsa)
 PARCA = r"(kapi|kapisi|kapilar|kapilari|camurluk|camurlugu|kaput|kaputu|tampon|tamponu|bagaj|tavan|panel|marspiyel|on uc parca|uc parca|kapagi|gogus|gogsu|kapi saclari)"
-DEGISEN_METIN = re.compile(PARCA + r"\w*\W{1,3}(\w+\W+){0,4}?(degismis|degismistir|degisti|degistirilmis|degistirilmistir|"
-                           r"degistirmis|degistirmistir|degisimi|degisim olmus|degisen)\b")
+DEGISEN_METIN = re.compile(PARCA + r"\w*\W{1,3}(\w+\W+){0,5}?(degismis|degismistir|degisti|degistirilmis|degistirilmistir|"
+                           r"degistirmis|degistirmistir|degisimi|degisim olmus|degisen|degisendir)\b")
 BOYA_METIN = re.compile(PARCA + r"\w*\W{1,3}(\w+\W+){0,3}?(boyali|boyalidir|boyanmis|boyanmistir|boya var|boya mevcut|"
                         r"lokal boya|lokal boyali|lokal boyalidir)\b")
 MANUEL = re.compile(r"\bmanuel\b(?!\W{0,2}(klima|mod|gecis|vites modu|kullanim|katlan|ayar|koltuk|el fren|park|perde|"
@@ -140,7 +141,7 @@ OLUMLU = [
 
 TRAMER_YOK = re.compile(
     r"tramer(siz| kaydi yok| kaydi bulunmamakta| yok| yoktur| 0 ?(tl)?\b| bulunmamakta| sifir)|"
-    r"hasar kaydi (yok|bulunmamakta)|hasar kayitsiz|sifir tramer|\b0 tramer|tramer kaydi yoktur|degisen ve tramer yok|"
+    r"tramer\s*:\s*(yok|yoktur)|hasar kaydi\s*:?\s*(yok|bulunmamakta)|hasar kayitsiz|sifir tramer|\b0 tramer|tramer kaydi yoktur|degisen ve tramer yok|"
     r"boya ?(,|ve)? ?degisen ?(,|ve)? ?tramer yok")
 TRAMER_ANAHTAR = re.compile(r"tramer|hasar kaydi|hasar kayit|hasar\s?\d|normal kayit")
 
@@ -155,6 +156,8 @@ def _tutar(ham, carpani):
 def tramer_metinden(t):
     """Sade metinden tramer bilgisi. (durum, tutar) döner: ('yok',0) | ('tutar',x) | (None,None)."""
     t = t.replace("tiramer", "tramer").replace("taramer", "tramer")
+    # tarihler ("02.02.2026 : 29.300 tl", "sorgu tarihi : 11.11.2026") tutar sanılmasın
+    t = re.sub(r"\b\d{1,2}[./]\d{1,2}[./](\d{4}|\d{2})\b", " tarih ", t)
     if not TRAMER_ANAHTAR.search(t):
         return None, None
     adaylar = []
@@ -163,6 +166,8 @@ def tramer_metinden(t):
         if "siz" in m.group(2):                          # tramersiz / hasar kayıtsız
             continue
         pencere = t[m.end(): m.end() + 45]
+        if re.match(r"\W{0,3}(kaydi\W{0,3})?(yok|yoktur|bulunma)", pencere):     # "tramer yok km: 35.000"
+            continue
         for n in re.finditer(r"(\d{1,3}(?:[.,]\d{3})+|\d+)\s*(bin|k\b)?\s*(tl|lira|₺)?(\s*(km|adet|parca|kalem|kez|kayit))?", pencere):
             if n.start() > 32:
                 break
@@ -175,10 +180,16 @@ def tramer_metinden(t):
                 continue
             adaylar.append(deger)
             break
+    # tarihli birden çok kayıt: "hasar kaydı 02.02.2026 : 29.300 tl 19.07.2026 : 174.000 tl" → toplam
+    for m in re.finditer(r"tramer|hasar kaydi|hasar kayit", t):
+        kayitlar = [_tutar(n.group(1), None) for n in
+                    re.finditer(r"tarih\w*\s*:?\s*(\d{1,3}(?:[.,]\d{3})+)\s*(?:tl|₺|lira)", t[m.end(): m.end() + 160])]
+        if len(kayitlar) >= 2:
+            adaylar.append(sum(kayitlar))
     # "45 bin tl tramer", "1 milyon 200 bin hasar kaydı"
     # "123 bin yeni tarihli tramer" gibi araya en fazla 3 kelime girebilir (km ise sayılmaz)
     # "24 binde hasar kaydı yok" (km) ya da arkasından "yok" gelen ifade tutar sayılmaz
-    for m in re.finditer(r"(?:(\d+)\s*milyon\s*)?(\d{1,3}(?:[.,]\d{3})*|\d+)\s*(bin(?=lik|\b)|k\b|tl\b|₺)(?!\s*(?:km|kilometre))\s*(tl\s*)?(lik\s*)?"
+    for m in re.finditer(r"(?:(\d+)\s*milyon\s*)?(\d{1,3}(?:[.,]\d{3})*|\d+)\.?\s*(bin(?=lik|\b)|k\b|tl\b|₺)(?!\s*(?:km|kilometre))\s*(tl\s*)?(lik\s*)?"
                          r"(?:(?!km\b)\w+\s+){0,3}?(tramer|hasar kaydi|hasar kayit|normal kayit)", t):
         if re.match(r"\w*\W{0,3}(yok|bulunma|olmad)", t[m.end():m.end() + 20]):
             continue
@@ -186,7 +197,7 @@ def tramer_metinden(t):
         adaylar.append(deger)
     # "50000 tramer", "45.000 hasar kaydı" (birimsiz, en az 4 hane)
     for m in re.finditer(r"(?<![\d.,])(\d{1,3}(?:[.,]\d{3})+|\d{4,7})(?!\s*(?:km|kilometre|model|yil))\s*(?:tl\s*|₺\s*)?"
-                         r"(?:(?!km\b)\w+\s+){0,2}?(tramer|hasar kaydi|hasar kayit)", t):
+                         r"(?:(?!km\b)\w+\s+){0,2}?(tramer|hasar kaydi|hasar kayit)(?!\W{0,3}(detay|sorgu))", t):
         deger = _tutar(m.group(1), None)
         if not (1990 <= deger <= 2030):
             adaylar.append(deger)

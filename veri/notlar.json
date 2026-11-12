@@ -2825,7 +2825,7 @@
   ],
   "1350639155": [
     "İNCELE",
-    "Galeri. Açıklama boş: boya, değişen ve tramer bilgisini iste.",
+    "Galeri (Bey-Cars). Fiyatı dünden beri 1.309.000'den 1.299.000'e indi; başlıkta 'boyasız' var ama açıklama hâlâ boş, tramer bilinmiyor.",
     [
       "Boya değişen var mı, tramer kaydı ne kadar?",
       "Aracı benim seçtiğim ekspertize götürebilir miyiz?"
@@ -3469,6 +3469,796 @@
     [
       "Formda boyasız yazıyor ama açıklamada sağ iki kapı ve çamurluk boyalı, hangisi doğru?",
       "Bu boyalarla fiyatta pazarlık payı var mı?"
+    ]
+  ],
+  "1350958855": [
+    "AL",
+    "Galeri (Ankara). Boya, değişen ve tramer yok, cam tavanlı Sky Pack; 2018 model için 54 bin km çok az. Fiyat ~%12 altında.",
+    [
+      "2018 model için 54 bin km az, servis kayıtlarındaki km'ler tutuyor mu?",
+      "Şanzıman yağı hiç değişti mi?"
+    ]
+  ],
+  "1350886748": [
+    "İNCELE",
+    "Sahibinden, ilk sahibi, Mart 2025 çıkışlı, garantili ve hatasız; rol bar da veriliyor. Ama pickup ve KGM'nin ikinci el talebi dar, dünkü Musso emsallerine göre gerçek ucuzluk ~%5-7.",
+    [
+      "Ruhsatta kamyonet mi yazıyor, muayene ve vergisi ne kadar?",
+      "Pazarlık payı var demişsiniz, nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350819746": [
+    "İNCELE",
+    "Galeri (Ankara), 8.300 km, ilk sahibinden, %20 KDV faturalı; boya, değişen ve tramer yok. Pickup/KGM talebi dar; gerçek ucuzluk görünenden küçük.",
+    [
+      "Fiyata %20 KDV dahil mi, şahıs olarak alırsam toplam ne ödeyeceğim?",
+      "8 bin km'lik araç neden satışta?"
+    ]
+  ],
+  "1336917468": [
+    "İNCELE",
+    "Yetkili bayi, başlıkta 'boyasız' yazıyor ama açıklamada hiç bilgi yok. 98 bin km Power Edition, fiyat ~%11 altında; tramer ve DCT durumunu öğrenmeden karar verme.",
+    [
+      "Tramer kaydı var mı, varsa ne kadar?",
+      "Şanzımanda kalkışta titreme ya da vuruntu var mı?"
+    ]
+  ],
+  "1350923822": [
+    "DİKKAT",
+    "Form değişensiz gösteriyor ama açıklamada 'ön kaputun ezilmesinden dolayı servis değişen' yazıyor. Kaput değişmiş, tramer tutarı belirtilmemiş; %15 ucuzluğun sebebi bu.",
+    [
+      "Kaput değişiminin tramer kaydı ne kadar?",
+      "Kaput orijinal Nissan parçası mı, ön panelde işlem var mı?"
+    ]
+  ],
+  "1350862427": [
+    "AL",
+    "Galeri (İstanbul). Boya, değişen ve hasar kaydı yok. Ama 2023 model için 90 bin km yüksek; fiyat ~%10 altında.",
+    [
+      "İki yılda 90 bin km yapmış, kiralık ya da şirket aracı mıydı?",
+      "Şanzımanın ve motorun bakımı serviste mi yapıldı?"
+    ]
+  ],
+  "1345620536": [
+    "AL",
+    "MG-Suzuki bayisi. Kendi ekspertizlerinde boyasız (plastikler hariç), hasar kaydı yok; Sport Plus 1.5 turbo. Fiyat ~%10 altında.",
+    [
+      "Plastik tamponlarda boya ya da değişim var mı?",
+      "Bakımları Honda serviste mi yapıldı?"
+    ]
+  ],
+  "45479178": [
+    "AL",
+    "Galeri (İstanbul). Hasar kaydı yok, şasi-podye-airbag orijinal; yalnız kaputun sol ucunda iki avuç lokal boya. 1 yılda 48 bin km; fiyat ~%11 altında.",
+    [
+      "Başlıktaki 'yeni direksiyon' ne demek, direksiyon değişti mi?",
+      "Bir yılda 48 bin km yapmış, kiralık ya da şirket aracı mıydı?"
+    ]
+  ],
+  "1351013214": [
+    "AL",
+    "Galeri (Osmaniye). Boya, değişen, ezik ve tramer yok; orijinal 45 bin km, ağır yükte kullanılmamış diyor. Hilux'un talebi güçlü, fiyat ~%10 altında.",
+    [
+      "Araç şirket aracı mıydı, faturalı mı satılıyor?",
+      "Kasada yük taşındı mı, kasa içinde ezik var mı?"
+    ]
+  ],
+  "1350986688": [
+    "AL",
+    "Renault yetkili bayi (Afyon). Boya, değişen ve hasar kaydı yok, 32 bin km. Fiyat ~%10 altında.",
+    [
+      "Bakımları Renault serviste mi yapıldı, garantisi devam ediyor mu?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350987375": [
+    "AL",
+    "Galeri (Bursa). Hatasız boyasız, hasar kaydı yok, 25 bin km; istediğin yere götürebilirsin diyor. Essential alt paket; fiyat ~%9 altında.",
+    [
+      "Garantisi devam ediyor mu?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350950916": [
+    "DİKKAT",
+    "Form boyasız ama açıklamada kapılarda 'temizlik boyası' ve kaput ucunda lokal boya yazıyor; 14 bin TL kayıt var. Sadece Ranger ile takas diyor.",
+    [
+      "Kaç kapı boyalı, temizlik boyası neden yapıldı?",
+      "14 bin TL'lik kayıt hangi parçadan?"
+    ]
+  ],
+  "45469088": [
+    "DİKKAT",
+    "Bagaj kapağı değişmiş ve iki hasar kaydı var: 29.300 + 174.000 TL (toplam ~203 bin). Arkadan ciddi darbe.",
+    [
+      "174 bin TL'lik kazada bagaj kapağı dışında neler yapıldı?",
+      "Arka panel ya da bagaj havuzunda işlem var mı?"
+    ]
+  ],
+  "1351005255": [
+    "AL",
+    "Sahibinden (Mersin), 4x4 şehir içi kullanılmış. Boya, değişen, tramer, ezik yok, yetkili servis bakımlı; bagaj kapatma yeni. 'Acil' satış, fiyat ~%12 altında.",
+    [
+      "Neden acil satıyorsunuz?",
+      "Şasi numarasını atarsanız tramer sorgusunu kendim yaptırabilir miyim?"
+    ]
+  ],
+  "1336765248": [
+    "AL",
+    "Galeri (Erçal). Değişensiz, boyasız, tramersiz, cam tavanlı Shine. 17.11'e kadar kampanya fiyatı (normali 1.468.650). Fiyat ~%8 altında.",
+    [
+      "Kampanya fiyatı nakit alımda da geçerli mi?",
+      "Garantisi devam ediyor mu?"
+    ]
+  ],
+  "1350996335": [
+    "İNCELE",
+    "Galeri. 1,5 parça boyalı, tramer yok, servis bakımlı. 1 yılda 56 bin km yapmış.",
+    [
+      "Hangi parçalar boyalı, neden boyandı?",
+      "Bir yılda 56 bin km yapmış, kiralık mıydı?"
+    ]
+  ],
+  "45474585": [
+    "AL",
+    "Galeri (Şanlıurfa). Hatasız boyasız tramersiz, 21 bin km Easy. Fiyat ~%8 altında.",
+    [
+      "Garantisi ne zamana kadar?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350956180": [
+    "İNCELE",
+    "Galeri (Eskişehir). Ekspertizde boya/değişen yok, komple PPF kaplı, fiyat nakit. Fırsat orta (~%7).",
+    [
+      "Tramer kaydı var mı?",
+      "PPF'nin altında boya ya da lokal işlem var mı?"
+    ]
+  ],
+  "1350975813": [
+    "İNCELE",
+    "Sahibinden. 2025 model ama 107 bin km: yılda 100 binin üstü, ticari/uzun yol kullanımı. Açıklama tek satır; boya ve tramer yazılmamış.",
+    [
+      "Bir yılda 107 bin km, şirket aracı mı, uzun yolda mı kullanıldı?",
+      "Boya değişen ve tramer durumu ne?"
+    ]
+  ],
+  "1346719614": [
+    "İNCELE",
+    "Sahibinden. Hatasız, garantili, 15 bin km. Fırsat orta (~%7).",
+    [
+      "Neden satıyorsunuz?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350937317": [
+    "İNCELE",
+    "Galeri (Giresun). Hatasız, garantili ama 2023 model 98 bin km. Fırsat küçük.",
+    [
+      "İki yılda 98 bin km yapmış, kiralık ya da şirket aracı mıydı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "45482095": [
+    "İNCELE",
+    "Sahibinden. Sağ ön çamurlukta küçük lokal boya, tramer yok, bakımları yeni; 105 bin km.",
+    [
+      "105 bin km'de DSG yağı ve ağır bakım yapıldı mı?",
+      "Açıklamadaki 2 yıllık garanti neyin garantisi?"
+    ]
+  ],
+  "1313814521": [
+    "İNCELE",
+    "Galeri (Aydın). Hatasız, 4 lastik yeni, 50 bin km Feel. İlan aylardır yayında.",
+    [
+      "İlan uzun süredir yayında, nakit son rakamınız ne?",
+      "Tramer kaydı var mı?"
+    ]
+  ],
+  "1348377924": [
+    "İNCELE",
+    "Galeri (Tekirdağ). Tramer yok, sağ ön çamurluğun yarısı lokal boyalı; ama 142 bin km.",
+    [
+      "S-Tronic yağı hiç değişti mi?",
+      "142 bin km'de triger ve ağır bakım yapıldı mı?"
+    ]
+  ],
+  "1342733582": [
+    "DİKKAT",
+    "Boyasız ama 05.09.2024 tarihli 120 bin TL kayıt var: jant, lastik, plastik ve rot kolu. Önden yürüyen aksama darbe almış.",
+    [
+      "120 bin TL'lik kayıtta rot kolu dışında süspansiyon parçası değişti mi?",
+      "Rot balans ayarı tutuyor mu, lastikleri yiyor mu?"
+    ]
+  ],
+  "1345637543": [
+    "İNCELE",
+    "Sahibinden, ilk sahibi, servis bakımlı; kaput ucunda 3-4 cm rötuş dışında hatasız. Fırsat orta (~%7).",
+    [
+      "Tramer kaydı var mı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "45373610": [
+    "İNCELE",
+    "Sahibinden. Kaporta orijinal, tramer yok; ama ufak sürtmeler ve ön cam çatlak var.",
+    [
+      "Ön cam çatlağı için fiyattan ne kadar düşersiniz?",
+      "Sürtmeler hangi parçalarda?"
+    ]
+  ],
+  "1350898294": [
+    "İNCELE",
+    "Sahibinden. Kaldırım taşına çarpma: sağ çamurluk boyalı, bayide 126 bin TL'lik onarım faturası çıkmış. 23 bin km'lik araç için büyük kayıt.",
+    [
+      "126 bin TL'lik onarımda çamurluk dışında rot ya da salıncak değişti mi?",
+      "Tramer sorgusunda ne kadar görünüyor?"
+    ]
+  ],
+  "1351003440": [
+    "İNCELE",
+    "Sahibinden, ilk sahibi. Boya, değişen, tramer yok; arka çamurlukta boyasız düzeltmelik göçük var. Fırsat orta.",
+    [
+      "Arka çamurluktaki göçük için fiyattan ne kadar düşersiniz?",
+      "Bakımlar Renault serviste mi yapıldı?"
+    ]
+  ],
+  "1350962755": [
+    "İNCELE",
+    "Galeri (White Motors). Hatasız, hasar kaydı yok, 9 bin km; indirimli fiyat 1.415.000, pazarlık yok. 'You' en alt paket.",
+    [
+      "Paket You mu, hangi donanımlar var?",
+      "Garantisi ne zamana kadar?"
+    ]
+  ],
+  "1350885521": [
+    "İNCELE",
+    "Sahibinden. Kazasız boyasız değişensiz, yetkili servis bakımlı, 38.600 km. Fırsat orta (~%8).",
+    [
+      "Tramer kaydı tamamen sıfır mı?",
+      "Kaçıncı sahibisiniz?"
+    ]
+  ],
+  "1345530540": [
+    "İNCELE",
+    "Galeri (Bursa). Hatasız, tramersiz, 34 bin km Shine. Fırsat orta.",
+    [
+      "Bakımları serviste mi yapıldı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350961013": [
+    "AL",
+    "Hyundai yetkili bayi (Yalova). Boya, değişen ve tramer yok (plastikler hariç), 58 bin km. Fiyat ~%10 altında.",
+    [
+      "Plastik tamponlarda boya ya da değişim var mı?",
+      "Bakımları Hyundai serviste mi yapıldı?"
+    ]
+  ],
+  "1350911615": [
+    "İNCELE",
+    "Galeri (White Motors). Hasar kaydı yok ama sağ ön çamurluk ve ön kapıda sürtme onarımı var (form boyasız). İndirimli fiyat 1.615.000.",
+    [
+      "Sağ ön çamurluk ve kapıdaki onarım boyalı mı, macun var mı?",
+      "Hibrit batarya garantisi ne zamana kadar?"
+    ]
+  ],
+  "45477286": [
+    "İNCELE",
+    "Galeri. Boya-değişen yok ama arka plastik tampon yenilenmiş, 56 bin TL tramer.",
+    [
+      "56 bin TL'lik kayıt sadece arka tampon mu?",
+      "Bagaj kapağı ya da arka panelde işlem var mı?"
+    ]
+  ],
+  "1345597018": [
+    "AL",
+    "Galeri (Tokat). 2024 yeni kasa, 18 bin km, hatasız boyasız hasar kayıtsız. Fiyat ~%10 altında.",
+    [
+      "Garantisi ne zamana kadar?",
+      "18 bin km'lik araç neden satışta, ilk sahibi kimdi?"
+    ]
+  ],
+  "1348248572": [
+    "AL",
+    "Galeri (White Motors). Boya-değişen yok, yalnız sol dikiz ayna camından 3.300 TL kayıt. İndirimli fiyat 1.265.000, 25 bin km. Fiyat ~%9 altında.",
+    [
+      "İndirimli 1.265.000 fiyatı nakit alımda geçerli mi?",
+      "Garantisi devam ediyor mu?"
+    ]
+  ],
+  "41598347": [
+    "İNCELE",
+    "Sahibinden. Orijinal, tramersiz; sağ marşpiyelde bir karışlık sürtme. Fırsat küçük.",
+    [
+      "Marşpiyeldeki sürtme boyandı mı, öyle mi duruyor?",
+      "Kaçıncı sahibisiniz?"
+    ]
+  ],
+  "1350958220": [
+    "İNCELE",
+    "Sahibinden. Boya-değişen yok ama plastik aksamdan iki kayıt var: 65 bin + 14 bin TL.",
+    [
+      "65 bin ve 14 bin TL'lik kayıtlar hangi plastik parçalardan?",
+      "Far ya da radyatör değişti mi?"
+    ]
+  ],
+  "45484744": [
+    "AL",
+    "Galeri (Tekirdağ). 2026 model, 14 bin km, hatasız tramersiz, garantili. Fiyat ~%11 altında.",
+    [
+      "Garantisi ne zamana kadar?",
+      "14 bin km'lik araç neden satışta?"
+    ]
+  ],
+  "1351004580": [
+    "İNCELE",
+    "Sahibinden. Kaput ucu lokal ve sağ arka kapı boyalı, tramer yok; termostat, devirdaim ve V kayışı değişmiş. 85 bin km.",
+    [
+      "Sağ arka kapı neden boyandı?",
+      "Termostat ve devirdaim neden değişti, hararet yaptı mı?"
+    ]
+  ],
+  "1350980297": [
+    "İNCELE",
+    "Sahibinden, ilk sahibi. Kaza, boya, tramer yok; çamurluklarda çizik ve sağ far altında plastik kırık var. Fırsat küçük.",
+    [
+      "Far altındaki kırık için fiyattan düşer misiniz?",
+      "Garantisi devam ediyor mu?"
+    ]
+  ],
+  "1345591345": [
+    "İNCELE",
+    "Galeri adı 'Kılınç Filo': araç filo/kiralık geçmişli olabilir. Hatasız, SBM'de hasar yok; 2 yılda 66 bin km.",
+    [
+      "Araç sizin filonuzdan mı çıktı, kiralık olarak kullanıldı mı?",
+      "Bakımları Hyundai serviste mi yapıldı?"
+    ]
+  ],
+  "1348326416": [
+    "İNCELE",
+    "Galeri (Yalova). Boyasız, değişensiz, tramersiz. Fırsat küçük (~%6).",
+    [
+      "Şanzımanda kalkışta titreme var mı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350913045": [
+    "AL",
+    "Honda-Chery bayisi (Tekbaş, Adana). Tramer yok, TSE onaylı ekspertiz raporu ilanda, 15 bin km. Fiyat ~%9 altında.",
+    [
+      "TSE ekspertiz raporunu önceden atabilir misiniz?",
+      "Garantisi devam ediyor mu?"
+    ]
+  ],
+  "1350881050": [
+    "İNCELE",
+    "Galeri (Diyarbakır), ilk sahibi. AVM sürtmesinden sağ arka kapıya lokal boya; tramersiz. Fırsat orta.",
+    [
+      "Sağ arka kapıdaki lokal boya ne kadar alan?",
+      "Garantisi ne zamana kadar?"
+    ]
+  ],
+  "1350953304": [
+    "İNCELE",
+    "Galeri. Boya ve değişen yok, bakımı yeni. Fırsat küçük.",
+    [
+      "Tramer kaydı var mı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350978197": [
+    "İNCELE",
+    "Galeri (Antalya), ilk elden, garantili; %20 fatura fiyata dahil. Boya ve tramer açıkça yazılmamış.",
+    [
+      "Boya değişen ve tramer durumu ne?",
+      "Fiyata %20 KDV dahil mi?"
+    ]
+  ],
+  "1345652023": [
+    "İNCELE",
+    "Galeri. Hatasız boyasız tramersiz, 19 bin km. Fırsat küçük.",
+    [
+      "Garantisi ne zamana kadar?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350994988": [
+    "İNCELE",
+    "Galeri (Antalya). Boya-değişen yok ama ön tampondan 50 bin TL hasar kaydı. Fırsat küçük.",
+    [
+      "50 bin TL'lik kayıt sadece ön tampon mu, far ya da radyatör değişti mi?",
+      "Şanzımanda kalkışta titreme var mı?"
+    ]
+  ],
+  "1336915035": [
+    "İNCELE",
+    "Galeri. Kaput ve sağ çamurluk boyalı, far değişmiş; 1 çarpma kaydı var diyor ama 'hasar kaydı yok' da yazıyor. 2 yılda 82 bin km.",
+    [
+      "Çarpma kaydının tutarı ne kadar?",
+      "İki yılda 82 bin km yapmış, kiralık mıydı?"
+    ]
+  ],
+  "1347515779": [
+    "İNCELE",
+    "Galeri (Konya). 10 bin TL kayıt, sol çamurluk ve kaput ucunda lokal boya; 4x4. Jeep'in ikinci el talebi düşük, %15 ucuzluk abartılı olabilir.",
+    [
+      "10 bin TL'lik kayıt sol çamurluktan mı?",
+      "9 ileri şanzımanda vuruntu var mı?"
+    ]
+  ],
+  "1314227943": [
+    "İNCELE",
+    "Galeri. Hatasız boyasız tramersiz diyor ama %15 ucuz ve ilan aylardır yayında; kasa ve paket teyit edilmeli.",
+    [
+      "Araç yeni kasa mı, ruhsattaki ilk tescil tarihi ne?",
+      "İlan uzun süredir yayında, neden satılmadı?"
+    ]
+  ],
+  "1351006452": [
+    "İNCELE",
+    "Galeri. Başlıkta 'kaput, tavan, bagaj orijinal' yazıyor, formda 2 lokal boya var. 1,5 yılda 75 bin km.",
+    [
+      "Kaput, tavan ve bagaj dışında hangi parçalar boyalı?",
+      "Bir buçuk yılda 75 bin km, kiralık mıydı?"
+    ]
+  ],
+  "1350926370": [
+    "İNCELE",
+    "Galeri. Boya-değişen yok, arka stop değişiminden 12 bin TL kayıt. Başlık 2024, açıklama 2025 model diyor.",
+    [
+      "Model 2024 mü 2025 mi, ruhsatta ne yazıyor?",
+      "12 bin TL'lik kayıt sadece arka stop mu?"
+    ]
+  ],
+  "1351020493": [
+    "İNCELE",
+    "Galeri (Bursa). Hatasız, garantili, %20 KDV'li; 2 yılda 69 bin km. Fırsat küçük.",
+    [
+      "Fiyata KDV dahil mi?",
+      "İki yılda 69 bin km yapmış, şirket aracı mıydı?"
+    ]
+  ],
+  "1351012266": [
+    "İNCELE",
+    "Galeri (Diyarbakır). Ön 3 parça boyalı, hasar kaydı yok. Ucuzluğun bir kısmı boyadan.",
+    [
+      "Ön 3 parça neden boyandı, hasar kaydı olmadan nasıl?",
+      "DSG yağı değişti mi?"
+    ]
+  ],
+  "1348356670": [
+    "İNCELE",
+    "%20 faturalı, ilk sahibinden, servis bakımlı Limited, 20 bin km. Fırsat küçük.",
+    [
+      "Tramer kaydı var mı?",
+      "Fatura şirketten mi kesilecek, fiyata KDV dahil mi?"
+    ]
+  ],
+  "45467202": [
+    "DİKKAT",
+    "Plastik parça değişiminden 145 bin TL tramer ve 1 boyalı parça var; 1,5 yılda 66 bin km.",
+    [
+      "145 bin TL'lik kayıtta hangi parçalar ve farlar değişti?"
+    ]
+  ],
+  "1350973462": [
+    "İNCELE",
+    "Galeri, senetli satış öne çıkarılmış. Hatasız boyasız diyor; tramer yazılmamış.",
+    [
+      "İlandaki fiyat nakit fiyatı mı, senetli fiyat mı?",
+      "Tramer kaydı var mı?"
+    ]
+  ],
+  "1350891515": [
+    "İNCELE",
+    "Sahibinden. Arka kapı altında 15 cm hafif düzeltme ve alt plastiklerde çizikler; pazarlık yok diyor.",
+    [
+      "Arka kapıdaki düzeltme boyalı mı?",
+      "Tramer kaydı var mı?"
+    ]
+  ],
+  "1345199780": [
+    "DİKKAT",
+    "Kaput ucu doğrultulup boyanmış, bagajda lokal boya; 'şişirme' dediği 120 bin TL yeni tarihli kayıt. 112 bin km.",
+    [
+      "120 bin TL'lik kayıtta hangi parçalar değişti?",
+      "Hibrit batarya sağlık raporu alabilir miyim?"
+    ]
+  ],
+  "1343995993": [
+    "İNCELE",
+    "Sahibinden, 3. sahibi. Değişensiz boyasız tramersiz, yetkili servis bakımlı, 80 bin km. Fırsat orta.",
+    [
+      "DSG yağı değişti mi?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350978588": [
+    "İNCELE",
+    "Galeri (Eskişehir). Hatasız tramersiz, kış paketli, 79 bin km. Fırsat orta.",
+    [
+      "Şanzımanda kalkışta titreme var mı?",
+      "Bakımları VW serviste mi yapıldı?"
+    ]
+  ],
+  "45459127": [
+    "İNCELE",
+    "Sahibinden. Boya, değişen, tramer yok; sağ arka kapıda göçük düzeltme. Garanti uzatılmış. Chery talebi zayıf.",
+    [
+      "Uzatılmış garanti devirle yeni sahibine geçiyor mu?",
+      "Neden satıyorsunuz?"
+    ]
+  ],
+  "1350866450": [
+    "İNCELE",
+    "Galeri. 1 parça boyalı, tramersiz. Jeep'in ikinci el talebi düşük.",
+    [
+      "Hangi parça boyalı, neden?",
+      "Şanzımanda kalkışta titreme var mı?"
+    ]
+  ],
+  "45475090": [
+    "İNCELE",
+    "Galeri. Boyasız, plastik aksamdan 2 parça 21.200 TL kayıt; 90 bin km. Dün sahibinden'de de aynı araç vardı.",
+    [
+      "21 bin TL'lik kayıt hangi plastik parçalardan?",
+      "Şanzımanda kalkışta titreme var mı?"
+    ]
+  ],
+  "1350985816": [
+    "İNCELE",
+    "Galeri (beon). Sol arka kapı sök-tak, boyasız; tramer yok; %20 KDV. Fırsat küçük.",
+    [
+      "Sol arka kapı neden söküldü?",
+      "Fiyata KDV dahil mi?"
+    ]
+  ],
+  "45138191": [
+    "İNCELE",
+    "Galeri (Konya), ilk kullanıcıdan. Boya-değişen-hasar yok ama 2 yılda 157 bin km.",
+    [
+      "İki yılda 157 bin km, şirket aracı mıydı?",
+      "DSG ve triger bakımı yapıldı mı?"
+    ]
+  ],
+  "1348173729": [
+    "İNCELE",
+    "Galeri. Orijinal, hasar kayıtsız, 2028'e kadar garantili, 14 bin km. Fırsat küçük.",
+    [
+      "14 bin km'lik araç neden satışta?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "45473877": [
+    "İNCELE",
+    "Galeri (Hatay), ilk sahibi. Bagaj kapağı boyalı, hasar kaydı yok. Jeep talebi düşük.",
+    [
+      "Bagaj kapağı hangi olaydan boyandı, hasar kaydı neden yok?",
+      "Şanzımanda kalkışta titreme var mı?"
+    ]
+  ],
+  "1350801997": [
+    "İNCELE",
+    "Galeri (Malatya). Hatasız boyasız ama ön cam çatlak. Fırsat küçük.",
+    [
+      "Ön cam çatlağı için fiyattan düşer misiniz?",
+      "Tramer kaydı var mı?"
+    ]
+  ],
+  "1350896036": [
+    "İNCELE",
+    "Sahibinden, Mart'ta alınmış, komple PPF. Fotoğraflar henüz eklenmemiş. Fırsat orta.",
+    [
+      "Fotoğrafları ne zaman eklersiniz?",
+      "Mart'ta aldığınız aracı neden satıyorsunuz?"
+    ]
+  ],
+  "1350947754": [
+    "İNCELE",
+    "Sahibinden (Şanlıurfa). Hatasız boyasız, 16 bin km. Fırsat orta.",
+    [
+      "Tramer kaydı var mı?",
+      "Neden satıyorsunuz?"
+    ]
+  ],
+  "1350899675": [
+    "İNCELE",
+    "Yetkili bayi (Skoda Erya). Hasar, boya, değişen yok, 14 bin km Elite. Fırsat küçük.",
+    [
+      "Garantisi ne zamana kadar?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350971093": [
+    "İNCELE",
+    "Kia bayisi (Malatya). Hatasız, 5 yıl garantili, 7 bin km. Fırsat orta.",
+    [
+      "7 bin km'lik araç neden satışta?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350965579": [
+    "DİKKAT",
+    "Sahibinden. Prins sıralı LPG takılı (ikinci el talebini düşürür); ön cam orijinalle değişmiş, boya-değişen yok.",
+    [
+      "LPG ruhsata işli mi, ne zaman takıldı?",
+      "Tramer kaydı var mı?"
+    ]
+  ],
+  "1350984500": [
+    "İNCELE",
+    "Galeri (Erzurum). Sağ ön çamurluk ve sağ ön kapı boyalı, tramer yok; 126 bin km.",
+    [
+      "Sağ ön çamurluk ve kapı neden boyandı, hasar kaydı neden yok?",
+      "DSG yağı değişti mi?"
+    ]
+  ],
+  "1351006024": [
+    "İNCELE",
+    "Galeri (Ankara). Hatasız, tramersiz, garantili, 8 bin km. Fırsat küçük.",
+    [
+      "8 bin km'lik araç neden satışta?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "45478446": [
+    "İNCELE",
+    "Galeri (Sakarya). Hatasız; 2022 model 100 bin km.",
+    [
+      "100 bin km'de DSG ve ağır bakım yapıldı mı?",
+      "Şirket aracı mıydı?"
+    ]
+  ],
+  "1350996515": [
+    "İNCELE",
+    "Galeri. Hatasız boyasız tramersiz, 42.500 km. Fırsat küçük.",
+    [
+      "Şanzımanda kalkışta titreme var mı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "45467267": [
+    "İNCELE",
+    "Galeri. Formda 1 boyalı, 2 lokal; tramerde hasar ödemesi yok. 1,5 yılda 96 bin km.",
+    [
+      "Şemadaki boyalı ve lokal parçalar hangileri?",
+      "Bir buçuk yılda 96 bin km, şirket aracı mıydı?"
+    ]
+  ],
+  "1350994233": [
+    "İNCELE",
+    "Sahibinden. Garantili, komple PPF; boya ve tramer yazılmamış.",
+    [
+      "Boya değişen ve tramer durumu ne?",
+      "Neden satıyorsunuz?"
+    ]
+  ],
+  "1350957646": [
+    "DİKKAT",
+    "Sağ ön çamurluk ve ön tampon boyalı, 229 bin TL hasar kaydı var: ciddi önden darbe.",
+    [
+      "229 bin TL'lik kazada hangi parçalar değişti?"
+    ]
+  ],
+  "1350936502": [
+    "İNCELE",
+    "Sahibinden, 2. sahibi. Orijinal, tramersiz, 100 binde ağır bakımı yapılmış; birkaç küçük gamze. 128 bin km.",
+    [
+      "Şanzıman yağı hiç değişti mi?",
+      "Gamzeler hangi parçalarda?"
+    ]
+  ],
+  "44857354": [
+    "İNCELE",
+    "Toyota-BYD bayisi. Formda 1 boyalı parça, hasar kaydı yok; 1 yılda 75 bin km.",
+    [
+      "Hangi parça boyalı, neden?",
+      "Bir yılda 75 bin km yapmış, kiralık mıydı?"
+    ]
+  ],
+  "1350861409": [
+    "İNCELE",
+    "Sahibinden (doktor). Hatasız, Şubat 2024 çıkışlı. Fırsat küçük.",
+    [
+      "Tramer kaydı var mı?",
+      "Neden satıyorsunuz?"
+    ]
+  ],
+  "1350992746": [
+    "İNCELE",
+    "Galeri (beon). Sol arka kapıda göçük onarımı, tramer yok; ama 2 yılda 127 bin km.",
+    [
+      "İki yılda 127 bin km, filo aracı mıydı?",
+      "Fiyata KDV dahil mi?"
+    ]
+  ],
+  "44799907": [
+    "İNCELE",
+    "Galeri (Ankara). Formda 1 değişen parça; açıklama yok.",
+    [
+      "Hangi parça değişti, neden?",
+      "Tramer kaydı ne kadar?"
+    ]
+  ],
+  "43962845": [
+    "İNCELE",
+    "Galeri (Antalya), müşteri aracı. Hatasız ama 157 bin km.",
+    [
+      "Şanzıman Powershift mi, tork konvertörlü mü?",
+      "157 bin km'de triger ve ağır bakım yapıldı mı?"
+    ]
+  ],
+  "45177451": [
+    "İNCELE",
+    "Galeri (Ankara). Değişen, boya, tramer yok, cam tavanlı. Fırsat küçük.",
+    [
+      "Garantisi ne zamana kadar?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1345226025": [
+    "İNCELE",
+    "Sahibinden. Tamponlar dahil boyasız, tramer yok; iki yerde göçük onarımı gerekiyor.",
+    [
+      "Onarım isteyen iki göçük nerede, fotoğrafını atar mısınız?",
+      "Kaçıncı sahibisiniz?"
+    ]
+  ],
+  "45158762": [
+    "İNCELE",
+    "Galeri. Hatasız boyasız hasar kayıtsız, 182 HP Style; 87 bin km. Fırsat küçük.",
+    [
+      "87 bin km'de şirket aracı mıydı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "45477206": [
+    "İNCELE",
+    "Galeri (Ankara). Sağ ön kapı lokal boyalı, tramer yok; 2 yılda 101 bin km.",
+    [
+      "İki yılda 101 bin km yapmış, şirket aracı mıydı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "45456609": [
+    "İNCELE",
+    "Sahibinden. Formda 3 boyalı, 2 lokal; ön camda çatlak, marşpiyellerde göçük, triger değişimine 50 bin km var. Ucuzluğun çoğu boyadan.",
+    [
+      "Formdaki 3 boyalı parça hangileri, neden boyandı?",
+      "Tramer kaydı ne kadar?"
+    ]
+  ],
+  "1327475244": [
+    "İNCELE",
+    "Sahibinden, garantili, Otokoç servis bakımlı. Sol ön çamurluk ve kaput ucu lokal boyalı.",
+    [
+      "Lokal boyalar taş izi mi, sürtme mi?",
+      "Tramer kaydı var mı?"
+    ]
+  ],
+  "1350864635": [
+    "İNCELE",
+    "Galeri (Antalya), %20 faturalı. Hatasız boyasız ama tampon boyasından 14 bin TL yeni kayıt var; 2 yılda 104 bin km.",
+    [
+      "14 bin TL'lik kayıt hangi tampondan?",
+      "İki yılda 104 bin km yapmış, şirket aracı mıydı?"
+    ]
+  ],
+  "1348232172": [
+    "İNCELE",
+    "Galeri. Hasar kaydı yok, servis bakımlı; ama kaputta ve sağ ön kapı altında göçük düzeltme var. Fırsat küçük.",
+    [
+      "Kaputtaki ve kapıdaki göçük düzeltmeleri boyasız mı yapıldı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1350988096": [
+    "İNCELE",
+    "Galeri. Boya, değişen, hasar kaydı yok, 17 bin km Evolution. Fırsat küçük (~%5).",
+    [
+      "Garantisi ne zamana kadar?",
+      "Nakit alırsam son rakam ne olur?"
     ]
   ]
 }
