@@ -61,7 +61,7 @@ RISKLER = [
     ("yapisal", "Şasi/podye/direk/tavan işlemi ifadesi", 15,
      r"(sasi|sase|sasesi|sasisi|sasede|saside|saseye|sasiye) (hasar|duzelt|kesme|islemli|islem gor(mus|du|en)|islem var|islem mevcut|islem bulunmakta\w*|islem bulunuyor|degis|cekil)|"
      r"havuz sac\w* (degis|islemli|islem var|islem mevcut|islem bulunmakta\w*)|"
-     r"podye (hasar|degis|islemli|islem gor(mus|du|en)|duzelt|kaynak)|"
+     r"podye (hasar|degis|islemli|islem gor(mus|du|en)|duzelt|kaynak)|podye\w*\W+(\w+\W+){0,3}?islem\W+(mevcut|var|yapil)|"
      r"direk (degis|hasar|islemli|islem gor(mus|du|en)|kaynak)|tavan (degisen|degismis|degisti|kesme)", True),
     ("motor", "Motor/şanzıman işlemi ya da arıza ifadesi", 14,
      r"motor (revizyon|rektifiye|yenilen|yenilendi|degisti|degismis|degisimi|degistiril\w*|arizali|arizasi)|motor indi|sandik motor|"
