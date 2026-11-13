@@ -2612,8 +2612,12 @@
     "Galeri. Fırsat çok küçük."
   ],
   "1350505480": [
-    "İNCELE",
-    "Sahibinden, 42 bin km, fabrika LPG'li. Güncel ekspertiz raporu var. Fırsat küçük."
+    "AL",
+    "Sahibinden (İzmir). 2021, sadece 42.500 km, nokta hatasız, Honda servis faturalı, 10 Kasım tarihli ekspertiz var. Fiyat ~%7 altında; düşük km sayesinde satarken en kolay gidecek Civic. Tramer yazılmamış.",
+    [
+      "Tramer kaydı var mı, varsa ne kadar?",
+      "Garantisi ne zamana kadar devam ediyor?"
+    ]
   ],
   "1350433389": [
     "İNCELE",
@@ -4597,11 +4601,11 @@
     ]
   ],
   "1306524988": [
-    "İNCELE",
-    "Sahibinden. Fabrika çıkışlı LPG'li Eco Executive; hatasız boyasız tramersiz, iki küçük çizik. İlan aylardır yayında.",
+    "AL",
+    "Sahibinden. 2019 Eco Executive (en dolu paket), hatasız boyasız tramersiz, 83 bin km; sadece 2 küçük çizik. İlan aylardır yayında, pazarlık payı var.",
     [
-      "LPG sisteminin bakımı en son ne zaman yapıldı?",
-      "İlan uzun süredir yayında, nakit son rakamınız ne?"
+      "İlan uzun süredir yayında, nakit son rakamınız ne?",
+      "LPG sisteminin bakımı en son ne zaman yapıldı?"
     ]
   ],
   "1345745402": [
@@ -5039,6 +5043,230 @@
     [
       "Yağ içindeki triger kayışı kontrol edildi mi?",
       "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1317301392": [
+    "AL",
+    "Sahibinden (Samsun). 2021 makyajlı Eco Elegance, Samsun Honda'da bakımlı (son bakım Ekim 2026, şanzıman yağı dahil), fabrika garantisi Mayıs 2027'ye kadar. Sadece sağ arka çamurlukta avuç içi lokal boya, 4.445 TL kayıt. Fiyat ~%8 altında; Civic'ler içinde en mantıklısı.",
+    [
+      "4.445 TL'lik kayıt o lokal boyanın olduğu sürtmeden mi?",
+      "Garanti devirle yeni sahibine geçiyor mu, servis kayıtlarını atabilir misiniz?"
+    ]
+  ],
+  "1343184378": [
+    "AL",
+    "Galeri (Eskişehir). 2021 Eco Elegance, değişen yok, sadece sağ ön kapı sürtmeden ince boyalı; ağır bakımları yeni. 108 bin km, fiyat ~%8 altında.",
+    [
+      "Tramer kaydı var mı, varsa ne kadar?",
+      "Bakımlar Honda serviste mi yapıldı?"
+    ]
+  ],
+  "1343315190": [
+    "DİKKAT",
+    "Depremde duvar yıkılmasından sol tavan direği ve kapı arası direk boyalı, sol arka çamurlukta ezik onarımı; kaput ucu da boyalı. Tramer yok dese de direk boyası satarken ciddi sorun.",
+    [
+      "Direklerde macun ya da düzeltme var mı, servis faturası var mı?"
+    ]
+  ],
+  "1346628707": [
+    "İNCELE",
+    "Sahibinden. Hatasız değişensiz, 1-2 karış lokal; ama 176 bin km (çok yüksek).",
+    [
+      "176 bin km'de triger ve şanzıman bakımı ne zaman yapıldı?"
+    ]
+  ],
+  "1348960417": [
+    "İNCELE",
+    "Galeri (Osmaniye). İki çamurlukta küçük lokal, kaput sök-tak; hasar kaydı yok. 2018 model 145 bin km.",
+    [
+      "Kaput neden söküldü?",
+      "Servis bakım faturalarını atabilir misiniz?"
+    ]
+  ],
+  "1346619061": [
+    "DİKKAT",
+    "Önden iki far ve tampon değişimi: 423 bin TL hasar kaydı, sol ön çamurluk lokal boyalı. Ucuzluk bu kayıttan.",
+    [
+      "423 bin TL'lik kazada far ve tampon dışında neler yapıldı?"
+    ]
+  ],
+  "1345375016": [
+    "İNCELE",
+    "Sahibinden, 2. sahibi. Honda servisinde bakımlı, garantisi Eylül 2027'ye kadar; ama ön ve arka tampon değişmiş, tramer tutarı sadece fotoğrafta.",
+    [
+      "Ön ve arka tampon değişiminin tramer tutarı ne kadar?",
+      "Far ya da ön panelde işlem var mı?"
+    ]
+  ],
+  "1322939085": [
+    "İNCELE",
+    "Sahibinden. Kaputta vernik kalkması, sağ arka çamurlukta göçük düzeltme; 110 bin km.",
+    [
+      "Tramer kaydı var mı?",
+      "Kaputtaki vernik kalkması boyanmayı gerektiriyor mu?"
+    ]
+  ],
+  "1350776397": [
+    "İNCELE",
+    "Galeri (Mersin). 2 boyalı parça, hasar kaydı yok; 110 bin km.",
+    [
+      "Hangi parçalar boyalı, neden?",
+      "Bakımlar Honda serviste mi yapıldı?"
+    ]
+  ],
+  "1350427962": [
+    "İNCELE",
+    "Galeri (İstanbul). Honda Marmara'da bakımlı, tramer yok; 109 bin km. Fırsat orta.",
+    [
+      "Boya ya da lokal işlem var mı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1331823396": [
+    "DİKKAT",
+    "Sağ şasede hafif ezik ve ön 3 parça boyalı; 157 bin km. Şasi ezikli araç satarken zorlanır.",
+    [
+      "Sağ şasedeki ezik hangi olaydan, işlem var mı?"
+    ]
+  ],
+  "1333840536": [
+    "İNCELE",
+    "Sahibinden (İzmir). Sadece şoför kapısı boyalı, tramer yok, 75 bin km; kaputta PPF sökümünden deforme. Fırsat orta.",
+    [
+      "Şoför kapısı neden boyandı?",
+      "Kaputtaki deforme boya gerektiriyor mu?"
+    ]
+  ],
+  "1340833869": [
+    "İNCELE",
+    "Galeri (Afyon). En dolu Executive, 1 lokal, 40.700 TL kayıt; ama 160 bin km.",
+    [
+      "40 bin TL'lik kayıt hangi parçadan?",
+      "160 bin km'de ağır bakım yapıldı mı?"
+    ]
+  ],
+  "1338428948": [
+    "DİKKAT",
+    "Sahibinden. Bagaj kapağı boyalı, sağ şase ucunda ezik, 43 bin TL kayıt; arka koltukta sigara deliği.",
+    [
+      "Sağ şase ucundaki ezik hangi olaydan?"
+    ]
+  ],
+  "1289449515": [
+    "İNCELE",
+    "Sahibinden. Plastik tampon değişiminden 56 bin TL kayıt, iki lokal boya; 145 bin km. İlan çok uzun süredir yayında.",
+    [
+      "56 bin TL'lik kayıt sadece tampon mu?",
+      "Nakit alırsam son rakamınız ne?"
+    ]
+  ],
+  "1346430188": [
+    "DİKKAT",
+    "Ön teker, jant ve lastik değişiminden 295 bin TL hasar kaydı: yürüyen aksama sert darbe.",
+    [
+      "295 bin TL'lik kayıtta salıncak, rot ya da aks değişti mi?"
+    ]
+  ],
+  "1340714000": [
+    "ELE",
+    "Açıklamada airbag'in ('egirbek') serviste değiştiği yazıyor.",
+    []
+  ],
+  "1284900086": [
+    "İNCELE",
+    "Sahibinden. Boya-değişen yok; boyasız düzeltme ve marşpiyelde küçük göçük; 124 bin km. İlan çok uzun süredir yayında.",
+    [
+      "Tramer kaydı var mı?",
+      "İlan uzun süredir yayında, son rakamınız ne?"
+    ]
+  ],
+  "1350915154": [
+    "İNCELE",
+    "Galeri, peşinat/senetli satış öne çıkarılmış. Hatasız tramersiz, 130 bin km.",
+    [
+      "İlandaki fiyat nakit fiyatı mı?",
+      "130 bin km'de ağır bakım yapıldı mı?"
+    ]
+  ],
+  "1349381427": [
+    "DİKKAT",
+    "Galeri. Sol arka çamurluk boyalı, sağ ön lokal; parça parça 165 bin TL hasar kaydı.",
+    [
+      "165 bin TL'lik kayıtlar hangi olaylardan?"
+    ]
+  ],
+  "1346909248": [
+    "İNCELE",
+    "Sahibinden. Açıklama tek cümle ('hatasız boyasız'); 135 bin km, tramer bilinmiyor.",
+    [
+      "Tramer kaydı var mı?",
+      "Bakımlar nerede yapıldı?"
+    ]
+  ],
+  "1350638709": [
+    "İNCELE",
+    "Sahibinden. Executive, boya-değişen-tramer yok; 116 bin km. Fırsat küçük.",
+    [
+      "Ekspertiz raporunu atabilir misiniz?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1349924518": [
+    "İNCELE",
+    "Galeri (Ankara). Değişen ve boya yok, servis bakımlı; 87 bin km. Fırsat küçük.",
+    [
+      "Tramer kaydı var mı?",
+      "Nakit alırsam son rakam ne olur?"
+    ]
+  ],
+  "1347181461": [
+    "DİKKAT",
+    "03.11.2025 tarihli 239.400 TL kayıt (tampon, far, sis) ve sol ön çamurlukta ayar; sol arka lokal.",
+    [
+      "239 bin TL'lik kazada ön panel ya da şasede işlem var mı?"
+    ]
+  ],
+  "1338500953": [
+    "ELE",
+    "Açıklamada arka bagaj havuzunun işlemli olduğu ve arka şasede ezik bulunduğu yazıyor: arkadan yapısal darbe.",
+    []
+  ],
+  "1338976475": [
+    "İNCELE",
+    "Sahibinden. Makyajlı 2020, hasar kaydı yok; sol kapıda boyasız göçük onarımı ve kapı ayarı. 130 bin km.",
+    [
+      "Kapı ayarı neden yapıldı?",
+      "Bakımlar serviste mi yapıldı?"
+    ]
+  ],
+  "1346819744": [
+    "İNCELE",
+    "Sahibinden, ilk sahibi, tam Honda servis geçmişli; ama 178 bin km (çok yüksek).",
+    [
+      "178 bin km'de şanzıman yağı kaç kez değişti?"
+    ]
+  ],
+  "1350348554": [
+    "İNCELE",
+    "Sahibinden, 'acil'. 3 boyalı parça, açıklama yok; 166 bin km.",
+    [
+      "Hangi parçalar boyalı, tramer ne kadar?"
+    ]
+  ],
+  "1315899667": [
+    "İNCELE",
+    "Sahibinden (Hatay). Tramer yok, 4 yazlık 4 kışlık lastik; 132 bin km. Fırsat küçük.",
+    [
+      "Boya ya da değişen var mı?",
+      "Bakımlar Honda serviste mi yapıldı?"
+    ]
+  ],
+  "1349168519": [
+    "İNCELE",
+    "Galeri, senetli satış. Hatasız boyasız, 11.500 TL kayıt; 123 bin km.",
+    [
+      "İlandaki fiyat nakit fiyatı mı?",
+      "11.500 TL'lik kayıt neyden?"
     ]
   ]
 }
